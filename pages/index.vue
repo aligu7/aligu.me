@@ -1,6 +1,12 @@
+<script setup lang="ts">
+useSeoMeta({
+  title: "Ali Guliyev",
+});
+</script>
+
 <template>
   <div>
-    <h1>Site under construction</h1>
+    <h1>Ali Guliyev</h1>
     <a href="https://aliguliyev-v2.netlify.app"
       >Go to the latest version of portfolio</a
     >

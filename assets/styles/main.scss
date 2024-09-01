@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Pacifico-Regular';
+  src: url(../fonts/Pacifico-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url(../fonts/Inter.ttf);
+}
+
+body {
+  font-family: 'Inter';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+a {
+  @apply  text-primary hover:text-primary-hover transition-all transition-duration-200 decoration-underline decoration-primary-hover decoration-op-0 hover:decoration-op-100;
+}

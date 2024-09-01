@@ -10,7 +10,16 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@iconify-json/mingcute": "^1.2.0",
     "nuxt": "^3.13.0",
     "vue": "latest"
+  },
+  "devDependencies": {
+    "@iconify-json/mdi": "^1.1.68",
+    "@unocss/nuxt": "^0.62.3",
+    "@unocss/preset-icons": "^0.62.3",
+    "@unocss/transformer-directives": "^0.62.3",
+    "sass-embedded": "^1.77.8",
+    "unocss": "^0.62.3"
   }
 }
