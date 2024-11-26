@@ -1,6 +1,11 @@
+// @font-face {
+//   font-family: 'Pacifico-Regular';
+//   src: url(../fonts/Pacifico-Regular.ttf);
+// }
+
 @font-face {
-  font-family: 'Pacifico-Regular';
-  src: url(../fonts/Pacifico-Regular.ttf);
+  font-family: 'Satisfy-Regular';
+  src: url(../fonts/Satisfy-Regular.ttf);
 }
 
 @font-face {
@@ -10,6 +15,7 @@
 
 body {
   font-family: 'Inter';
+  overflow: hidden;
 }
 
 * {
@@ -19,5 +25,34 @@ body {
 }
 
 a {
-  @apply  text-primary hover:text-primary-hover transition-all transition-duration-200 decoration-underline decoration-primary-hover decoration-op-0 hover:decoration-op-100;
+  @apply  text-[#888] hover:text-primary-hover transition-all transition-duration-200 no-underline;
 }
+
+p {
+  @apply text-primary;
+}
+
+.page {
+  @apply mx-auto w-4xl;
+}
+
+.md-mg-sm2 {
+  margin-bottom: 10px;
+}
+
+.md-mg-sm {
+  margin-bottom: 16px;
+}
+
+.md-mg-md {
+  margin-bottom: 24px;
+}
+
+.md-mg-lg {
+  margin-bottom: 30px;
+}
+
+.md-mg-xl {
+  margin-bottom: 35px;
+}
+
