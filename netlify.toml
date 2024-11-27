@@ -1,99 +1,12 @@
-[
-build
-]
-  # Directory with source code (optional)
-  base = "/"
-  
-  # Build command
+[build]
   command = "pnpm build"
-  
-  # Directory with the built site
   publish = ".output/public"
-  
-  # Environment variables during build
-  environment = { NODE_VERSION = "18", PNPM_VERSION = "8.0.0" }
 
-# Production context: all deploys from the Production branch 
-[
-context.production
-]
-  # Cache headers for production
-  command = "pnpm generate"
+[build.environment]
+  NODE_VERSION = "18"
+  PNPM_VERSION = "8.0.0"
 
-# Headers to return with requests for the specified paths
-[[
-headers
-]]
-  # Define which paths this specific [[headers]] block will cover.
-  for = "/*"
-  [
-headers.values
-]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';"
-
-# Redirects and rewrites
-[[
-redirects
-]]
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-# Asset optimization
-[
-build.processing
-]
-  skip_processing = false
-[
-build.processing.css
-]
-  bundle = true
-  minify = true
-[
-build.processing.js
-]
-  bundle = true
-  minify = true
-[
-build.processing.images
-]
-  compress = true
-
-# Plugin configurations
-[[
-plugins
-]]
-  package = "@netlify/plugin-lighthouse"
-
-# Deploy Preview context: all deploys generated from a pull/merge request
-[
-context.deploy-preview
-]
-  command = "pnpm build"
-
-# Branch Deploy context: all deploys that are not from a pull/merge request or from the Production branch
-[
-context.branch-deploy
-]
-  command = "pnpm build"
-
-# Specific branch context: all deploys from this specific branch
-[
-context.staging
-] # 'staging' is just an example
-  command = "pnpm build:staging"
-  environment = { NODE_ENV = "staging" }
-
-# Dev settings
-[
-dev
-]
-  command = "pnpm dev"
-  port = 8888
-  publish = ".output/public"
-  targetPort = 3000
-  framework = "#custom"
