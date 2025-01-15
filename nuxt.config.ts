@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   css: ['~/assets/styles/main.scss'],
-  modules: ['@unocss/nuxt', '@nuxt/content'],
+  modules: ['@unocss/nuxt', '@nuxt/content', '@nuxthub/core'],
   content: {
     documentDriven: true,
   },
