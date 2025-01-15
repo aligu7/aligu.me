@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: "Ali Guliyev",
-});
+  title: 'Ali Guliyev',
+})
 </script>
 
 <template>

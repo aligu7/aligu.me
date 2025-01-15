@@ -5,11 +5,11 @@ export default defineNuxtConfig({
   css: ['~/assets/styles/main.scss'],
   modules: ['@unocss/nuxt', '@nuxt/content'],
   content: {
-    documentDriven: true
+    documentDriven: true,
   },
   components: {
     global: true,
-    dirs: ['~/components']
+    dirs: ['~/components'],
   },
   plugins: ['~/plugins/iconify.ts'],
 })

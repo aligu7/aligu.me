@@ -1,7 +1,7 @@
 <script setup>
 useHead({
-  title: "Projects - Ali Guliyev",
-});
+  title: 'Projects - Ali Guliyev',
+})
 </script>
 
 <template>

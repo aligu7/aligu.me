@@ -7,22 +7,22 @@
 </template>
 
 <script setup>
-const { path } = useRoute();
+const { path } = useRoute()
 const { data: post } = await useAsyncData(
   `
 ${path}`,
-  () => queryContent(path).findOne()
-);
+  () => queryContent(path).findOne(),
+)
 
 if (!post.value) {
-  throw createError({ statusCode: 404, message: "Post not found" });
+  throw createError({ statusCode: 404, message: 'Post not found' })
 }
 
 function formatDate(date) {
-  return new Date(date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  return new Date(date).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  })
 }
 </script>

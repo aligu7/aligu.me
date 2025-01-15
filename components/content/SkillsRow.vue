@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { getIconName } from "@/utils/utils";
+import { getIconName } from '@/utils/utils'
 
 interface Skill {
-  name: string;
-  icon: string;
-  link: string;
+  name: string
+  icon: string
+  link: string
 }
 
 defineProps<{
-  skills: Skill[];
-}>();
+  skills: Skill[]
+}>()
 </script>
 
 <template>
