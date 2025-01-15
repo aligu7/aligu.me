@@ -39,5 +39,5 @@ jobs:
         uses: nuxt-hub/action@v1
         id: deploy
         with:
-          project-key: aligu-info-a21i
+          project-key: aliguliyev-z8uz
           directory: dist/dist
