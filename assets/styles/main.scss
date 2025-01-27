@@ -25,7 +25,11 @@ body {
 }
 
 a {
-  @apply text-[#888] hover:text-primary-hover transition-all transition-duration-200 no-underline;
+  @apply text-[#888] hover:text-primary-hover transition-all transition-duration-200;
+}
+
+a:not(.btn-secondary, .btn, .btn-primary) {
+  @apply no-underline;
 }
 
 p {

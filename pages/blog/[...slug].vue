@@ -1,22 +1,6 @@
-<template>
-  <article class="mx-auto page">
-    <h1>{{ post.title }}</h1>
-    <p class="text-gray-600">{{ formatDate(post.date) }}</p>
-    <ContentRenderer :value="post" />
-  </article>
-</template>
-
 <script setup>
 const { path } = useRoute()
-const { data: post } = await useAsyncData(
-  `
-${path}`,
-  () => queryContent(path).findOne(),
-)
-
-if (!post.value) {
-  throw createError({ statusCode: 404, message: 'Post not found' })
-}
+const { data: post } = await useAsyncData(`content:${path}`, () => queryContent(path).findOne())
 
 function formatDate(date) {
   return new Date(date).toLocaleDateString('en-US', {
@@ -26,3 +10,21 @@ function formatDate(date) {
   })
 }
 </script>
+
+<template>
+  <article v-if="post" class="mx-auto page">
+    <BackButton />
+    <h1>{{ post.title }}</h1>
+    <p class="text-gray-600">{{ formatDate(post.date) }}</p>
+    <ContentRenderer :value="post" />
+  </article>
+  <div v-else class="text-center py-10">
+    <p>Loading...</p>
+  </div>
+</template>
+
+<style scoped>
+.page * {
+  @apply my-2;
+}
+</style>
