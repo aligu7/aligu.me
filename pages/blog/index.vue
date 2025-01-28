@@ -50,3 +50,4 @@ const formatDate = (date) => {
   })
 }
 
+</script>
