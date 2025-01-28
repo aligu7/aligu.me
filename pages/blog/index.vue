@@ -1,44 +1,52 @@
 <template>
   <div class="page">
-    <h1 class="text-4xl font-bold mb-6">Blog</h1>
-    <ul>
-      <li v-for="post in posts" :key="post.slug" class="mb-4">
-        <nuxt-link :to="`/blog/${post.slug}`" class="text-xl font-semibold text-blue-600 hover:underline">
-          {{ post.title }}
-        </nuxt-link>
-        <p class="text-gray-600">{{ formatDate(post.date) }}</p>
-        <p class="text-gray-800">{{ post.description }}</p>
+    <!-- Loading state -->
+    <div v-if="pending" class="text-center py-10">
+      <p>Loading posts...</p>
+    </div>
+
+    <!-- Error state -->
+    <div v-else-if="error" class="text-center py-10 text-red-600">
+      <p>Error loading posts: {{ error.message }}</p>
+    </div>
+    <!-- Posts list -->
+    <ul v-else>
+      <li v-for="post in posts" :key="post.slug" class="mb-4 relative">
+        <div class="flex justify-between items-start">
+          <div>
+            <NuxtLink :to="post._path" class="text-xl font-semibold text-blue-600 hover:underline">
+              {{ post.title }}
+            </NuxtLink>
+            <p class="text-gray-600">{{ formatDate(post.date) }}</p>
+            <p class="text-gray-800">{{ post.description }}</p>
+          </div>
+        </div>
       </li>
     </ul>
   </div>
 </template>
 
 <script setup>
-// useAutoImports from #app is not needed, `queryContent` is auto-imported by Nuxt
 
-// Use useAsyncData to fetch blog posts
-const { data: posts, error } = await useAsyncData('content:blog', () =>
+// Fetch blog posts with proper error and loading states
+const {
+  data: posts,
+  error,
+  pending,
+} = await useAsyncData('blog-posts', () =>
   queryContent('blog')
-    .where({ _path: { $not: '/blog' } })
-    .only(['title', 'slug', 'date', 'description'])
+    .where({ _path: { $ne: '/blog' } })
+    .only(['title', 'date', 'description', '_path'])
     .sort({ date: -1 })
     .find(),
 )
 
-// Handle the error case
-if (error.value) {
-  console.error('Failed to fetch blog posts:', error.value)
-}
-
-function formatDate(date) {
+// Date formatting function
+const formatDate = (date) => {
   return new Date(date).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
   })
 }
-</script>
 
-<style scoped>
-/* Your styles here */
-</style>

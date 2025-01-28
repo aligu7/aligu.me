@@ -1,8 +1,7 @@
 ---
-title: hiiii.
-slug: 2
-date: 2024-10-08
-description: This is a brief description of my first blog post.
+title: Neovim distributions
+date: 2025-01-28
+description: "Astronvim is the best distro there is" 
 ---
 
 Welcome to my first blog post! Here is where I can write content in **markdown**.

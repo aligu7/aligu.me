@@ -1,8 +1,7 @@
 ---
-title: Hello world
-slug: 1
+title: Frontend Development
 date: 2024-10-08
-description: This is a brief description of my first blog post.
+description: "Description about frontend dev"
 ---
 
 Welcome to my first blog post! Here is where I can write content in **markdown**.
