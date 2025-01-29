@@ -27,6 +27,9 @@
 </template>
 
 <script setup>
+useSeoMeta({
+  title: 'Blog Posts',
+})
 
 // Fetch blog posts with proper error and loading states
 const {
