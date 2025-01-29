@@ -4,13 +4,12 @@ title: Ali Guliyev
 
 # [Ali Guliyev]{.text-4xl}
 
-
-::div{class="md-mg-xl"}
+::div{.md-mg-xl}
 ::
 
 Hey, I am Ali Guliyev, an aspiring software engineer.
 
-::div{class="md-mg-md"}
+::div{.md-mg-md}
 ::
 
 ::skills-row
@@ -23,7 +22,7 @@ skills:
     icon: logos:nuxt-icon
     link: https://github.com/nuxt
   - name: Firebase
-    icon: logos:firebase 
+    icon: logos:firebase
     link: https://github.com/firebase
   - name: UnoCSS
     icon: logos:unocss
@@ -38,7 +37,7 @@ skills:
 Main tools:
 ::
 
-::div{class="md-mg-sm2"}
+::div{.md-mg-sm2}
 ::
 
 ::skills-row
@@ -66,7 +65,7 @@ skills:
 Secondary tools:
 ::
 
-::div{class="md-mg-sm2"}
+::div{.md-mg-sm2}
 ::
 
 ::skills-row
@@ -85,11 +84,11 @@ skills:
     icon: logos:python
     link: https://github.com/python
   - name: C++
-    icon: vscode-icons:file-type-cpp3 
+    icon: vscode-icons:file-type-cpp3
     link: https://www.google.com/search?q=c%2B%2B&oq=c%2B%2B&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGEEyBggCEEUYQTIGCAMQRRg9MgYIBBAuGEDSAQc2ODlqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8
 ---
 Programming Languages:
 ::
 
-::div{class="md-mg-xl"}
+::div{.md-mg-xl}
 ::

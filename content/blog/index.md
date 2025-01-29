@@ -1,3 +1,3 @@
 ---
-title: "Ali Guliyev - Blog"
+title: Ali Guliyev - Blog
 ---
