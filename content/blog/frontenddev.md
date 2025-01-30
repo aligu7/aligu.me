@@ -5,10 +5,7 @@ description: This is a post regarding my frontend dev journey which includes all
   the tools that I have used throghout the recent years.
 ---
 
-::div{class=md-mg-md}
-::
-
-### My Professional Journey in Frontend Development
+# My Professional Journey in Frontend Development
 
 My introduction to frontend development began at the age of 11, when I first explored HTML and CSS. These foundational technologies ignited my curiosity, allowing me to create basic web pages and understand the structure and presentation of digital content. While early projects were simple—static layouts with rudimentary styling—they instilled a critical appreciation for clean code and semantic markup
 
@@ -23,10 +20,7 @@ Between the ages of 14 and 16, I focused on modernizing my workflow through indu
 
 Concurrently, I advanced my JavaScript expertise by adopting frameworks that prioritize scalability and maintainability. **React.js** introduced me to component-driven architecture and state management, while **Vue.js** deepened my appreciation for declarative UI development. Eventually, I leveraged **Nuxt.js** to build production-ready applications with server-side rendering, static site generation, and intuitive file-based routing.
 
-::div{class=md-mg-md}
-::
-
-### Key Insights from My Development Journey
+# Key Insights from My Development Journey
 
 1. **Foundational Mastery**: Proficiency in core technologies (HTML, CSS, JavaScript) remains critical for effectively utilizing modern frameworks.
 2. **Tooling Strategy**: While the frontend ecosystem evolves rapidly, selecting tools that align with project requirements—rather than chasing trends—yields sustainable results.

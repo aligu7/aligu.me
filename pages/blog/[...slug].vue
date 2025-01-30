@@ -21,18 +21,24 @@ function formatDate(date) {
 
 <template>
   <article v-if="post" class="mx-auto page">
-    <BackButton />
-    <h1>{{ post.title }}</h1>
-    <p class="text-gray-600">{{ formatDate(post.date) }}</p>
-    <ContentRenderer :value="post" />
+    <BackButton path="/blog" />
+    <h1 class="text-4xl">{{ post.title }}</h1>
+    <p class="text-gray-600 mt-2">{{ formatDate(post.date) }}</p>
+    <ContentRenderer :value="post" class="post" />
   </article>
   <div v-else class="text-center py-10">
     <p>Loading...</p>
   </div>
 </template>
 
-<style scoped>
-.page * {
-  @apply my-2;
+<style lang="scss">
+.post {
+  * {
+    @apply my-2;
+  }
+
+  h1 {
+    @apply mt-8 mb-4;
+  }
 }
 </style>
