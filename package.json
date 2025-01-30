@@ -20,6 +20,10 @@
     "nuxt": "^3.13.2",
     "pinia": "^2.2.4",
     "prettier": "^3.4.2",
+    "rehype-pretty-code": "^0.14.0",
+    "rehype-slug": "^6.0.0",
+    "remark-slug": "^8.0.0",
+    "shiki": "^2.2.0",
     "vue": "latest"
   },
   "devDependencies": {

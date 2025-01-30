@@ -1,20 +1,14 @@
-// @font-face {
-//   font-family: 'Pacifico-Regular';
-//   src: url(../fonts/Pacifico-Regular.ttf);
-// }
-
 @font-face {
-  font-family: 'Satisfy-Regular';
-  src: url(../fonts/Satisfy-Regular.ttf);
+  font-family: 'blinkmac-md';
+  src: url(../fonts/blinkmacsystemfont-regular.ttf);
 }
 
-@font-face {
-  font-family: 'Inter';
-  src: url(../fonts/Inter.ttf);
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Inter';
+  font-family: 'blinkmac-md';
   overflow: hidden;
 }
 
@@ -22,13 +16,15 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  line-height: 25px;
+  letter-spacing: 0.8px;
 }
 
 a {
   @apply text-[#888] hover:text-primary-hover transition-all transition-duration-200;
 }
 
-a:not(.btn-secondary, .btn, .btn-primary) {
+a:not(.btn-primary, .btn) {
   @apply no-underline;
 }
 
@@ -58,4 +54,32 @@ p {
 
 .md-mg-xl {
   margin-bottom: 35px;
+}
+
+.post {
+  h1,
+  h2,
+  h2 a,
+  h3,
+  h3 a {
+    @apply pt-2.5 pb-4;
+    color: black !important;
+  }
+
+  h1 {
+    @apply pt-12;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
+
+  * {
+    @apply my-2;
+  }
+
+  ol,
+  ul {
+    @apply pl-10;
+  }
 }

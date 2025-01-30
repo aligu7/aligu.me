@@ -7,8 +7,8 @@ const path = props.path.split('/')[1]
 </script>
 
 <template>
-  <NuxtLink class="btn-secondary" :to="props.path">
-    <div class="i-mingcute:arrow-left-line"></div>
+  <NuxtLink class="btn-primary" :to="props.path">
+    <div class="i-mingcute:arrow-left-line text-xs"></div>
     <span>Back to {{ path[0].toUpperCase() + path.slice(1, path.length) }}</span>
   </NuxtLink>
 </template>
