@@ -1,7 +1,6 @@
 ---
 title: Neovim distributions
 date: 2025-01-28
-description: Astronvim is the best distro there is
 ---
 
 Welcome to my first blog post! Here is where I can write content in **markdown**.

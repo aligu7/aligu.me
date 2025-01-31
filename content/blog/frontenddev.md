@@ -1,8 +1,6 @@
 ---
 title: "My Journey Through Frontend Development: From HTML to Modern Frameworks"
 date: 2024-10-08
-description: This is a post regarding my frontend dev journey which includes all
-  the tools that I have used throghout the recent years.
 ---
 
 <hr />
