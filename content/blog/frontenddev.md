@@ -1,6 +1,7 @@
 ---
 title: "My Journey Through Frontend Development: From HTML to Modern Frameworks"
 date: 2024-10-08
+tags: ["Nuxt", "Firebase", "UnoCSS"]
 ---
 
 <hr />

@@ -9,6 +9,7 @@ export default defineConfig({
   ],
   theme: {
     colors: {
+      'primary-light': '#888888',
       primary: '#555555',
       'primary-hover': '#3f3f3f',
     },

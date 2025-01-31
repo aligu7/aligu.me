@@ -3,7 +3,6 @@ import { Icon } from '@iconify/vue'
 
 const props = defineProps<{
   name: string
-  size?: string | number
 }>()
 
 const iconName = computed(() => {
@@ -13,5 +12,5 @@ const iconName = computed(() => {
 </script>
 
 <template>
-  <Icon :icon="iconName" :width="size" :height="size" />
+  <Icon :icon="iconName" />
 </template>

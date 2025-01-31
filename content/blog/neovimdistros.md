@@ -1,6 +1,7 @@
 ---
 title: Neovim distributions
 date: 2025-01-28
+tags: ["Vim", "Neovim", "AstroNvim"]
 ---
 
 Welcome to my first blog post! Here is where I can write content in **markdown**.

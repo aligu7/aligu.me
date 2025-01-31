@@ -17,7 +17,7 @@ const socialLinks = computed(() => data.value?.social || [])
   <div>
     <nav class="h-25 flex items-center justify-between max-w-8xl mx-auto px-8">
       <Logo />
-      <ul class="flex items-center justify-between list-none gap-x-4">
+      <ul class="flex items-center justify-between list-none gap-x-3">
         <li>
           <NuxtLink to="/projects">Projects</NuxtLink>
         </li>
@@ -29,7 +29,7 @@ const socialLinks = computed(() => data.value?.social || [])
         </li>
         <li v-for="social in socialLinks" :key="social.icon" class="pt-2">
           <NuxtLink :to="social.link" target="blank">
-            <Icon :icon="getIconName(social.icon)" width="1.5em" height="1.5em" />
+            <Icon :icon="getIconName(social.icon)" class="text-2xl" />
           </NuxtLink>
         </li>
       </ul>

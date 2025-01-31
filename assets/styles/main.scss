@@ -21,7 +21,7 @@ body {
 }
 
 a {
-  @apply text-[#888] hover:text-primary-hover transition-all transition-duration-200;
+  @apply text-primary-light hover:text-primary-hover transition-all transition-duration-200;
 }
 
 a:not(.btn-primary, .btn) {
