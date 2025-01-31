@@ -66,7 +66,7 @@ const formatDate = (date) => {
                 {{ post.title }}
               </p>
               <ul class="list-none flex flex-row items-center gap-3">
-                <li class="text-xs" v-for="tag in post.tags" :key="tag">
+                <li v-for="tag in post.tags" :key="tag">
                   <Tag :name="tag" />
                 </li>
               </ul>
