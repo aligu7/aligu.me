@@ -17,7 +17,7 @@ export default defineConfig({
   shortcuts: {
     btn: '',
     'btn-primary':
-      'w-fit-content flex items-center flex-row gap-1 hover:cursor-pointer border-op-0 hover:border-op-100 border-b-solid border-b border-b-1 border-b-primary',
+      'w-fit-content flex items-center flex-row gap-1 border-op-50 hover:border-op-100 hover:cursor-pointer border-b-solid border-b border-b-1 border-b-primary-light hover:border-b-primary-hover',
   },
   transformers: [transformerDirectives()],
   safelist: [],

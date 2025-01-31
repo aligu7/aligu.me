@@ -2,14 +2,11 @@
 const props = defineProps<{
   path: string
 }>()
-
-const path = props.path.split('/')[1]
 </script>
 
 <template>
   <NuxtLink class="btn-primary" :to="props.path">
-    <div class="i-mingcute:arrow-left-line text-xs"></div>
-    <span>Back to {{ path[0].toUpperCase() + path.slice(1, path.length) }}</span>
+    <span>&gt; &nbsp; cd ..</span>
   </NuxtLink>
 </template>
 

@@ -21,11 +21,12 @@ function formatDate(date) {
 
 <template>
   <article v-if="post" class="mx-auto page">
-    <BackButton path="/blog" />
+    <BackButton path="/blog" class="mb-2" />
     <h1 class="text-4xl">{{ post.title }}</h1>
     <p class="text-gray-600 mt-2">{{ formatDate(post.date) }}</p>
 
     <ContentRenderer :value="post" class="blog post" />
+    <BackButton path="/blog" class="mt-2" />
   </article>
   <div v-else class="text-center py-10">
     <p>Loading...</p>
