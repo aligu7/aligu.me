@@ -19,15 +19,15 @@ const socialLinks = computed(() => data.value?.social || [])
       <Logo />
       <ul class="flex items-center justify-between list-none gap-x-4">
         <li>
-          <NuxtLink to="/blog">Blog</NuxtLink>
+          <NuxtLink to="/projects">Projects</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/projects">Projects</NuxtLink>
+          <NuxtLink to="/blog">Blog</NuxtLink>
         </li>
         <li>
           <NuxtLink target="new" to="/pdf/Ali_Guliyev_Resume.pdf">Resume</NuxtLink>
         </li>
-        <li v-for="social in socialLinks" :key="social.icon">
+        <li v-for="social in socialLinks" :key="social.icon" class="pt-2">
           <NuxtLink :to="social.link" target="blank">
             <Icon :icon="getIconName(social.icon)" width="1.5em" height="1.5em" />
           </NuxtLink>
