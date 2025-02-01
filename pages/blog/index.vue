@@ -2,7 +2,7 @@
 import { getUniqueValues, filteredCollection, formatDate } from '@/utils/utils'
 
 useSeoMeta({
-  title: 'Blog Posts',
+  title: 'Blog - Ali Guliyev',
 })
 
 const selectedTag = ref('All')

@@ -1,3 +1,0 @@
----
-title: Ali Guliyev - Blog
----
