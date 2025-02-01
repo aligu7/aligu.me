@@ -33,7 +33,7 @@ p {
 }
 
 .page {
-  @apply mx-auto w-4xl;
+  @apply mx-auto max-w-4xl w-full;
 }
 
 .md-mg-sm2 {
