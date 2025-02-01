@@ -1,4 +1,6 @@
 <script setup>
+import { getUniqueValues, filteredCollection, formatDate } from '@/utils/utils'
+
 useSeoMeta({
   title: 'Blog Posts',
 })
@@ -17,25 +19,15 @@ const {
     .find(),
 )
 
+// Use the utility to extract unique tags
 const uniqueTags = computed(() => {
-  if (!posts.value) return []
-  const tags = posts.value.flatMap((post) => post.tags)
-  return ['All', ...new Set(tags)].sort()
+  return posts.value ? getUniqueValues(posts.value, 'tags') : []
 })
 
+// Use the utility to filter the posts based on the selected tag
 const filteredPosts = computed(() => {
-  if (!posts.value) return []
-  if (selectedTag.value === 'All') return posts.value
-  return posts.value.filter((post) => post.tags.includes(selectedTag.value))
+  return posts.value ? filteredCollection(posts.value, 'tags', selectedTag.value) : []
 })
-
-const formatDate = (date) => {
-  return new Date(date).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  })
-}
 </script>
 
 <template>
@@ -57,10 +49,11 @@ const formatDate = (date) => {
 
     <!-- Posts list -->
     <ul v-else class="list-none">
-      <li v-for="post in filteredPosts" :key="post.slug" class="mb-4 relative">
+      <li v-for="post in filteredPosts" :key="post.title" class="mb-4 relative">
         <NuxtLink :to="post._path">
           <div
-            class="group flex justify-between items-start border-primary border-solid border-1 border-opacity-10 hover:border-opacity-100 hover:border-primary-hover rounded-xl p-5 transition-all duration-75">
+            class="group flex justify-between items-start border-primary border-solid border-1 border-opacity-10 hover:border-opacity-100 hover:border-primary-hover rounded-xl p-5 transition-all duration-75"
+          >
             <div class="flex flex-col gap-2">
               <p class="text-xl font-semibold max-w-2xl text-primary group-hover:text-black transition-all duration-75">
                 {{ post.title }}
@@ -70,8 +63,7 @@ const formatDate = (date) => {
                   <Tag :name="tag" />
                 </li>
               </ul>
-              <p
-                class="text-black flex flex-row items-center gap-1 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-75">
+              <p class="text-black flex flex-row items-center gap-1 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-75">
                 <span>Read</span>
                 <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
               </p>

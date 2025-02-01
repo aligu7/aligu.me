@@ -1,11 +1,5 @@
-<script setup lang="ts">
-const props = defineProps<{
-  path: string
-}>()
-</script>
-
 <template>
-  <NuxtLink class="btn-primary" :to="props.path">
+  <NuxtLink class="btn-primary" @click="$router.back()">
     <span>&gt; &nbsp; cd ..</span>
   </NuxtLink>
 </template>
