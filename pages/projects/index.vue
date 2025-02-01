@@ -72,7 +72,7 @@ const filteredProjetcs = computed(() => {
                     <span>Live Demo</span>
                     <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
                   </a>
-                  <a @click.stop class="flex items-center gap-1" :href="project.github" target="_blank">
+                  <a v-if="project.github" @click.stop class="flex items-center gap-1" :href="project.github" target="_blank">
                     <span>Github</span>
                     <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
                   </a>
