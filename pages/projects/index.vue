@@ -66,18 +66,18 @@ const filteredProjetcs = computed(() => {
               </ul>
 
               <div class="flex flex-row justify-between items-center mt-2 w-full">
-                <div class="flex flex-row gap-2 z-50">
+                <div class="flex flex-row gap-3 z-50">
                   <!-- Stop the click event from propagating to the NuxtLink -->
-                  <a @click.stop class="flex items-center gap-1" :href="project.demo" target="_blank">
+                  <a @click.stop class="flex items-center gap-0.5" :href="project.demo" target="_blank">
                     <span>Live Demo</span>
                     <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
                   </a>
-                  <a v-if="project.github" @click.stop class="flex items-center gap-1" :href="project.github" target="_blank">
+                  <a v-if="project.github" @click.stop class="flex items-center gap-0.5" :href="project.github" target="_blank">
                     <span>Github</span>
                     <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
                   </a>
                 </div>
-                <p class="text-black flex flex-row items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-75">
+                <p class="text-black flex flex-row items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-75">
                   <span>Details</span>
                   <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
                 </p>

@@ -56,7 +56,12 @@ p {
   margin-bottom: 35px;
 }
 
-.post {
+.post,
+.project {
+  * {
+    @apply max-w-full;
+  }
+
   h1,
   h2,
   h2 a,

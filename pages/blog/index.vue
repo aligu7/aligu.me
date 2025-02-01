@@ -63,7 +63,7 @@ const filteredPosts = computed(() => {
                   <Tag :name="tag" />
                 </li>
               </ul>
-              <p class="text-black flex flex-row items-center gap-1 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-75">
+              <p class="text-black flex flex-row items-center gap-0.5 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-75">
                 <span>Read</span>
                 <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
               </p>

@@ -23,7 +23,7 @@ watchEffect(() => {
       </li>
     </ul>
     <p class="text-gray-600 mt-2">{{ formatDate(post.date) }}</p>
-    <ContentRenderer :value="post" class="blog post" />
+    <ContentRenderer :value="post" class="post" />
     <BackButton class="mt-2" />
   </article>
   <div v-else class="text-center py-10">
