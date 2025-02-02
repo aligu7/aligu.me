@@ -1,5 +1,5 @@
 ---
-title: Fazliddin Husanov' Website
+title: Fazliddin Husanov's Website
 tags:
   - Web Dev
   - Wordpress
