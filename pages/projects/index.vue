@@ -15,7 +15,6 @@ const {
   queryContent('projects')
     .where({ _path: { $ne: '/projects' } })
     .only(['title', 'demo', 'tags', 'github', 'description', '_path'])
-    //.sort({ date: -1 })
     .find(),
 )
 
@@ -25,8 +24,14 @@ const uniqueTags = computed(() => {
 })
 
 // Use the utility to filter the posts based on the selected tag
-const filteredProjetcs = computed(() => {
+const filteredProjects = computed(() => {
   return projects.value ? filteredCollection(projects.value, 'tags', selectedTag.value) : []
+})
+
+// Then sort the filtered projects by the number of tags (descending)
+// We use slice() to avoid mutating the original array.
+const sortedFilteredProjects = computed(() => {
+  return filteredProjects.value ? filteredProjects.value.slice().sort((a, b) => b.tags.length - a.tags.length) : []
 })
 </script>
 
@@ -49,11 +54,10 @@ const filteredProjetcs = computed(() => {
 
     <!-- Projects list -->
     <ul v-else class="list-none">
-      <li v-for="project in filteredProjetcs" :key="project.title" class="mb-4 relative">
+      <li v-for="project in sortedFilteredProjects" :key="project.title" class="mb-4 relative">
         <NuxtLink :to="project._path">
           <div
-            class="group flex justify-between items-start border-primary border-solid border-1 border-opacity-10 hover:border-opacity-100 hover:border-primary-hover rounded-xl p-5 transition-all duration-75"
-          >
+            class="group flex justify-between items-start border-primary border-solid border-1 border-opacity-10 hover:border-opacity-100 hover:border-primary-hover rounded-xl p-5 transition-all duration-75">
             <div class="flex flex-col gap-1 w-full">
               <p class="text-xl font-semibold max-w-2xl text-primary group-hover:text-black transition-all duration-75">
                 {{ project.title }}
@@ -72,12 +76,14 @@ const filteredProjetcs = computed(() => {
                     <span>Live Demo</span>
                     <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
                   </a>
-                  <a v-if="project.github" @click.stop class="flex items-center gap-0.5" :href="project.github" target="_blank">
+                  <a v-if="project.github" @click.stop class="flex items-center gap-0.5" :href="project.github"
+                    target="_blank">
                     <span>Github</span>
                     <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
                   </a>
                 </div>
-                <p class="text-black flex flex-row items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-75">
+                <p
+                  class="text-black flex flex-row items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-75">
                   <span>Details</span>
                   <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
                 </p>
