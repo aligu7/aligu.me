@@ -13,7 +13,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="skillsRow flex flex-wrap items-center gap-x-2 mt-4 md:mt-5 mb-3">
+  <div class="skillsRow flex flex-wrap items-center gap-x-2 mt-2.5">
     <ContentSlot :use="$slots.default" />
     <NuxtLink v-for="skill in skills" :key="skill.name"
       class="flex items-center my-1 gap-x-1 bg-gray-1 px-2 md:px-3 py-0.75 md:py-1 cursor-pointer hover:bg-gray-2 rounded-3xl"
