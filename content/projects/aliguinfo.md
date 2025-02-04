@@ -4,6 +4,7 @@ tags:
   - Web Dev
   - Nuxt
   - UnoCSS
+  - Current Project
 demo: https://aligu.info/
 github: https://github.com/aligu7/aligu.info
 description: This website was written using some of Nuxt.js's new CMS feature
