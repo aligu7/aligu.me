@@ -5,7 +5,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="px-2.5 py-1.5 bg-primary text-white rounded-full text-xs">
+  <div class="px-2 py-1 md:px-2.5 md:py-1.5 bg-primary text-white rounded-full text-xs md:text-sm">
     {{ name }}
   </div>
 </template>

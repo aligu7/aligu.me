@@ -2,15 +2,9 @@
 title: Ali Guliyev
 ---
 
-# [Ali Guliyev]{.text-4xl}
-
-::div{.md-mg-xl}
-::
+# Ali Guliyev
 
 Hey, I am Ali Guliyev, an aspiring software engineer.
-
-::div{.md-mg-md}
-::
 
 ::skills-row
 ---
@@ -35,9 +29,6 @@ skills:
     link: https://github.com
 ---
 Main tools:
-::
-
-::div{.md-mg-sm2}
 ::
 
 ::skills-row
@@ -65,9 +56,6 @@ skills:
 Secondary tools:
 ::
 
-::div{.md-mg-sm2}
-::
-
 ::skills-row
 ---
 skills:
@@ -88,7 +76,4 @@ skills:
     link: https://www.google.com/search?q=c%2B%2B&oq=c%2B%2B&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGEEyBggCEEUYQTIGCAMQRRg9MgYIBBAuGEDSAQc2ODlqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8
 ---
 Programming Languages:
-::
-
-::div{.md-mg-xl}
 ::

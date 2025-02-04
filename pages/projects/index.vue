@@ -37,8 +37,8 @@ const sortedFilteredProjects = computed(() => {
 
 <template>
   <div class="page">
-    <div class="flex justify-between items-center mb-6">
-      <h1 class="text-4xl font-bold">Projects</h1>
+    <div class="flex justify-between items-center mb-3 md:mb-6">
+      <h1 class="title">Projects</h1>
       <Dropdown v-model="selectedTag" :options="uniqueTags" />
     </div>
 
@@ -59,11 +59,12 @@ const sortedFilteredProjects = computed(() => {
           <div
             class="group flex justify-between items-start border-primary border-solid border-1 border-opacity-10 hover:border-opacity-100 hover:border-primary-hover rounded-xl p-5 transition-all duration-75">
             <div class="flex flex-col gap-1 w-full">
-              <p class="text-xl font-semibold max-w-2xl text-primary group-hover:text-black transition-all duration-75">
+              <p
+                class="text-lg md:text-xl font-semibold max-w-2xl text-primary group-hover:text-black transition-all duration-75">
                 {{ project.title }}
               </p>
-              <p>{{ project.description }}</p>
-              <ul class="list-none flex flex-row items-center gap-3 mt-2">
+              <p class="text-sm md:text-base">{{ project.description }}</p>
+              <ul class="list-none flex flex-row flex-wrap items-center gap-2 md:gap-3 mt-2">
                 <li v-for="tag in project.tags" :key="tag">
                   <Tag :name="tag" />
                 </li>

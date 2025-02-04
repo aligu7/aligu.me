@@ -32,8 +32,8 @@ const filteredPosts = computed(() => {
 
 <template>
   <div class="page">
-    <div class="flex justify-between items-center mb-6">
-      <h1 class="text-4xl font-bold">Blog</h1>
+    <div class="flex justify-between items-center mb-3 md:mb-6">
+      <h1 class="title">Blog</h1>
       <Dropdown v-model="selectedTag" :options="uniqueTags" />
     </div>
 
@@ -52,23 +52,24 @@ const filteredPosts = computed(() => {
       <li v-for="post in filteredPosts" :key="post.title" class="mb-4 relative">
         <NuxtLink :to="post._path">
           <div
-            class="group flex justify-between items-start border-primary border-solid border-1 border-opacity-10 hover:border-opacity-100 hover:border-primary-hover rounded-xl p-5 transition-all duration-75"
-          >
+            class="group flex justify-between items-start border-primary border-solid border-1 border-opacity-10 hover:border-opacity-100 hover:border-primary-hover rounded-xl p-5 transition-all duration-75">
             <div class="flex flex-col gap-2">
-              <p class="text-xl font-semibold max-w-2xl text-primary group-hover:text-black transition-all duration-75">
+              <p
+                class="text-md md:text-xl font-semibold max-w-2xl text-primary group-hover:text-black transition-all duration-75">
                 {{ post.title }}
               </p>
-              <ul class="list-none flex flex-row items-center gap-3">
+              <ul class="list-none flex flex-row flex-wrap items-center gap-2 md:gap-3">
                 <li v-for="tag in post.tags" :key="tag">
                   <Tag :name="tag" />
                 </li>
               </ul>
-              <p class="text-black flex flex-row items-center gap-0.5 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-75">
+              <p
+                class="text-black flex flex-row items-center gap-0.5 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-75">
                 <span>Read</span>
                 <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
               </p>
             </div>
-            <p class="text-gray-600">{{ formatDate(post.date) }}</p>
+            <p class="text-gray-600 text-xs md:text-base whitespace-nowrap">{{ formatDate(post.date) }}</p>
           </div>
         </NuxtLink>
       </li>

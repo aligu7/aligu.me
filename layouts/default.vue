@@ -11,7 +11,7 @@
 
         <NuxtPage />
 
-        <p class="text-center py-5 text-primary-light text-sm">2024-PRESENT © Ali Guliyev</p>
+        <p class="text-center py-5 mb-30 md:mb-5 text-primary-light text-sm">2024-PRESENT © Ali Guliyev</p>
       </div>
     </ClientOnly>
   </div>

@@ -33,7 +33,23 @@ p {
 }
 
 .page {
-  @apply mx-auto max-w-4xl w-full;
+  @apply pt-18 md:pt-25 mx-auto max-w-4xl w-full px-5 md:px-10;
+
+  .title {
+    @apply text-xl md:text-4xl font-bold;
+  }
+}
+
+main.page {
+  @apply max-w-5xl;
+
+  h1 {
+    @apply mb-5;
+  }
+
+  p {
+    @apply text-sm md:text-base;
+  }
 }
 
 .md-mg-sm2 {
@@ -59,7 +75,7 @@ p {
 .post,
 .project {
   * {
-    @apply max-w-full;
+    @apply max-w-full my-1.5 md:my-2;
   }
 
   h1,
@@ -67,24 +83,20 @@ p {
   h2 a,
   h3,
   h3 a {
-    @apply pt-2.5 pb-4;
+    @apply pt-1.5 pb-2 md:pt-2.5 md:pb-4;
     color: black !important;
   }
 
   h1 {
-    @apply pt-12;
+    @apply pt-9 md:pt-12;
   }
 
   h2 {
-    font-size: 21px;
-  }
-
-  * {
-    @apply my-2;
+    @apply text-xl;
   }
 
   ol,
   ul {
-    @apply pl-10;
+    @apply pl-8 md:pl-10;
   }
 }

@@ -13,17 +13,13 @@ defineProps<{
 </script>
 
 <template>
-  <div class="flex items-center gap-x-2">
+  <div class="skillsRow flex flex-wrap items-center gap-x-2 mt-4 md:mt-5 mb-3">
     <ContentSlot :use="$slots.default" />
-    <NuxtLink
-      v-for="skill in skills"
-      :key="skill.name"
-      class="flex items-center gap-x-1 bg-gray-1 px-3 py-1 cursor-pointer hover:bg-gray-2 rounded-3xl"
-      :to="skill.link"
-      target="_blank"
-    >
-      <span class="text-sm">{{ skill.name }}</span>
-      <Icon :icon="getIconName(skill.icon)" width="1.5em" height="1.5em" />
+    <NuxtLink v-for="skill in skills" :key="skill.name"
+      class="flex items-center my-1 gap-x-1 bg-gray-1 px-2 md:px-3 py-0.75 md:py-1 cursor-pointer hover:bg-gray-2 rounded-3xl"
+      :to="skill.link" target="_blank">
+      <span class="text-xs md:text-sm">{{ skill.name }}</span>
+      <Icon :icon="getIconName(skill.icon)" class="w-5 h-5 md:w-6 md:h-6" />
     </NuxtLink>
   </div>
 </template>

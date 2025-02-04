@@ -15,24 +15,33 @@ const socialLinks = computed(() => data.value?.social || [])
 
 <template>
   <div>
-    <nav class="h-25 flex items-center justify-between max-w-8xl mx-auto px-8">
+    <nav class="z-99 fixed w-full h-15 md:h-24 flex items-center justify-between max-w-8xl mx-auto px-5 md:px-8">
       <Logo />
-      <ul class="flex items-center justify-between list-none gap-x-3">
-        <li>
-          <NuxtLink to="/projects">Projects</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/blog">Blog</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink target="new" to="/pdf/Ali_Guliyev_Resume.pdf">Resume</NuxtLink>
-        </li>
-        <li v-for="social in socialLinks" :key="social.icon" class="pt-2">
+      <ul class="flex items-center justify-between list-none gap-x-2 md:gap-x-3">
+        <div class="flex gap-x-2 md:gap-x-3 text-sm md:text-base">
+          <li>
+            <NuxtLink to="/projects">Projects</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/blog">Blog</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink target="new" to="/pdf/Ali_Guliyev_Resume.pdf">Resume</NuxtLink>
+          </li>
+        </div>
+        <li v-for="social in socialLinks" :key="social.icon" class="pt-1.75 md:pt-2">
           <NuxtLink :to="social.link" target="blank">
-            <Icon :icon="getIconName(social.icon)" class="text-2xl" />
+            <Icon :icon="getIconName(social.icon)" class="text-lg md:text-2xl" />
           </NuxtLink>
         </li>
       </ul>
     </nav>
   </div>
 </template>
+
+<style scoped>
+nav {
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+</style>
