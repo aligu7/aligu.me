@@ -26,12 +26,12 @@ const props = defineProps<{
           <div class="flex flex-row gap-3 z-50">
             <!-- Stop the click event from propagating to the NuxtLink -->
             <a @click.stop class="flex items-center gap-0.5" :href="project.demo" target="_blank">
-              <span>Live Demo</span>
+              <span class="text-sm md:text-base">Live Demo</span>
               <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
             </a>
             <a v-if="project.github" @click.stop class="flex items-center gap-0.5" :href="project.github"
               target="_blank">
-              <span>Github</span>
+              <span class="text-sm md:text-base">Github</span>
               <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
             </a>
           </div>

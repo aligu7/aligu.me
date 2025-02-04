@@ -21,7 +21,7 @@ const currentProjects = computed(() => {
     <div class="flex justify-between items-center mb-3">
       <h1 style="margin: 0" class="text-xl">Current Projects</h1>
       <NuxtLink class="flex items-center gap-0.5" to="projects">
-        <span>View all projects</span>
+        <span class="text-sm md:text-base">View all projects</span>
         <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
       </NuxtLink>
     </div>
