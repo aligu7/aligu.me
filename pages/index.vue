@@ -7,5 +7,7 @@ useSeoMeta({
 <template>
   <main class="page">
     <ContentDoc />
+
+    <CurrentProjects class="mt-10" />
   </main>
 </template>

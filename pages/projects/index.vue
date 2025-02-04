@@ -12,7 +12,7 @@ const {
   error,
   pending,
 } = await useAsyncData('projects', () =>
-  queryContent('projects')
+    queryContent('projects')
     .where({ _path: { $ne: '/projects' } })
     .only(['title', 'demo', 'tags', 'github', 'description', '_path'])
     .find(),
@@ -55,43 +55,7 @@ const sortedFilteredProjects = computed(() => {
     <!-- Projects list -->
     <ul v-else class="list-none">
       <li v-for="project in sortedFilteredProjects" :key="project.title" class="mb-4 relative">
-        <NuxtLink :to="project._path">
-          <div
-            class="group flex justify-between items-start border-primary border-solid border-1 border-opacity-10 hover:border-opacity-100 hover:border-primary-hover rounded-xl p-5 transition-all duration-75">
-            <div class="flex flex-col gap-1 w-full">
-              <p
-                class="text-lg md:text-xl font-semibold max-w-2xl text-primary group-hover:text-black transition-all duration-75">
-                {{ project.title }}
-              </p>
-              <p class="text-sm md:text-base">{{ project.description }}</p>
-              <ul class="list-none flex flex-row flex-wrap items-center gap-2 md:gap-3 mt-2">
-                <li v-for="tag in project.tags" :key="tag">
-                  <Tag :name="tag" />
-                </li>
-              </ul>
-
-              <div class="flex flex-row justify-between items-center mt-2 w-full">
-                <div class="flex flex-row gap-3 z-50">
-                  <!-- Stop the click event from propagating to the NuxtLink -->
-                  <a @click.stop class="flex items-center gap-0.5" :href="project.demo" target="_blank">
-                    <span>Live Demo</span>
-                    <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
-                  </a>
-                  <a v-if="project.github" @click.stop class="flex items-center gap-0.5" :href="project.github"
-                    target="_blank">
-                    <span>Github</span>
-                    <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
-                  </a>
-                </div>
-                <p
-                  class="text-black flex flex-row items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-75">
-                  <span>Details</span>
-                  <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
-                </p>
-              </div>
-            </div>
-          </div>
-        </NuxtLink>
+        <Project :project="project" />
       </li>
     </ul>
   </div>
