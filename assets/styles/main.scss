@@ -56,6 +56,12 @@ main.page {
   }
 }
 
+[data-content-id='content:about.md'] {
+  a {
+    @apply underline;
+  }
+}
+
 .skillsRow p {
   margin: 0 !important;
 }
