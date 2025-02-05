@@ -18,7 +18,10 @@ const socialLinks = computed(() => data.value?.social || [])
     <nav class="z-99 fixed w-full h-15 md:h-24 flex items-center justify-between max-w-8xl mx-auto px-5 md:px-8">
       <Logo />
       <ul class="flex items-center justify-between list-none gap-x-2 md:gap-x-3">
-        <div class="flex gap-x-2 md:gap-x-3 text-sm md:text-base">
+        <div class="flex gap-x-2 md:gap-x-3 text-xs md:text-base">
+          <li>
+            <NuxtLink to="/about">About</NuxtLink>
+          </li>
           <li>
             <NuxtLink to="/projects">Projects</NuxtLink>
           </li>
