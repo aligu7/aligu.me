@@ -1,10 +1,13 @@
 ---
 title: "My Journey Through Frontend Development: From HTML to Modern Frameworks"
 date: 2024-10-08
-tags: ["Nuxt", "Firebase", "UnoCSS"]
+tags:
+  - Nuxt
+  - Firebase
+  - UnoCSS
 ---
 
-<hr />
+---
 
 # 1 My Professional Journey in Frontend Development
 
@@ -24,6 +27,7 @@ Between the ages of 14 and 16, I focused on modernizing my workflow through indu
 Concurrently, I advanced my JavaScript expertise by adopting frameworks that prioritize scalability and maintainability. **React.js** introduced me to component-driven architecture and state management, while **Vue.js** deepened my appreciation for declarative UI development. Eventually, I leveraged **Nuxt.js** to build production-ready applications with server-side rendering, static site generation, and intuitive file-based routing.
 
 ## 1.2 Random Python Code:
+
 ```python
 # Iterative Binary Search Function
 # It returns index of x in given array arr if present,
@@ -64,7 +68,6 @@ else:
     print("Element is not present in array")
 ```
 
-
 # 2 Key Insights from My Development Journey
 
 ## 2.1 Siuuuuu
@@ -77,8 +80,8 @@ Today, my focus lies in optimizing user experiences through performance tuning, 
 
 As I continue to evolve within this field, I remain dedicated to balancing innovation with best practices, ensuring my work delivers both technical excellence and tangible business value.
 
-
 ## 2.2 Some Binary Tree Search Algoritmhs in Javascript
+
 ```js
 // helper method which creates a new node to 
 // be inserted and calls insertNode
