@@ -14,4 +14,4 @@ In parallel, I have built a solid foundation in programming languages and framew
 
 Looking ahead, I am eager to specialize in artificial intelligence, machine learning, and neural networks. I plan to deepen my understanding of deep learning, natural language processing, and retrieval-augmented generation techniques. My goal is to merge cutting-edge theory with practical solutions that drive real-world impact, continually evolving as a developer who bridges innovative concepts with tangible outcomes.
 
-In this website I will be documenting my work through projects and blog posts. So stay tuned!
+In this website I will be documenting my work through [<u>projects</u>](/projects) and [<u>blog posts</u>](/blog). So stay tuned!
