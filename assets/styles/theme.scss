@@ -1,0 +1,15 @@
+html:not(.dark) {
+  --primary-light: #888888;
+  --primary-hover: #3f3f3f;
+  --nav-bg: 255, 255, 255;
+  --primary: #555555;
+  --primary-op10: #55555510;
+}
+
+html.dark {
+  --primary-light: #888888;
+  --primary-hover: #3f3f3f;
+  --nav-bg: 0, 0, 0;
+  --primary: white;
+  color-scheme: dark;
+}

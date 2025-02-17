@@ -1,17 +1,18 @@
-import { defineConfig, presetUno, presetIcons, presetAttributify } from 'unocss'
+import { defineConfig, presetUno, presetIcons, presetAttributify, presetMini } from 'unocss'
 import transformerDirectives from '@unocss/transformer-directives'
 
 export default defineConfig({
-  presets: [presetIcons({}), presetUno(), presetAttributify()],
+  presets: [presetMini(), presetIcons({}), presetUno(), presetAttributify()],
   rules: [
     ['max-w-8xl', { 'max-width': '130rem' }],
     ['w-fit-content', { width: 'fit-content' }],
   ],
   theme: {
     colors: {
-      'primary-light': '#888888',
-      primary: '#555555',
-      'primary-hover': '#3f3f3f',
+      'primary-light': 'var(--primary-light)',
+      primary: 'var(--primary)',
+      'primary-op10': 'var(--primary-op10)',
+      'primary-hover': 'var(--primary-hover)',
     },
   },
   shortcuts: {

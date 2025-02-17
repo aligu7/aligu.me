@@ -52,7 +52,7 @@ const filteredPosts = computed(() => {
       <li v-for="post in filteredPosts" :key="post.title" class="mb-4 relative">
         <NuxtLink :to="post._path">
           <div
-            class="group flex justify-between items-start border-primary border-solid border-1 border-opacity-10 hover:border-opacity-100 hover:border-primary-hover rounded-xl p-5 transition-all duration-75">
+            class="group flex justify-between items-start border-primary-op10 border-solid border-1 hover:border-primary-hover rounded-xl p-5 transition-all duration-75">
             <div class="flex flex-col gap-2">
               <p
                 class="text-md md:text-xl font-semibold max-w-2xl text-primary group-hover:text-black transition-all duration-75">

@@ -7,6 +7,12 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 
+const isDark = useDark()
+
+watch(isDark, () => {
+  console.log(isDark.value)
+})
+
 const canvasElement = ref(null)
 
 onMounted(() => {

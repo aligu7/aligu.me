@@ -11,6 +11,9 @@ importers:
       '@iconify-json/mingcute':
         specifier: ^1.2.1
         version: 1.2.3
+      '@iconify-json/ri':
+        specifier: ^1.2.5
+        version: 1.2.5
       '@iconify/vue':
         specifier: ^4.1.2
         version: 4.3.0(vue@3.5.13(typescript@5.7.3))
@@ -72,6 +75,9 @@ importers:
       '@unocss/preset-icons':
         specifier: ^0.62.4
         version: 0.62.4
+      '@unocss/preset-mini':
+        specifier: ^65.5.0
+        version: 65.5.0
       '@unocss/transformer-directives':
         specifier: ^0.62.4
         version: 0.62.4
@@ -685,6 +691,9 @@ packages:
   '@iconify-json/mingcute@1.2.3':
     resolution: {integrity: sha512-yiEQfLBF5iwyOdxuY0kEU06+8Mp6Mrp14KVXTb+5jjSVuD71C9EQrzM/mm1Efd8Nu2amJalTPisl3loC8pHBqQ==}
 
+  '@iconify-json/ri@1.2.5':
+    resolution: {integrity: sha512-kWGimOXMZrlYusjBKKXYOWcKhbOHusFsmrmRGmjS7rH0BpML5A9/fy8KHZqFOwZfC4M6amObQYbh8BqO5cMC3w==}
+
   '@iconify-json/vscode-icons@1.2.10':
     resolution: {integrity: sha512-qjp/j2RcHEZkesuAT6RP8BfcuHa+oERr7K1twfsulrIHrKZlpxxBeEyFm+3evZSAOgD+sjgU5CuTYS3RfCL+Pg==}
 
@@ -1237,8 +1246,14 @@ packages:
   '@unocss/core@0.62.4':
     resolution: {integrity: sha512-Cc+Vo6XlaQpyVejkJrrzzWtiK9pgMWzVVBpm9VCVtwZPUjD4GSc+g7VQCPXSsr7m03tmSuRySJx72QcASmauNQ==}
 
+  '@unocss/core@65.5.0':
+    resolution: {integrity: sha512-XYWdS09M2XOjZNDotGhI2TIW/6duLNiyssopwjCbv4AlPklF0bZI86SKI55syYDBt6GRadoQbuvUkhSiTV/hzQ==}
+
   '@unocss/extractor-arbitrary-variants@0.62.4':
     resolution: {integrity: sha512-e4hJfBMyFr6T6dYSTTjNv9CQwaU1CVEKxDlYP0GpfSgxsV58pguID9j1mt0/XZD6LvEDzwxj9RTRWKpUSWqp+Q==}
+
+  '@unocss/extractor-arbitrary-variants@65.5.0':
+    resolution: {integrity: sha512-7K3gftOdkv9jbWvbkExTcx6/FDP2Xk/NSsOYTvR9oITLnLjmdQvp+9276WSnNfKF3frBl8ZcqpkC2EsuL2Yutw==}
 
   '@unocss/inspector@0.62.4':
     resolution: {integrity: sha512-bRcnI99gZecNzrUr6kDMdwGHkhUuTPyvvadRdaOxHc9Ow3ANNyqymeFM1q5anZEUZt8h15TYN0mdyQyIWkU3zg==}
@@ -1261,6 +1276,9 @@ packages:
   '@unocss/preset-mini@0.62.4':
     resolution: {integrity: sha512-1O+QpQFx7FT61aheAZEYemW5e4AGib8TFGm+rWLudKq2IBNnXHcS5xsq5QvqdC7rp9Dn3lnW5du6ijow5kCBuw==}
 
+  '@unocss/preset-mini@65.5.0':
+    resolution: {integrity: sha512-oD2INmEgTOxmFsVceflv4Zs67vz9PRbpg3+CMsJLWgfX4UdQ1H4jZms72+g3N1hhXBvOFwvGvqGaMnrVMRk54g==}
+
   '@unocss/preset-tagify@0.62.4':
     resolution: {integrity: sha512-8b2Kcsvt93xu1JqDqcD3QvvW0L5rqvH7ev3BlNEVx6n8ayBqfB5HEd4ILKr7wSC90re+EnCgnMm7EP2FiQAJkw==}
 
@@ -1281,6 +1299,10 @@ packages:
 
   '@unocss/rule-utils@0.62.4':
     resolution: {integrity: sha512-XUwLbLUzL+VSHCJNK5QBHC9RbFehumge1/XJmsRfmh0+oxgJoO1gvEvxi57gYEmdJdMRJHRJZ66se6+cB0Ymvw==}
+    engines: {node: '>=14'}
+
+  '@unocss/rule-utils@65.5.0':
+    resolution: {integrity: sha512-xT4N0EY1dl1mqY5gTKD0H/Fg6xApe7xbfNTUwctOu02DMeJhqv9BTqfoAihH/hzGSI69+FtzVtz7hUxTypfehA==}
     engines: {node: '>=14'}
 
   '@unocss/transformer-attributify-jsx@0.62.4':
@@ -4938,6 +4960,10 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
+  '@iconify-json/ri@1.2.5':
+    dependencies:
+      '@iconify/types': 2.0.0
+
   '@iconify-json/vscode-icons@1.2.10':
     dependencies:
       '@iconify/types': 2.0.0
@@ -5843,9 +5869,15 @@ snapshots:
 
   '@unocss/core@0.62.4': {}
 
+  '@unocss/core@65.5.0': {}
+
   '@unocss/extractor-arbitrary-variants@0.62.4':
     dependencies:
       '@unocss/core': 0.62.4
+
+  '@unocss/extractor-arbitrary-variants@65.5.0':
+    dependencies:
+      '@unocss/core': 65.5.0
 
   '@unocss/inspector@0.62.4':
     dependencies:
@@ -5907,6 +5939,12 @@ snapshots:
       '@unocss/extractor-arbitrary-variants': 0.62.4
       '@unocss/rule-utils': 0.62.4
 
+  '@unocss/preset-mini@65.5.0':
+    dependencies:
+      '@unocss/core': 65.5.0
+      '@unocss/extractor-arbitrary-variants': 65.5.0
+      '@unocss/rule-utils': 65.5.0
+
   '@unocss/preset-tagify@0.62.4':
     dependencies:
       '@unocss/core': 0.62.4
@@ -5939,6 +5977,11 @@ snapshots:
   '@unocss/rule-utils@0.62.4':
     dependencies:
       '@unocss/core': 0.62.4
+      magic-string: 0.30.17
+
+  '@unocss/rule-utils@65.5.0':
+    dependencies:
+      '@unocss/core': 65.5.0
       magic-string: 0.30.17
 
   '@unocss/transformer-attributify-jsx@0.62.4':
