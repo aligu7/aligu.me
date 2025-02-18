@@ -11,7 +11,7 @@ const props = defineProps<{
       <div class="projectInnerContainer flex flex-col justify-between gap-1 w-full">
         <div>
           <p
-            class="text-lg md:text-xl font-semibold max-w-2xl text-primary group-hover:text-black transition-all duration-75 mb-1">
+            class="text-lg md:text-xl font-semibold max-w-2xl text-primary group-hover:text-black dark:group-hover:text-primary-hover transition-all duration-75 mb-1">
             {{ project.title }}
           </p>
           <p class="text-sm md:text-base">{{ project.description }}</p>

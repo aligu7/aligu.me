@@ -55,7 +55,7 @@ const filteredPosts = computed(() => {
             class="group flex justify-between items-start border-primary-op10 border-solid border-1 hover:border-primary-hover rounded-xl p-5 transition-all duration-75">
             <div class="flex flex-col gap-2">
               <p
-                class="text-md md:text-xl font-semibold max-w-2xl text-primary group-hover:text-black transition-all duration-75">
+                class="text-lg md:text-xl font-semibold max-w-2xl text-primary group-hover:text-black dark:group-hover:text-primary-hover transition-all duration-75 mb-1">
                 {{ post.title }}
               </p>
               <ul class="list-none flex flex-row flex-wrap items-center gap-2 md:gap-3">
@@ -64,12 +64,13 @@ const filteredPosts = computed(() => {
                 </li>
               </ul>
               <p
-                class="text-black flex flex-row items-center gap-0.5 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-75">
+                class="text-black dark:text-white flex flex-row items-center gap-0.5 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-75">
                 <span>Read</span>
                 <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
               </p>
             </div>
-            <p class="text-gray-600 text-xs md:text-base whitespace-nowrap">{{ formatDate(post.date) }}</p>
+            <p class="text-gray-600 dark:text-gray-100 text-xs md:text-base whitespace-nowrap">{{ formatDate(post.date)
+              }}</p>
           </div>
         </NuxtLink>
       </li>

@@ -3,7 +3,7 @@
   <div class="relative">
     <ClientOnly>
       <!-- Background Animation -->
-      <BgAnimation class="fixed top-0 left-0 w-full h-full pointer-events-none" style="opacity: 0.07" />
+      <BgAnimation class="fixed top-0 left-0 w-full h-full pointer-events-none" />
 
       <!-- Main content with navbar -->
       <div class="absolute top-0 left-0 w-screen h-screen overflow-y-auto">

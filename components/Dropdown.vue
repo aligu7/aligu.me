@@ -36,10 +36,10 @@ const selectOption = (option) => {
       enter-to-class="opacity-100 scale-100" leave-active-class="transition ease-in duration-75"
       leave-from-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">
       <ul v-show="isOpen"
-        class="z-60 list-none absolute right-0 mt-2 w-48 origin-top-right bg-white rounded-xl shadow-lg border-1 border-solid border-primary-op10 focus:outline-none z-10">
+        class="z-60 list-none absolute right-0 mt-2 w-48 origin-top-right bg-white dark:bg-dark-400 rounded-xl shadow-lg border-1 border-solid border-primary-op10 focus:outline-none z-10">
         <li v-for="option in options" :key="option"
-          class="px-4 py-3 text-sm text-primary cursor-pointer hover:bg-gray-50 transition-colors duration-100 first:rounded-t-xl last:rounded-b-xl"
-          :class="{ 'bg-gray-100': modelValue === option }" @click="selectOption(option)">
+          class="px-4 py-3 text-sm text-primary-hover cursor-pointer hover:bg-gray-50 dark:hover:bg-dark-800 transition-colors duration-100 first:rounded-t-xl last:rounded-b-xl"
+          :class="{ 'bg-gray-100 dark:bg-dark-700': modelValue === option }" @click="selectOption(option)">
           {{ option }}
         </li>
       </ul>
