@@ -71,7 +71,7 @@ export const animateProjectsAndPosts = (
   } = {},
 ) => {
   // Default options
-  const { duration = 0.3, stagger = 0.3, y = 20, ease = 'power2.out', delay = 0, onComplete } = options
+  const { duration = 0.3, stagger = 0.2, y = 20, ease = 'power2.out', delay = 0, onComplete } = options
 
   // Reset elements to initial state (useful for re-animations)
   const elements = document.querySelectorAll(selector)
