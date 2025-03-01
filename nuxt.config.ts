@@ -1,5 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  // Automatic Page Transitions
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+  },
+  experimental: {
+    viewTransition: true,
+  },
   compatibilitydate: '2024-04-03',
   devtools: { enabled: true },
   css: ['~/assets/styles/main.scss'],

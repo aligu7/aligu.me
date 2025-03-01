@@ -10,6 +10,7 @@
         <Navbar />
 
         <NuxtPage />
+
         <ScrollToTop />
 
         <p class="text-center py-5 mb-30 md:mb-5 text-primary-light text-sm">2024-PRESENT © Ali Guliyev</p>
@@ -17,3 +18,16 @@
     </ClientOnly>
   </div>
 </template>
+
+<style lang="scss">
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.7s;
+}
+
+.page-enter-from {
+  opacity: 0;
+  filter: blur(1rem);
+  transform: translateY(-20px);
+}
+</style>

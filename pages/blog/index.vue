@@ -1,5 +1,5 @@
 <script setup>
-import { getUniqueValues, filteredCollection, formatDate } from '@/utils/utils'
+import { getUniqueValues, filteredCollection, formatDate, animateProjectsAndPosts, setupAnimationWatcher } from '@/utils/utils'
 
 useSeoMeta({
   title: 'Blog - Ali Guliyev',
@@ -28,6 +28,22 @@ const uniqueTags = computed(() => {
 const filteredPosts = computed(() => {
   return posts.value ? filteredCollection(posts.value, 'tags', selectedTag.value) : []
 })
+
+// Watch for changes in the filtered blog posts
+watch(filteredPosts, setupAnimationWatcher(filteredPosts, '.blog-item'), { deep: true })
+
+onMounted(() => {
+  // Initial animation once projects are loaded
+  watch(
+    posts,
+    () => {
+      nextTick(() => {
+        animateProjectsAndPosts('.blog-item')
+      })
+    },
+    { immediate: true },
+  )
+})
 </script>
 
 <template>
@@ -49,7 +65,7 @@ const filteredPosts = computed(() => {
 
     <!-- Posts list -->
     <ul v-else class="list-none">
-      <li v-for="post in filteredPosts" :key="post.title" class="mb-4 relative">
+      <li v-for="post in filteredPosts" :key="post.title" class="blog-item mb-4 relative">
         <NuxtLink :to="post._path">
           <div
             class="group flex justify-between items-start border-primary-op10 border-solid border-1 hover:border-primary-hover rounded-xl p-5 transition-all duration-75">

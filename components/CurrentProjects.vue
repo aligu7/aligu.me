@@ -27,7 +27,7 @@ const currentProjects = computed(() => {
     </div>
 
     <ul class="list-none grid grid-cols-1 md:grid-cols-2 gap-4">
-      <li v-for="project in currentProjects" :key="project.title">
+      <li class="currentProject-item" v-for="project in currentProjects" :key="project.title">
         <Project :project="project" />
       </li>
     </ul>

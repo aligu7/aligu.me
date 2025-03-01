@@ -51,3 +51,84 @@ export const formatDate = (date: string | Date, locale: string = 'en-US'): strin
     day: 'numeric',
   })
 }
+
+import { gsap } from 'gsap'
+
+/**
+ * Animate elements with a staggered fade-in and move-up effect
+ * @param selector CSS selector for the elements to animate
+ * @param options Optional configuration options
+ */
+export const animateProjectsAndPosts = (
+  selector: string,
+  options: {
+    duration?: number
+    stagger?: number
+    y?: number
+    ease?: string
+    delay?: number
+    onComplete?: () => void
+  } = {},
+) => {
+  // Default options
+  const { duration = 0.3, stagger = 0.3, y = 20, ease = 'power2.out', delay = 0, onComplete } = options
+
+  // Reset elements to initial state (useful for re-animations)
+  const elements = document.querySelectorAll(selector)
+  elements.forEach((item) => {
+    item.style.opacity = '0'
+    item.style.transform = `translateY(${y}px)`
+  })
+
+  // Perform the animation
+  return gsap.fromTo(
+    selector,
+    { opacity: 0, y },
+    {
+      opacity: 1,
+      y: 0,
+      duration,
+      stagger,
+      ease,
+      delay,
+      clearProps: 'all', // Clean up inline styles after animation
+      onComplete,
+    },
+  )
+}
+
+/**
+ * Setup animation watcher for items that may change due to filtering
+ * @param itemsArray Reactive array of items to watch for changes
+ * @param selector CSS selector for the elements to animate
+ * @param options Optional animation configuration
+ */
+export const setupAnimationWatcher = (itemsArray: any, selector: string, options = {}) => {
+  // Return the watch function to be used with Vue's watch
+  return () => {
+    // Small delay to ensure DOM is updated
+    setTimeout(() => {
+      animateProjectsAndPosts(selector, options)
+    }, 10)
+  }
+}
+
+// for utils.ts
+export const observeMutations = (targetSelector: string, animatePage: () => void) => {
+  const observer = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      if (mutation.addedNodes.length > 0 && document.querySelectorAll(targetSelector).length > 0) {
+        animatePage()
+        observer.disconnect()
+        break
+      }
+    }
+  })
+
+  const container = document.querySelector('.page') || document.body
+  if (container) {
+    observer.observe(container, { childList: true, subtree: true })
+  }
+
+  return observer
+}

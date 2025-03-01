@@ -1,5 +1,6 @@
 <script setup>
-import { getUniqueValues, filteredCollection, formatDate } from '@/utils/utils'
+import { getUniqueValues, filteredCollection, formatDate, animateProjectsAndPosts, setupAnimationWatcher } from '@/utils/utils'
+import { gsap } from 'gsap'
 
 useSeoMeta({
   title: 'Projects - Ali Guliyev',
@@ -11,11 +12,14 @@ const {
   data: projects,
   error,
   pending,
-} = await useAsyncData('projects', () =>
+} = await useAsyncData(
+  'projects',
+  () =>
     queryContent('projects')
-    .where({ _path: { $ne: '/projects' } })
-    .only(['title', 'demo', 'tags', 'github', 'description', '_path'])
-    .find(),
+      .where({ _path: { $ne: '/projects' } })
+      .only(['title', 'demo', 'tags', 'github', 'description', '_path'])
+      .find(),
+  { server: false },
 )
 
 // Use the utility to extract unique tags
@@ -32,6 +36,22 @@ const filteredProjects = computed(() => {
 // We use slice() to avoid mutating the original array.
 const sortedFilteredProjects = computed(() => {
   return filteredProjects.value ? filteredProjects.value.slice().sort((a, b) => b.tags.length - a.tags.length) : []
+})
+
+// Watch for changes in the filtered projects
+watch(sortedFilteredProjects, setupAnimationWatcher(sortedFilteredProjects, '.project-item'), { deep: true })
+
+onMounted(() => {
+  // Initial animation once projects are loaded
+  watch(
+    projects,
+    () => {
+      nextTick(() => {
+        animateProjectsAndPosts('.project-item')
+      })
+    },
+    { immediate: true },
+  )
 })
 </script>
 
@@ -54,7 +74,7 @@ const sortedFilteredProjects = computed(() => {
 
     <!-- Projects list -->
     <ul v-else class="list-none">
-      <li v-for="project in sortedFilteredProjects" :key="project.title" class="mb-4 relative">
+      <li v-for="(project, index) in sortedFilteredProjects" :key="project.title" class="project-item mb-4 relative">
         <Project :project="project" />
       </li>
     </ul>
