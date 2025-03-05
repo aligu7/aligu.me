@@ -17,7 +17,7 @@ const currentProjects = computed(() => {
 </script>
 
 <template>
-  <div>
+  <div v-if="currentProjects.length > 0">
     <div class="flex justify-between items-center mb-3">
       <h1 style="margin: 0" class="text-xl">Current Projects</h1>
       <NuxtLink class="flex items-center gap-0.5" to="projects">
