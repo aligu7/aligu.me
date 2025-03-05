@@ -1,5 +1,6 @@
 ---
 title: 2nd Version of my Portfolio Website
+date: 2022-08-31
 tags:
   - Web Dev
   - Nuxt

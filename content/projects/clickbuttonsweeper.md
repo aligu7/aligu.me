@@ -1,5 +1,6 @@
 ---
 title: Very simple version of MineSweeper Game in Javascript
+date: 2020-11-03
 tags:
   - Web Dev
   - JavaScript

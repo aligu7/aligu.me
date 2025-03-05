@@ -1,5 +1,6 @@
 ---
 title: 1st Version of my Portfolio Website
+date: 2021-09-21
 tags:
   - Web Dev
   - Vue

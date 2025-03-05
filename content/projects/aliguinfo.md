@@ -1,5 +1,6 @@
 ---
 title: aligu.info (This Website)
+date: 2024-08-25
 tags:
   - Web Dev
   - Nuxt

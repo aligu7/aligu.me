@@ -1,5 +1,6 @@
 ---
 title: Hangman Game in JavaScript
+date: 2021-06-16
 tags:
   - Web Dev
   - JavaScript

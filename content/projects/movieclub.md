@@ -1,5 +1,6 @@
 ---
 title: Movies App
+date: 2021-03-03
 tags:
   - Web Dev
   - Vue

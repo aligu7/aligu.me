@@ -1,5 +1,6 @@
 ---
 title: Sozler.im
+date: 2022-09-14
 tags:
   - Web Dev
   - Vue

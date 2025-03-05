@@ -1,5 +1,6 @@
 ---
 title: Fazliddin Husanov's Website
+date: 2023-03-01
 tags:
   - Web Dev
   - Wordpress

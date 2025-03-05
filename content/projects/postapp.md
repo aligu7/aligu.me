@@ -1,5 +1,6 @@
 ---
 title: Post App
+date: 2023-09-27
 tags:
   - Web Dev
   - Vue

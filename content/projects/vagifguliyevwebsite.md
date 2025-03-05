@@ -1,5 +1,6 @@
 ---
 title: Prof. Dr. Vagif Guliyev's Website
+date: 2024-08-07
 tags:
   - Web Dev
   - Nuxt
