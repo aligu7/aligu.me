@@ -9,11 +9,15 @@
       <div class="absolute top-0 left-0 w-screen h-screen overflow-y-auto">
         <Navbar />
 
-        <NuxtPage />
+        <!-- Wrap content in a container -->
+        <div class="min-h-screen">
+          <NuxtPage />
+
+          <!-- Footer after content -->
+          <p class="text-center py-5 text-primary-light text-sm">2024-PRESENT © Ali Guliyev</p>
+        </div>
 
         <ScrollToTop />
-
-        <p class="text-center py-5 mb-30 md:mb-5 text-primary-light text-sm">2024-PRESENT © Ali Guliyev</p>
       </div>
     </ClientOnly>
   </div>

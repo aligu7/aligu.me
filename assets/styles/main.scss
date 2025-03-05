@@ -43,10 +43,10 @@ p {
 }
 
 main.page {
-  @apply max-w-5xl;
+  @apply max-w-5xl pb-10;
 
   h1#ali-guliyev {
-    @apply mb-5;
+    @apply mb-5 text-2xl md:text-4xl;
   }
 
   h1#about {
@@ -58,8 +58,12 @@ main.page {
   }
 }
 
-.skillsRow p {
-  margin: 0 !important;
+.skillsRow {
+  @apply flex flex-row items-center gap-2 md:gap-3 mb-4;
+  
+  p {
+    @apply text-sm md:text-base text-primary;
+  }
 }
 
 .post,

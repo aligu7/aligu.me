@@ -6,18 +6,18 @@ const props = defineProps<{
 
 <template>
   <NuxtLink :to="project._path">
-    <div
-      class="group flex justify-between items-start border-primary-op10 border-solid border-1 hover:border-primary-hover rounded-xl p-5 transition-all duration-75"
-    >
-      <div class="projectInnerContainer flex flex-col justify-between gap-1 w-full">
-        <div>
+    <div class="group relative h-full">
+      <div
+        class="projectInnerContainer border-primary-op10 border-solid border-1 hover:border-primary-hover rounded-xl p-5 transition-all duration-75 h-full flex flex-col"
+      >
+        <div class="flex-1">
           <p
-            class="text-lg md:text-xl font-semibold max-w-2xl text-primary group-hover:text-black dark:group-hover:text-primary-hover transition-all duration-75 mb-1"
+            class="text-lg md:text-xl font-semibold max-w-2xl text-primary group-hover:text-black dark:group-hover:text-primary-hover transition-all duration-75 mb-2"
           >
             {{ project.title }}
           </p>
-          <p class="text-sm md:text-base">{{ project.description }}</p>
-          <ul class="list-none flex flex-row flex-wrap items-center gap-2 md:gap-3 mt-2">
+          <p class="text-primary text-sm md:text-base mb-3">{{ project.description }}</p>
+          <ul class="list-none flex flex-row flex-wrap items-center gap-2 md:gap-3">
             <li v-for="tag in project.tags" :key="tag">
               <Tag :name="tag" />
             </li>

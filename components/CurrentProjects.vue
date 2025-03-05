@@ -17,7 +17,7 @@ const currentProjects = computed(() => {
 </script>
 
 <template>
-  <div v-if="currentProjects.length > 0">
+  <div v-if="currentProjects.length > 0" class="flex flex-col">
     <div class="flex justify-between items-center mb-3">
       <h1 style="margin: 0" class="text-xl">Current Projects</h1>
       <NuxtLink class="flex items-center gap-0.5" to="projects">
@@ -27,15 +27,15 @@ const currentProjects = computed(() => {
     </div>
 
     <ul class="list-none grid grid-cols-1 md:grid-cols-2 gap-4">
-      <li class="currentProject-item" v-for="project in currentProjects" :key="project.title">
+      <li v-for="project in currentProjects" :key="project.title" class="currentProject-item">
         <Project :project="project" />
       </li>
     </ul>
   </div>
 </template>
 
-<style>
-main .projectInnerContainer {
-  @apply h-auto md:h-50;
+<style scoped>
+.currentProject-item {
+  @apply h-full;
 }
 </style>
