@@ -14,6 +14,11 @@ const {
 const currentProjects = computed(() => {
   return projects.value ? filteredCollection(projects.value, 'tags', 'Current Project') : []
 })
+
+// Compute grid columns based on number of projects
+const gridClass = computed(() => {
+  return currentProjects.value.length === 1 ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-2'
+})
 </script>
 
 <template>
@@ -26,7 +31,7 @@ const currentProjects = computed(() => {
       </NuxtLink>
     </div>
 
-    <ul class="list-none grid grid-cols-1 md:grid-cols-2 gap-4">
+    <ul :class="['list-none grid gap-4', gridClass]">
       <li v-for="project in currentProjects" :key="project.title" class="currentProject-item">
         <Project :project="project" />
       </li>
