@@ -16,7 +16,7 @@ watchEffect(() => {
     <article v-if="project" class="mx-auto page">
       <BackButton class="mb-2" />
       <h1 class="text-4xl">{{ project.title }}</h1>
-      <ul class="list-none flex flex-row items-center gap-3 mt-2">
+      <ul class="list-none flex flex-row flex-wrap items-center gap-3 mt-2">
         <li v-for="tag in project.tags" :key="tag">
           <Tag :name="tag" />
         </li>
