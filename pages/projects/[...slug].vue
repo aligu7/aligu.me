@@ -22,7 +22,7 @@ watchEffect(() => {
         </li>
       </ul>
       <div class="flex flex-row gap-3 mt-3">
-        <a class="flex items-center gap-0.5" :href="project.demo" target="_blank">
+        <a v-if="project.demo" class="flex items-center gap-0.5" :href="project.demo" target="_blank">
           <span>Live Demo</span>
           <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
         </a>
