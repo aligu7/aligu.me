@@ -27,7 +27,7 @@ const props = defineProps<{
         <div class="flex flex-row justify-between items-center mt-2 w-full">
           <div class="flex flex-row gap-3 z-50">
             <!-- Stop the click event from propagating to the NuxtLink -->
-            <a @click.stop class="flex items-center gap-0.5" :href="project.demo" target="_blank">
+            <a @click.stop v-if="project.demo" class="flex items-center gap-0.5" :href="project.demo" target="_blank">
               <span class="text-sm md:text-base">Live Demo</span>
               <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
             </a>
