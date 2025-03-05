@@ -1,10 +1,5 @@
 <script setup>
-import { getUniqueValues, filteredCollection, formatDate, animateProjectsAndPosts, setupAnimationWatcher } from '@/utils/utils'
-import { gsap } from 'gsap'
-
-useSeoMeta({
-  title: 'Projects - Ali Guliyev',
-})
+import { getUniqueValues, filteredCollection, formatDate } from '@/utils/utils'
 
 const selectedTag = ref('All')
 
@@ -17,7 +12,7 @@ const {
   () =>
     queryContent('projects')
       .where({ _path: { $ne: '/projects' } })
-      .only(['title', 'demo', 'tags', 'github', 'description', '_path'])
+      .only(['title', 'demo', 'tags', 'github', 'description', 'date', '_path'])
       .find(),
   { server: false },
 )
@@ -32,29 +27,22 @@ const filteredProjects = computed(() => {
   return projects.value ? filteredCollection(projects.value, 'tags', selectedTag.value) : []
 })
 
-// Then sort the filtered projects by the number of tags (descending)
-// We use slice() to avoid mutating the original array.
+// Sort filtered projects by date (most recent first)
 const sortedFilteredProjects = computed(() => {
-  return filteredProjects.value ? filteredProjects.value.slice().sort((a, b) => b.tags.length - a.tags.length) : []
-})
+  return filteredProjects.value
+    ? filteredProjects.value.slice().sort((a, b) => {
+        // Convert date to Date objects for comparison
+        const dateA = new Date(a.date || '1970-01-01')
+        const dateB = new Date(b.date || '1970-01-01')
 
-// Watch for changes in the filtered projects
-watch(sortedFilteredProjects, setupAnimationWatcher(sortedFilteredProjects, '.project-item'), { deep: true })
-
-onMounted(() => {
-  // Initial animation once projects are loaded
-  watch(
-    projects,
-    () => {
-      nextTick(() => {
-        animateProjectsAndPosts('.project-item')
+        // Sort in descending order (most recent first)
+        return dateB.getTime() - dateA.getTime()
       })
-    },
-    { immediate: true },
-  )
+    : []
 })
-</script>
 
+// Rest of the existing code remains the same...
+</script>
 <template>
   <div class="page">
     <div class="flex justify-between items-center mb-3 md:mb-6">
