@@ -7,11 +7,13 @@ const props = defineProps<{
 <template>
   <NuxtLink :to="project._path">
     <div
-      class="group flex justify-between items-start border-primary-op10 border-solid border-1 hover:border-primary-hover rounded-xl p-5 transition-all duration-75">
+      class="group flex justify-between items-start border-primary-op10 border-solid border-1 hover:border-primary-hover rounded-xl p-5 transition-all duration-75"
+    >
       <div class="projectInnerContainer flex flex-col justify-between gap-1 w-full">
         <div>
           <p
-            class="text-lg md:text-xl font-semibold max-w-2xl text-primary group-hover:text-black dark:group-hover:text-primary-hover transition-all duration-75 mb-1">
+            class="text-lg md:text-xl font-semibold max-w-2xl text-primary group-hover:text-black dark:group-hover:text-primary-hover transition-all duration-75 mb-1"
+          >
             {{ project.title }}
           </p>
           <p class="text-sm md:text-base">{{ project.description }}</p>
@@ -29,14 +31,12 @@ const props = defineProps<{
               <span class="text-sm md:text-base">Live Demo</span>
               <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
             </a>
-            <a v-if="project.github" @click.stop class="flex items-center gap-0.5" :href="project.github"
-              target="_blank">
+            <a v-if="project.github" @click.stop class="flex items-center gap-0.5" :href="project.github" target="_blank">
               <span class="text-sm md:text-base">Github</span>
               <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
             </a>
           </div>
-          <p
-            class="text-black flex flex-row items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-75">
+          <p class="text-black dark:text-white flex flex-row items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-75">
             <span>Details</span>
             <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
           </p>
