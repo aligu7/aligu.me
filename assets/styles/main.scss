@@ -54,7 +54,13 @@ main.page {
   }
 
   p {
-    @apply text-sm md:text-base mb-2;
+    @apply text-sm md:text-base;
+  }
+}
+
+main.page.about {
+  p {
+    @apply mb-2;
   }
 }
 

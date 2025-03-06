@@ -33,7 +33,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="page">
+  <main class="page about">
     <ContentDoc />
   </main>
 </template>
