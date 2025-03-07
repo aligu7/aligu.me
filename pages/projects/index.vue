@@ -31,18 +31,36 @@ const filteredProjects = computed(() => {
 const sortedFilteredProjects = computed(() => {
   return filteredProjects.value
     ? filteredProjects.value.slice().sort((a, b) => {
-        // Convert date to Date objects for comparison
-        const dateA = new Date(a.date || '1970-01-01')
-        const dateB = new Date(b.date || '1970-01-01')
+      // Convert date to Date objects for comparison
+      const dateA = new Date(a.date || '1970-01-01')
+      const dateB = new Date(b.date || '1970-01-01')
 
-        // Sort in descending order (most recent first)
-        return dateB.getTime() - dateA.getTime()
-      })
+      // Sort in descending order (most recent first)
+      return dateB.getTime() - dateA.getTime()
+    })
     : []
 })
 
-// Rest of the existing code remains the same...
+// Watch for changes in the filtered projects
+watch(sortedFilteredProjects, setupAnimationWatcher(sortedFilteredProjects, '.project-item'), { deep: true })
+
+onMounted(() => {
+  // Initial animation once projects are loaded
+
+  watch(
+    projects,
+
+    () => {
+      nextTick(() => {
+        animateProjectsAndPosts('.project-item')
+      })
+    },
+
+    { immediate: true },
+  )
+})
 </script>
+
 <template>
   <div class="page">
     <div class="flex justify-between items-center mb-3 md:mb-6">
