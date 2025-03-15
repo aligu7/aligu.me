@@ -5,16 +5,20 @@
       "link": "https://github.com/aligu7"
     },
     {
-      "icon": "i-mdi-email",
-      "link": "mailto:ali.guliyevoo7@gmai.com"
-    },
-    {
       "icon": "i-mingcute:linkedin-fill",
       "link": "https://www.linkedin.com/in/ali-guliyev-bb7211219/"
     },
     {
+      "icon": "i-ri:twitter-x-line",
+      "link": "https://x.com/guliyevali7"
+    },
+    {
       "icon": "i-mingcute:youtube-fill",
       "link": "https://www.youtube.com/@aliguliyev7/streams"
+    },
+    {
+      "icon": "i-mdi-email",
+      "link": "mailto:ali.guliyevoo7@gmai.com"
     }
   ]
 }
