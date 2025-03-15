@@ -6,6 +6,7 @@ export default defineConfig({
   rules: [
     ['max-w-8xl', { 'max-width': '130rem' }],
     ['w-fit-content', { width: 'fit-content' }],
+    ['text-xxs', { 'font-size': '0.65rem' }],
   ],
   theme: {
     colors: {
