@@ -25,7 +25,7 @@ watchEffect(() => {
       </ul>
       <p class="text-gray-600 dark:text-gray-100 mt-2 text-sm md:text-base">{{ formatDate(post.date) }}</p>
       <ContentRenderer :value="post" class="post" />
-      <BackButton class="mt-2" />
+      <BackButton class="mt-5" />
     </article>
     <div v-else class="text-center py-10">
       <p>Loading...</p>

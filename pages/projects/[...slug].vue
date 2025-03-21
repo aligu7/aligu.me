@@ -34,13 +34,13 @@ watchEffect(() => {
       </div>
 
       <!-- Description Section with Thin Line Below -->
-      <div v-if="project.description" class="mt-2 mb-6">
+      <div v-if="project.description" class="mt-3">
         <p class="text-primary text-lg">{{ project.description }}</p>
-        <div class="bg-primary-light mt-1 w-full h-0.2"></div>
+        <div class="bg-primary-light mt-2 w-full h-0.2"></div>
       </div>
 
       <ContentRenderer :value="project" class="project" />
-      <BackButton class="mt-2" />
+      <BackButton class="mt-5" />
     </article>
     <div v-else class="text-center py-10">
       <p>Loading...</p>
