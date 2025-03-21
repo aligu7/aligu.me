@@ -24,8 +24,10 @@ const copyCode = async () => {
     <code :class="`language-${props.language}`">
       <slot />
     </code>
-    <button @click="copyCode"
-      class="cursor-pointer absolute top-2 right-3 opacity-0 group-hover:opacity-100 bg-green-300/50 hover:bg-green-400/50 text-base text-white rounded px-2 py-1 border-0">
+    <button
+      @click="copyCode"
+      class="cursor-pointer absolute top-2 right-3 opacity-0 group-hover:opacity-100 bg-green-300/50 hover:bg-green-400/50 text-base text-white rounded px-2 py-1 border-0"
+    >
       Copy
     </button>
   </div>

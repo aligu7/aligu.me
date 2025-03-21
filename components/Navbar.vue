@@ -15,8 +15,7 @@ const socialLinks = computed(() => data.value?.social || [])
 
 <template>
   <div>
-    <nav
-      class="z-99 fixed top-0 left-50% -translate-x-50% w-full h-15 md:h-24 flex items-center justify-between max-w-8xl px-5 md:px-8">
+    <nav class="z-99 fixed top-0 left-50% -translate-x-50% w-full h-15 md:h-24 flex items-center justify-between max-w-8xl px-5 md:px-8">
       <Logo />
       <ul class="flex items-center justify-between list-none gap-x-2 md:gap-x-3">
         <div class="flex gap-x-1 md:gap-x-3 text-xxs md:text-base">

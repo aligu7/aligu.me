@@ -31,13 +31,13 @@ const filteredProjects = computed(() => {
 const sortedFilteredProjects = computed(() => {
   return filteredProjects.value
     ? filteredProjects.value.slice().sort((a, b) => {
-      // Convert date to Date objects for comparison
-      const dateA = new Date(a.date || '1970-01-01')
-      const dateB = new Date(b.date || '1970-01-01')
+        // Convert date to Date objects for comparison
+        const dateA = new Date(a.date || '1970-01-01')
+        const dateB = new Date(b.date || '1970-01-01')
 
-      // Sort in descending order (most recent first)
-      return dateB.getTime() - dateA.getTime()
-    })
+        // Sort in descending order (most recent first)
+        return dateB.getTime() - dateA.getTime()
+      })
     : []
 })
 

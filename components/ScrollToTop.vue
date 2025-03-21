@@ -1,6 +1,9 @@
 <template>
-  <button v-show="showButton" @click="scrollToTop"
-    class="hover:bg-primary-hover dark:hover:bg-dark-100 cursor-pointer rounded-full border-none bg-primary dark:bg-dark-200 text-white text-lg md:text-xl fixed bottom-3 right-3 md:bottom-6 md:right-6 p-2.5 md:p-3 shadow-lg z-50">
+  <button
+    v-show="showButton"
+    @click="scrollToTop"
+    class="hover:bg-primary-hover dark:hover:bg-dark-100 cursor-pointer rounded-full border-none bg-primary dark:bg-dark-200 text-white text-lg md:text-xl fixed bottom-3 right-3 md:bottom-6 md:right-6 p-2.5 md:p-3 shadow-lg z-50"
+  >
     <div class="i-mingcute:arrow-up-line"></div>
   </button>
 </template>
