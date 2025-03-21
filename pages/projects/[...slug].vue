@@ -21,6 +21,7 @@ watchEffect(() => {
           <Tag :name="tag" />
         </li>
       </ul>
+
       <div class="flex flex-row gap-3 mt-3">
         <a v-if="project.demo" class="flex items-center gap-0.5" :href="project.demo" target="_blank">
           <span>Live Demo</span>
@@ -31,6 +32,13 @@ watchEffect(() => {
           <Icon icon="mingcute:arrow-right-line" class="text-sm mt-0.5" />
         </a>
       </div>
+
+      <!-- Description Section with Thin Line Below -->
+      <div v-if="project.description" class="mt-2 mb-6">
+        <p class="text-primary text-lg">{{ project.description }}</p>
+        <div class="bg-primary-light mt-1 w-full h-0.2"></div>
+      </div>
+
       <ContentRenderer :value="project" class="project" />
       <BackButton class="mt-2" />
     </article>
