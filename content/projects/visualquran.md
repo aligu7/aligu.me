@@ -7,10 +7,14 @@ tags:
   - UnoCSS
   - Charts
   - Current Project
-demo: https://visual.koran.center/
+// demo: https://visual.koran.center - this will be uncommented once the demo is ready.
 github: https://github.com/quran-center
 description: Visual Quran is an innovative component of the Quran Center initiative, that will be available at visual.koran.center when it is released. It transforms the rich textual heritage of the Holy Quran into engaging, interactive visualizations.
 ---
+
+# Other Contributors
+
+I am working with <a class="account" target="new" href="https://github.com/husayt">@husayt</a> for this project.
 
 # About the Project
 
@@ -29,4 +33,4 @@ Join us in this journey to experience the Quran beyond words—through the power
 
 # Release
 
-Once the project is released, this post will be updated with exact changes and features available in the project. Keep in mind that the features listed above are still under construction, so they are approximated.
+Once the project is released, this post will be updated with exact changes and features available in the project. Also the link to the project will be available here. Keep in mind that the features listed above are still under construction, so they are approximated.
