@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { animateItemsWithStagger, observeMutations } from '@/utils/utils'
+import { observeMutations } from '@/utils/utils'
 import { gsap } from 'gsap'
 
 const animatePage = () => {
