@@ -8,7 +8,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "format": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,vue}\""
+    "format": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,vue}\"",
+    "upgrade-safe": "pnpm up --latest \"!shiki\" \"!@nuxt/content\" \"!@nuxthq/studio\""
   },
   "dependencies": {
     "@iconify-json/mingcute": "^1.2.3",
