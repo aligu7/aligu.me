@@ -17,7 +17,7 @@
     "@iconify/vue": "^5.0.0",
     "@nuxt/content": "^2.13.2",
     "@nuxthq/studio": "^2.2.1",
-    "@nuxthub/core": "0.8.25",
+    "@nuxthub/core": "0.8.27",
     "@pinia/nuxt": "^0.11.0",
     "@vueuse/core": "^13.1.0",
     "@vueuse/nuxt": "^13.1.0",
@@ -35,11 +35,11 @@
     "@iconify-json/logos": "^1.2.4",
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/vscode-icons": "^1.2.20",
-    "@unocss/nuxt": "66.1.0",
-    "@unocss/preset-icons": "66.1.0",
-    "@unocss/preset-mini": "66.1.0",
-    "@unocss/transformer-directives": "66.1.0",
+    "@unocss/nuxt": "66.1.1",
+    "@unocss/preset-icons": "66.1.1",
+    "@unocss/preset-mini": "66.1.1",
+    "@unocss/transformer-directives": "66.1.1",
     "sass-embedded": "^1.87.0",
-    "unocss": "66.1.0"
+    "unocss": "66.1.1"
   }
 }
