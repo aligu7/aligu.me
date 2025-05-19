@@ -9,12 +9,12 @@ tags:
   - Current Project
 // demo: https://visual.koran.center - this will be uncommented once the demo is ready.
 github: https://github.com/quran-center
-description: Visual Quran is an innovative component of the Quran Center initiative, that will be available at visual.koran.center when it is released. It transforms the rich textual heritage of the Holy Quran into engaging, interactive visualizations.
+description: Visual Quran is an innovative component of the Quran Center initiative. It transforms the rich textual heritage of the Holy Quran into engaging, interactive visualizations.
 ---
 
-# Other Contributors
+# Internship
 
-I am working with <a class="account" target="new" href="https://github.com/husayt">@husayt</a> for this project.
+I am working on this project as part of my internship at **Optimax Software**
 
 # About the Project
 
