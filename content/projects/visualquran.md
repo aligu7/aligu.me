@@ -14,7 +14,7 @@ description: Visual Quran is an innovative component of the Quran Center initiat
 
 # Internship
 
-I am working on this project as part of my internship at **Optimax Software**
+I am working on this project as part of my internship at **<a target="new" href="https://optimaxsoftware.com"><u>Optimax Software</u></a>**.
 
 # About the Project
 
