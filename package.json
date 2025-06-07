@@ -24,7 +24,6 @@
     "gsap": "^3.13.0",
     "nuxt": "^3.17.3",
     "pinia": "^3.0.2",
-    "prettier": "^3.5.3",
     "rehype-pretty-code": "^0.14.1",
     "rehype-slug": "^6.0.0",
     "remark-slug": "^8.0.0",
