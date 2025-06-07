@@ -4,7 +4,7 @@ title: Ali Guliyev
 
 # Ali Guliyev
 
-Hey, I am Ali Guliyev, an aspiring software engineer.
+Hey, I am Ali Guliyev, an aspiring web developer.
 
 ::skills-row
 ---
