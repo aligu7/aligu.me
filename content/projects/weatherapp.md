@@ -4,7 +4,7 @@ date: 2021-03-06
 tags:
   - Web Dev
   - Vue
-  - Completed 
+  - Completed
 demo: https://weatherappbyali.onrender.com/
 github: https://github.com/aligu7/weather-app
 description: You can search up a location and it will show you the current

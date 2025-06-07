@@ -1,18 +1,12 @@
-<template>
-  <div>
-    <canvas ref="canvasElement"></canvas>
-  </div>
-</template>
-
 <script setup>
-import { onMounted, ref, watch } from 'vue'
+import { onMounted, ref, watch } from "vue"
 
 const isDark = useDark()
 const canvasElement = ref(null)
 
 onMounted(() => {
   const canvas = canvasElement.value
-  const ctx = canvas.getContext('2d')
+  const ctx = canvas.getContext("2d")
 
   // Initial resize
   const resizeCanvas = () => {
@@ -20,14 +14,14 @@ onMounted(() => {
     canvas.height = window.innerHeight
   }
   resizeCanvas()
-  window.addEventListener('resize', resizeCanvas)
+  window.addEventListener("resize", resizeCanvas)
 
   // Matrix effect setup
-  let cols = Math.floor(window.innerWidth / 20) + 1
-  let ypos = Array(cols).fill(0)
+  const cols = Math.floor(window.innerWidth / 20) + 1
+  const ypos = new Array(cols).fill(0)
 
   const initialBackground = () => {
-    ctx.fillStyle = isDark.value ? '#000' : '#fff'
+    ctx.fillStyle = isDark.value ? "#000" : "#fff"
     ctx.fillRect(0, 0, canvas.width, canvas.height)
   }
   initialBackground()
@@ -37,20 +31,21 @@ onMounted(() => {
     const h = window.innerHeight
 
     // Update canvas dimensions if needed
-    if (canvas.width !== w || canvas.height !== h) resizeCanvas()
+    if (canvas.width !== w || canvas.height !== h) { resizeCanvas() }
 
     // Set overlay and text color based on theme
     if (isDark.value) {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'
+      ctx.fillStyle = "rgba(0, 0, 0, 0.1)"
       ctx.fillRect(0, 0, w, h)
-      ctx.fillStyle = 'white' // white for dark mode
-    } else {
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.15)'
+      ctx.fillStyle = "white" // white for dark mode
+    }
+    else {
+      ctx.fillStyle = "rgba(255, 255, 255, 0.15)"
       ctx.fillRect(0, 0, w, h)
-      ctx.fillStyle = '#000' // Black for light mode
+      ctx.fillStyle = "#000" // Black for light mode
     }
 
-    ctx.font = '10pt monospace'
+    ctx.font = "10pt monospace"
 
     // Draw characters
     ypos.forEach((y, ind) => {
@@ -67,7 +62,7 @@ onMounted(() => {
 
   // Theme change handler
   watch(isDark, () => {
-    ctx.fillStyle = isDark.value ? '#000' : '#fff'
+    ctx.fillStyle = isDark.value ? "#000" : "#fff"
     ctx.fillRect(0, 0, canvas.width, canvas.height)
   })
 
@@ -75,6 +70,12 @@ onMounted(() => {
   setInterval(matrix, 50)
 })
 </script>
+
+<template>
+  <div>
+    <canvas ref="canvasElement" />
+  </div>
+</template>
 
 <style scoped>
 canvas {

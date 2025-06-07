@@ -5,9 +5,9 @@ const lastRoute = useLastRoute()
 
 // Computed destination based on current path if it's a direct load
 const fallbackPath = computed(() => {
-  if (route.path.startsWith('/projects/')) return '/projects'
-  if (route.path.startsWith('/blogs/')) return '/blogs'
-  return '/' // fallback if unknown
+  if (route.path.startsWith("/projects/")) { return "/projects" }
+  if (route.path.startsWith("/blogs/")) { return "/blogs" }
+  return "/" // fallback if unknown
 })
 
 function handleClick(e: MouseEvent) {

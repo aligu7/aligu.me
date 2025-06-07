@@ -1,6 +1,6 @@
 export function getIconName(icon: string) {
   // Convert 'i-logos:vue' format to 'logos:vue'
-  return icon.startsWith('i-') ? icon.slice(2) : icon
+  return icon.startsWith("i-") ? icon.slice(2) : icon
 }
 
 /**
@@ -12,9 +12,9 @@ export function getIconName(icon: string) {
  * @param defaultValue - A value to prepend (default is "All")
  * @returns Sorted array of unique values
  */
-export const getUniqueValues = (collection: any[], key: string, defaultValue: string = 'All'): string[] => {
-  if (!Array.isArray(collection)) return []
-  const values = collection.flatMap((item) => item[key] ?? [])
+export const getUniqueValues = (collection: any[], key: string, defaultValue: string = "All"): string[] => {
+  if (!Array.isArray(collection)) { return [] }
+  const values = collection.flatMap(item => item[key] ?? [])
   return [defaultValue, ...Array.from(new Set(values))].sort()
 }
 
@@ -28,9 +28,9 @@ export const getUniqueValues = (collection: any[], key: string, defaultValue: st
  * @param defaultValue - The value that means "no filter" (default is "All")
  * @returns Filtered array of objects
  */
-export const filteredCollection = (collection: any[], key: string, filterValue: string, defaultValue: string = 'All'): any[] => {
-  if (!Array.isArray(collection)) return []
-  if (filterValue === defaultValue) return collection
+export const filteredCollection = (collection: any[], key: string, filterValue: string, defaultValue: string = "All"): any[] => {
+  if (!Array.isArray(collection)) { return [] }
+  if (filterValue === defaultValue) { return collection }
   return collection.filter((item) => {
     const itemValues = item[key] ?? []
     return itemValues.includes(filterValue)
@@ -44,15 +44,15 @@ export const filteredCollection = (collection: any[], key: string, filterValue: 
  * @param locale - The locale for formatting (default is "en-US")
  * @returns Formatted date string (e.g., "January 1, 2025")
  */
-export const formatDate = (date: string | Date, locale: string = 'en-US'): string => {
+export const formatDate = (date: string | Date, locale: string = "en-US"): string => {
   return new Date(date).toLocaleDateString(locale, {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
+    year: "numeric",
+    month: "long",
+    day: "numeric",
   })
 }
 
-import { gsap } from 'gsap'
+import { gsap } from "gsap"
 
 /**
  * Animate elements with a staggered fade-in and move-up effect
@@ -71,12 +71,12 @@ export const animateProjectsAndPosts = (
   } = {},
 ) => {
   // Default options
-  const { duration = 0.3, stagger = 0.2, y = 20, ease = 'power2.out', delay = 0, onComplete } = options
+  const { duration = 0.3, stagger = 0.2, y = 20, ease = "power2.out", delay = 0, onComplete } = options
 
   // Reset elements to initial state (useful for re-animations)
   const elements = document.querySelectorAll(selector)
   elements.forEach((item) => {
-    item.style.opacity = '0'
+    item.style.opacity = "0"
     item.style.transform = `translateY(${y}px)`
   })
 
@@ -91,7 +91,7 @@ export const animateProjectsAndPosts = (
       stagger,
       ease,
       delay,
-      clearProps: 'all', // Clean up inline styles after animation
+      clearProps: "all", // Clean up inline styles after animation
       onComplete,
     },
   )
@@ -125,7 +125,7 @@ export const observeMutations = (targetSelector: string, animatePage: () => void
     }
   })
 
-  const container = document.querySelector('.page') || document.body
+  const container = document.querySelector(".page") || document.body
   if (container) {
     observer.observe(container, { childList: true, subtree: true })
   }

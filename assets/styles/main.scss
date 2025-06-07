@@ -1,7 +1,7 @@
-@use './theme.scss';
+@use "./theme.scss";
 
 @font-face {
-  font-family: 'blinkmac-md';
+  font-family: "blinkmac-md";
   src: url(../fonts/blinkmacsystemfont-regular.ttf);
 }
 
@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: 'blinkmac-md';
+  font-family: "blinkmac-md";
   overflow: hidden;
 }
 

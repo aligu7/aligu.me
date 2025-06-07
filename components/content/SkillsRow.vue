@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { getIconName } from '@/utils/utils'
+import { getIconName } from "@/utils/utils"
 
-interface Skill {
+type Skill = {
   name: string
   icon: string
   link: string
@@ -13,17 +13,17 @@ defineProps<{
 </script>
 
 <template>
-  <div class="skillsRow flex flex-wrap items-center gap-x-2 mt-2.5">
+  <div class="skillsRow mt-2.5 flex flex-wrap items-center gap-x-2">
     <ContentSlot :use="$slots.default" />
     <NuxtLink
       v-for="skill in skills"
       :key="skill.name"
-      class="flex items-center text-primary my-1 gap-x-1 bg-gray-100 dark:bg-dark px-2 md:px-3 py-0.75 md:py-1 cursor-pointer hover:bg-gray-200 dark:hover:bg-dark-300 rounded-3xl"
+      class="my-1 flex cursor-pointer items-center gap-x-1 rounded-3xl bg-gray-100 px-2 py-0.75 text-primary dark:bg-dark hover:bg-gray-200 md:px-3 md:py-1 dark:hover:bg-dark-300"
       :to="skill.link"
       target="_blank"
     >
       <span class="text-xs md:text-sm">{{ skill.name }}</span>
-      <Icon :icon="getIconName(skill.icon)" class="w-5 h-5 md:w-6 md:h-6" />
+      <Icon :icon="getIconName(skill.icon)" class="h-5 w-5 md:h-6 md:w-6" />
     </NuxtLink>
   </div>
 </template>

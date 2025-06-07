@@ -3,8 +3,8 @@ const isDark = useDark()
 
 const loadingColor = computed(() =>
   isDark.value
-    ? 'repeating-linear-gradient(to right, #a1a1a1 0%, #c9c9c9 50%, #ffffff 100%)'
-    : 'repeating-linear-gradient(to right, #616161 0%, #383838 50%, #000000 100%)',
+    ? "repeating-linear-gradient(to right, #a1a1a1 0%, #c9c9c9 50%, #ffffff 100%)"
+    : "repeating-linear-gradient(to right, #616161 0%, #383838 50%, #000000 100%)",
 )
 </script>
 
@@ -12,10 +12,10 @@ const loadingColor = computed(() =>
   <div class="relative">
     <ClientOnly>
       <!-- Background Animation -->
-      <BgAnimation class="fixed top-0 left-0 w-full h-full pointer-events-none" />
+      <BgAnimation class="pointer-events-none fixed left-0 top-0 h-full w-full" />
 
       <!-- Main content with navbar -->
-      <div class="absolute top-0 left-0 w-screen h-screen overflow-y-auto">
+      <div class="absolute left-0 top-0 h-screen w-screen overflow-y-auto">
         <Navbar />
 
         <!-- Wrap content in a container -->
@@ -24,7 +24,9 @@ const loadingColor = computed(() =>
           <NuxtPage />
 
           <!-- Footer after content -->
-          <p class="text-center py-5 text-primary-light text-sm">2024-PRESENT © Ali Guliyev</p>
+          <p class="py-5 text-center text-sm text-primary-light">
+            2024-PRESENT © Ali Guliyev
+          </p>
         </div>
 
         <ScrollToTop />

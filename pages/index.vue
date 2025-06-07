@@ -1,30 +1,31 @@
 <script setup lang="ts">
-import { onMounted, nextTick, onBeforeUnmount } from 'vue'
-import { useRouter } from 'vue-router'
-import { gsap } from 'gsap'
-import { observeMutations } from '@/utils/utils'
+import { gsap } from "gsap"
+import { nextTick, onBeforeUnmount, onMounted } from "vue"
+import { useRouter } from "vue-router"
+
+import { observeMutations } from "@/utils/utils"
 
 const router = useRouter()
 let observer: MutationObserver | null = null
 
 // Function to animate elements
 const animatePage = () => {
-  const elements = document.querySelectorAll('.skillsRow')
-  if (elements.length === 0) return
+  const elements = document.querySelectorAll(".skillsRow")
+  if (elements.length === 0) { return }
 
   gsap.from(elements, {
     opacity: 0,
     y: -10,
     duration: 1,
     stagger: 0.3,
-    clearProps: 'all',
+    clearProps: "all",
   })
 }
 
 onMounted(async () => {
   await nextTick()
   animatePage() // Run animation on first load
-  observer = observeMutations('.skillsRow', animatePage) // Observe dynamic content
+  observer = observeMutations(".skillsRow", animatePage) // Observe dynamic content
 })
 
 router.afterEach(async () => {
@@ -33,8 +34,8 @@ router.afterEach(async () => {
 })
 
 onBeforeUnmount(() => {
-  if (observer) observer.disconnect()
-  gsap.killTweensOf('.skillsRow')
+  if (observer) { observer.disconnect() }
+  gsap.killTweensOf(".skillsRow")
 })
 </script>
 
@@ -43,7 +44,7 @@ onBeforeUnmount(() => {
     <ContentDoc />
     <NuxtLink
       to="/about"
-      class="w-45 flex items-center gap-x-1 mt-4 border-b border-b-primary-light hover:border-b-primary-hover border-b-solid border-b-1"
+      class="mt-4 w-45 flex items-center gap-x-1 border-b border-b-1 border-b-primary-light border-b-solid hover:border-b-primary-hover"
     >
       <span>Read more about me</span>
       <Icon icon="mingcute:arrow-right-line" class="pt-0.5" />

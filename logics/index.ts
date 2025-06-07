@@ -6,7 +6,7 @@ export const isDark = useDark()
  */
 export function toggleDark(event: MouseEvent) {
   // @ts-expect-error experimental API
-  const isAppearanceTransition = document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const isAppearanceTransition = document.startViewTransition && !window.matchMedia("(prefers-reduced-motion: reduce)").matches
 
   if (!isAppearanceTransition) {
     isDark.value = !isDark.value
@@ -29,8 +29,8 @@ export function toggleDark(event: MouseEvent) {
       },
       {
         duration: 400,
-        easing: 'ease-out',
-        pseudoElement: isDark.value ? '::view-transition-old(root)' : '::view-transition-new(root)',
+        easing: "ease-out",
+        pseudoElement: isDark.value ? "::view-transition-old(root)" : "::view-transition-new(root)",
       },
     )
   })

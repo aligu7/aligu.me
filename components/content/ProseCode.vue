@@ -2,31 +2,32 @@
 const props = defineProps({
   code: {
     type: String,
-    default: '',
+    default: "",
   },
   language: {
     type: String,
-    default: 'plaintext',
+    default: "plaintext",
   },
 })
 
 const copyCode = async () => {
   try {
     await navigator.clipboard.writeText(props.code)
-  } catch (error) {
-    console.error('Failed to copy:', error)
+  }
+  catch (error) {
+    console.error("Failed to copy:", error)
   }
 }
 </script>
 
 <template>
-  <div class="relative group">
+  <div class="group relative">
     <code :class="`language-${props.language}`">
       <slot />
     </code>
     <button
+      class="absolute right-3 top-2 cursor-pointer border-0 rounded bg-green-300/50 px-2 py-1 text-base text-white opacity-0 hover:bg-green-400/50 group-hover:opacity-100"
       @click="copyCode"
-      class="cursor-pointer absolute top-2 right-3 opacity-0 group-hover:opacity-100 bg-green-300/50 hover:bg-green-400/50 text-base text-white rounded px-2 py-1 border-0"
     >
       Copy
     </button>
@@ -34,7 +35,7 @@ const copyCode = async () => {
 </template>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=fira+code:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=fira+code:wght@400;500&display=swap");
 
 pre {
   @apply bg-[#1e1e1e] rounded-lg overflow-x-auto;
@@ -42,7 +43,7 @@ pre {
   code {
     @apply block text-sm px-5 py-3;
     color: #d4d4d4 !important;
-    font-family: 'fira code', monospace;
+    font-family: "fira code", monospace;
 
     /* Remove margin from first and last lines */
     .line {

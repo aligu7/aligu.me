@@ -1,7 +1,7 @@
 ---
 title: "My overall journey in programming: 6 years of coding from 11 to 17"
 date: 2025-02-11
-tags: 
+tags:
   - Personal
 ---
 

@@ -18,7 +18,7 @@ I am working on this project as part of my internship at **<a target="new" href=
 
 # About the Project
 
-Visual Quran leverages modern charting and graph libraries to bring the intricate structure and historical layers of the Quran to life. The repo will probably become public in  <a target="new" href="https://github.com/quran-center"><u>(github.com/quran-center)</u></a>, but not sure yet. Our visualizations include:
+Visual Quran leverages modern charting and graph libraries to bring the intricate structure and historical layers of the Quran to life. The repo will probably become public in <a target="new" href="https://github.com/quran-center"><u>(github.com/quran-center)</u></a>, but not sure yet. Our visualizations include:
 
 - Juz & Surah Analysis: Explore dynamic charts that break down the Quran into its 30 Juz and 114 Surahs, revealing patterns in word count, themes, and more.
 - Prophet Narratives: Follow interactive timelines and network graphs that map the stories of the Prophets mentioned in the Quran, showing their relationships and key events.

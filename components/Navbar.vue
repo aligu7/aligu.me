@@ -1,35 +1,43 @@
 <script setup lang="ts">
-import { getIconName } from '@/utils/utils'
+import { getIconName } from "@/utils/utils"
 
 // Add console.log to debug
-const { data, error } = await useAsyncData('social', () => {
-  return queryContent('social').findOne()
+const { data, error } = await useAsyncData("social", () => {
+  return queryContent("social").findOne()
 })
 
 // Debug logs
-console.log('Data:', data.value)
-console.log('Error:', error.value)
+console.log("Data:", data.value)
+console.log("Error:", error.value)
 
 const socialLinks = computed(() => data.value?.social || [])
 </script>
 
 <template>
   <div>
-    <nav class="z-99 fixed top-0 left-50% -translate-x-50% w-full h-15 md:h-24 flex items-center justify-between max-w-8xl px-5 md:px-8">
+    <nav class="fixed left-50% top-0 z-99 h-15 w-full flex items-center justify-between px-5 max-w-8xl md:h-24 -translate-x-50% md:px-8">
       <Logo />
-      <ul class="flex items-center justify-between list-none gap-x-2 md:gap-x-3">
-        <div class="flex gap-x-1 md:gap-x-3 text-xxs md:text-base">
+      <ul class="flex items-center justify-between gap-x-2 list-none md:gap-x-3">
+        <div class="flex gap-x-1 text-xxs md:gap-x-3 md:text-base">
           <li>
-            <NuxtLink to="/about">About</NuxtLink>
+            <NuxtLink to="/about">
+              About
+            </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/projects">Projects</NuxtLink>
+            <NuxtLink to="/projects">
+              Projects
+            </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/blog">Blog</NuxtLink>
+            <NuxtLink to="/blog">
+              Blog
+            </NuxtLink>
           </li>
           <li>
-            <NuxtLink target="new" to="/pdf/Ali_Guliyev_Resume.pdf">Resume</NuxtLink>
+            <NuxtLink target="new" to="/pdf/Ali_Guliyev_Resume.pdf">
+              Resume
+            </NuxtLink>
           </li>
         </div>
         <li v-for="social in socialLinks" :key="social.icon" class="pt-1.75 md:pt-2">

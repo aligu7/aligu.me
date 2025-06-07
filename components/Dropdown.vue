@@ -1,12 +1,12 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue"
 
 const props = defineProps({
   modelValue: String,
   options: Array,
 })
 
-const emit = defineEmits(['update:modelValue'])
+const emit = defineEmits(["update:modelValue"])
 const dropdownEl = ref(null)
 const isOpen = ref(false)
 
@@ -16,20 +16,20 @@ onClickOutside(dropdownEl, () => {
 })
 
 const selectOption = (option) => {
-  emit('update:modelValue', option)
+  emit("update:modelValue", option)
   isOpen.value = false
 }
 </script>
 
 <template>
-  <div class="relative" ref="dropdownEl">
+  <div ref="dropdownEl" class="relative">
     <button
+      class="group flex items-center gap-2 border-1 border-primary-op10 rounded-xl border-solid bg-transparent px-4 py-2 transition-all duration-200 hover:border-primary-hover"
       @click="isOpen = !isOpen"
-      class="bg-transparent group flex items-center gap-2 px-4 py-2 border-1 border-solid border-primary-op10 hover:border-primary-hover rounded-xl transition-all duration-200"
     >
       <span class="text-primary">{{ modelValue }}</span>
       <svg
-        class="w-4 h-4 text-primary transition-transform duration-200"
+        class="h-4 w-4 text-primary transition-transform duration-200"
         :class="{ 'rotate-180': isOpen }"
         fill="none"
         stroke="currentColor"
@@ -49,12 +49,12 @@ const selectOption = (option) => {
     >
       <ul
         v-show="isOpen"
-        class="z-60 list-none absolute right-0 mt-2 w-48 origin-top-right bg-white dark:bg-dark-400 rounded-xl shadow-lg border-1 border-solid border-primary-op10 focus:outline-none z-10"
+        class="absolute right-0 z-10 z-60 mt-2 w-48 origin-top-right border-1 border-primary-op10 rounded-xl border-solid bg-white shadow-lg list-none dark:bg-dark-400 focus:outline-none"
       >
         <li
           v-for="option in options"
           :key="option"
-          class="px-4 py-3 text-sm text-primary-hover cursor-pointer hover:bg-gray-50 dark:hover:bg-dark-800 transition-colors duration-100 first:rounded-t-xl last:rounded-b-xl"
+          class="cursor-pointer px-4 py-3 text-sm text-primary-hover transition-colors duration-100 first:rounded-t-xl last:rounded-b-xl hover:bg-gray-50 dark:hover:bg-dark-800"
           :class="{ 'bg-gray-100 dark:bg-dark-700': modelValue === option }"
           @click="selectOption(option)"
         >
