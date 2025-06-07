@@ -1,38 +1,7 @@
 <script setup lang="ts">
-import { gsap } from "gsap"
+import { useSkillsRowAnimation } from "~/composables/useSkillsRowAnimation"
 
-const router = useRouter()
-let observer: MutationObserver | null = null
-
-// Function to animate elements
-const animatePage = () => {
-  const elements = document.querySelectorAll(".skillsRow")
-  if (elements.length === 0) return
-
-  gsap.from(elements, {
-    opacity: 0,
-    y: -10,
-    duration: 1,
-    stagger: 0.3,
-    clearProps: "all",
-  })
-}
-
-onMounted(async () => {
-  await nextTick()
-  animatePage() // Run animation on first load
-  observer = observeMutations(".skillsRow", animatePage) // Observe dynamic content
-})
-
-router.afterEach(async () => {
-  await nextTick()
-  setTimeout(animatePage, 50) // Delay to ensure elements are available
-})
-
-onBeforeUnmount(() => {
-  if (observer) observer.disconnect()
-  gsap.killTweensOf(".skillsRow")
-})
+useSkillsRowAnimation()
 </script>
 
 <template>
