@@ -1,6 +1,4 @@
 <script setup>
-import { ref } from "vue"
-
 const _props = defineProps({
   modelValue: String,
   options: Array,

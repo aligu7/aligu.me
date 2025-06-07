@@ -1,6 +1,4 @@
 <script setup>
-import { onMounted, ref, watch } from "vue"
-
 const isDark = useDark()
 const canvasElement = ref(null)
 

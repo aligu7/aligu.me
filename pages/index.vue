@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { gsap } from "gsap"
-import { nextTick, onBeforeUnmount, onMounted } from "vue"
-import { useRouter } from "vue-router"
 
 const router = useRouter()
 let observer: MutationObserver | null = null

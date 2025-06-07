@@ -1,6 +1,4 @@
 <script setup>
-import { onMounted, onUnmounted, ref } from "vue"
-
 const showButton = ref(false)
 const scrollContainer = ref(null)
 
