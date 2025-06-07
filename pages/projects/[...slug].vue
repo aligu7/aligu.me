@@ -3,11 +3,10 @@ const { path } = useRoute()
 const { data: project } = await useAsyncData(`content:${path}`, () => queryContent(path).findOne())
 
 watchEffect(() => {
-  if (project?.value) {
+  if (project?.value)
     useSeoMeta({
       title: `${project.value.title} - Ali Guliyev`,
     })
-  }
 })
 </script>
 

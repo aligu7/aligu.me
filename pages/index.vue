@@ -11,7 +11,7 @@ let observer: MutationObserver | null = null
 // Function to animate elements
 const animatePage = () => {
   const elements = document.querySelectorAll(".skillsRow")
-  if (elements.length === 0) { return }
+  if (elements.length === 0) return
 
   gsap.from(elements, {
     opacity: 0,
@@ -34,7 +34,7 @@ router.afterEach(async () => {
 })
 
 onBeforeUnmount(() => {
-  if (observer) { observer.disconnect() }
+  if (observer) observer.disconnect()
   gsap.killTweensOf(".skillsRow")
 })
 </script>

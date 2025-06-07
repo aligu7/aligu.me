@@ -3,8 +3,6 @@ import { filteredCollection } from "@/utils/utils"
 
 const {
   data: projects,
-  error,
-  pending,
 } = await useAsyncData("projects", () =>
   queryContent("projects")
     .where({ _path: { $ne: "/projects" } })

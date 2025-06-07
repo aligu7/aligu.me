@@ -31,7 +31,7 @@ onMounted(() => {
     const h = window.innerHeight
 
     // Update canvas dimensions if needed
-    if (canvas.width !== w || canvas.height !== h) { resizeCanvas() }
+    if (canvas.width !== w || canvas.height !== h) resizeCanvas()
 
     // Set overlay and text color based on theme
     if (isDark.value) {

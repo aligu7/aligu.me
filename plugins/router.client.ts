@@ -1,4 +1,4 @@
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin(() => {
   const router = useRouter()
   const lastRoute = ref(router.currentRoute.value)
   router.afterEach((to, from) => {

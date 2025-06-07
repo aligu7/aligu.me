@@ -82,7 +82,7 @@ onMounted(() => {
 
     <!-- Projects list -->
     <ul v-else class="list-none">
-      <li v-for="(project, index) in sortedFilteredProjects" :key="project.title" class="project-item relative mb-4">
+      <li v-for="(project) in sortedFilteredProjects" :key="project.title" class="project-item relative mb-4">
         <Project :project="project" />
       </li>
     </ul>

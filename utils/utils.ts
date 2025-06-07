@@ -13,7 +13,7 @@ export function getIconName(icon: string) {
  * @returns Sorted array of unique values
  */
 export const getUniqueValues = (collection: any[], key: string, defaultValue: string = "All"): string[] => {
-  if (!Array.isArray(collection)) { return [] }
+  if (!Array.isArray(collection)) return []
   const values = collection.flatMap(item => item[key] ?? [])
   return [defaultValue, ...Array.from(new Set(values))].sort()
 }
@@ -29,8 +29,8 @@ export const getUniqueValues = (collection: any[], key: string, defaultValue: st
  * @returns Filtered array of objects
  */
 export const filteredCollection = (collection: any[], key: string, filterValue: string, defaultValue: string = "All"): any[] => {
-  if (!Array.isArray(collection)) { return [] }
-  if (filterValue === defaultValue) { return collection }
+  if (!Array.isArray(collection)) return []
+  if (filterValue === defaultValue) return collection
   return collection.filter((item) => {
     const itemValues = item[key] ?? []
     return itemValues.includes(filterValue)
@@ -58,6 +58,12 @@ import { gsap } from "gsap"
  * Animate elements with a staggered fade-in and move-up effect
  * @param selector CSS selector for the elements to animate
  * @param options Optional configuration options
+ * @param options.duration Animation duration in seconds (default: 0.3)
+ * @param options.stagger Delay between each element's animation in seconds (default: 0.2)
+ * @param options.y Initial Y offset in pixels for the animation (default: 20)
+ * @param options.ease GSAP easing function to use (default: "power2.out")
+ * @param options.delay Initial delay before animation starts in seconds (default: 0)
+ * @param options.onComplete Callback function to execute when animation completes
  */
 export const animateProjectsAndPosts = (
   selector: string,
@@ -116,19 +122,17 @@ export const setupAnimationWatcher = (itemsArray: any, selector: string, options
 // for utils.ts
 export const observeMutations = (targetSelector: string, animatePage: () => void) => {
   const observer = new MutationObserver((mutations) => {
-    for (const mutation of mutations) {
+    for (const mutation of mutations)
       if (mutation.addedNodes.length > 0 && document.querySelectorAll(targetSelector).length > 0) {
         animatePage()
         observer.disconnect()
         break
       }
-    }
   })
 
   const container = document.querySelector(".page") || document.body
-  if (container) {
+  if (container)
     observer.observe(container, { childList: true, subtree: true })
-  }
 
   return observer
 }

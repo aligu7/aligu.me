@@ -5,33 +5,29 @@ const showButton = ref(false)
 const scrollContainer = ref(null)
 
 const handleScroll = () => {
-  if (scrollContainer.value) {
+  if (scrollContainer.value)
     // Check scrollTop of the container rather than window.scrollY
     showButton.value = scrollContainer.value.scrollTop > 300
-  }
 }
 
 const scrollToTop = () => {
-  if (scrollContainer.value) {
+  if (scrollContainer.value)
     scrollContainer.value.scrollTo({
       top: 0,
       behavior: "smooth",
     })
-  }
 }
 
 onMounted(() => {
   // Grab the scrollable container. Make sure the selector uniquely identifies your container.
   scrollContainer.value = document.querySelector(".overflow-y-auto")
-  if (scrollContainer.value) {
+  if (scrollContainer.value)
     scrollContainer.value.addEventListener("scroll", handleScroll)
-  }
 })
 
 onUnmounted(() => {
-  if (scrollContainer.value) {
+  if (scrollContainer.value)
     scrollContainer.value.removeEventListener("scroll", handleScroll)
-  }
 })
 </script>
 

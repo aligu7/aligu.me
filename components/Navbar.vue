@@ -2,13 +2,9 @@
 import { getIconName } from "@/utils/utils"
 
 // Add console.log to debug
-const { data, error } = await useAsyncData("social", () => {
+const { data } = await useAsyncData("social", () => {
   return queryContent("social").findOne()
 })
-
-// Debug logs
-console.log("Data:", data.value)
-console.log("Error:", error.value)
 
 const socialLinks = computed(() => data.value?.social || [])
 </script>
