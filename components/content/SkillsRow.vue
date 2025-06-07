@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { getIconName } from "@/utils/utils"
-
 type Skill = {
   name: string
   icon: string

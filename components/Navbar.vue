@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { getIconName } from "@/utils/utils"
-
 // Add console.log to debug
 const { data } = await useAsyncData("social", () => {
   return queryContent("social").findOne()

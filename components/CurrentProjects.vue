@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { filteredCollection } from "@/utils/utils"
-
 const {
   data: projects,
 } = await useAsyncData("projects", () =>

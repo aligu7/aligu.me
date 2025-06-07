@@ -1,6 +1,4 @@
 <script setup>
-import { formatDate } from "@/utils/utils"
-
 const { path } = useRoute()
 const { data: post } = await useAsyncData(`content:${path}`, () => queryContent(path).findOne())
 

@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { gsap } from "gsap"
 
-import { observeMutations } from "@/utils/utils"
-
 const animatePage = () => {
   const tl = gsap.timeline()
 

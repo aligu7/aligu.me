@@ -1,6 +1,4 @@
 <script setup>
-import { animateProjectsAndPosts, filteredCollection, formatDate, getUniqueValues, setupAnimationWatcher } from "@/utils/utils"
-
 useSeoMeta({
   title: "Blog - Ali Guliyev",
 })

@@ -1,6 +1,4 @@
 <script setup>
-import { filteredCollection, getUniqueValues } from "@/utils/utils"
-
 const selectedTag = ref("All")
 
 const {
