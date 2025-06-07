@@ -12,6 +12,9 @@ export default antfu({
     semi: false,
     quotes: "double",
   },
+  ignores: [
+    "**/*.yml",
+  ],
 }, {
   rules: {
     "ts/no-redeclare": "off",
