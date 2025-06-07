@@ -8,8 +8,9 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "format": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,vue}\"",
-    "upgrade-safe": "pnpm up --latest \"!shiki\" \"!@nuxt/content\" \"!@nuxthq/studio\""
+    "upgrade-safe": "pnpm up --latest \"!shiki\" \"!@nuxt/content\" \"!@nuxthq/studio\"",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
   },
   "dependencies": {
     "@iconify-json/mingcute": "^1.2.3",
@@ -31,13 +32,16 @@
     "vue": "latest"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^4.14.1",
     "@iconify-json/logos": "^1.2.4",
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/vscode-icons": "^1.2.21",
+    "@unocss/eslint-plugin": "^66.1.3",
     "@unocss/nuxt": "66.1.2",
     "@unocss/preset-icons": "66.1.2",
     "@unocss/preset-mini": "66.1.2",
     "@unocss/transformer-directives": "66.1.2",
+    "eslint": "^9.28.0",
     "sass-embedded": "^1.89.0",
     "unocss": "66.1.2"
   }
