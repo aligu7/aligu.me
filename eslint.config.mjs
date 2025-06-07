@@ -29,5 +29,6 @@ export default antfu({
       tsconfigRootDir: ".",
     }],
     "unicorn/no-new-array": "off",
+    "unused-imports/no-unused-vars": "warn",
   },
 })
