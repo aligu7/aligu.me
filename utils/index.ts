@@ -1,3 +1,5 @@
+import { gsap } from "gsap"
+
 export function getIconName(icon: string) {
   // Convert 'i-logos:vue' format to 'logos:vue'
   return icon.startsWith("i-") ? icon.slice(2) : icon
@@ -12,7 +14,11 @@ export function getIconName(icon: string) {
  * @param defaultValue - A value to prepend (default is "All")
  * @returns Sorted array of unique values
  */
-export const getUniqueValues = (collection: any[], key: string, defaultValue: string = "All"): string[] => {
+export const getUniqueValues = (
+  collection: any[],
+  key: string,
+  defaultValue: string = "All",
+): string[] => {
   if (!Array.isArray(collection)) return []
   const values = collection.flatMap(item => item[key] ?? [])
   return [defaultValue, ...Array.from(new Set(values))].sort()
@@ -28,7 +34,12 @@ export const getUniqueValues = (collection: any[], key: string, defaultValue: st
  * @param defaultValue - The value that means "no filter" (default is "All")
  * @returns Filtered array of objects
  */
-export const filteredCollection = (collection: any[], key: string, filterValue: string, defaultValue: string = "All"): any[] => {
+export const filteredCollection = (
+  collection: any[],
+  key: string,
+  filterValue: string,
+  defaultValue: string = "All",
+): any[] => {
   if (!Array.isArray(collection)) return []
   if (filterValue === defaultValue) return collection
   return collection.filter((item) => {
@@ -44,15 +55,16 @@ export const filteredCollection = (collection: any[], key: string, filterValue: 
  * @param locale - The locale for formatting (default is "en-US")
  * @returns Formatted date string (e.g., "January 1, 2025")
  */
-export const formatDate = (date: string | Date, locale: string = "en-US"): string => {
+export const formatDate = (
+  date: string | Date,
+  locale: string = "en-US",
+): string => {
   return new Date(date).toLocaleDateString(locale, {
     year: "numeric",
     month: "long",
     day: "numeric",
   })
 }
-
-import { gsap } from "gsap"
 
 /**
  * Animate elements with a staggered fade-in and move-up effect
@@ -77,7 +89,14 @@ export const animateProjectsAndPosts = (
   } = {},
 ) => {
   // Default options
-  const { duration = 0.3, stagger = 0.2, y = 20, ease = "power2.out", delay = 0, onComplete } = options
+  const {
+    duration = 0.3,
+    stagger = 0.2,
+    y = 20,
+    ease = "power2.out",
+    delay = 0,
+    onComplete,
+  } = options
 
   // Reset elements to initial state (useful for re-animations)
   const elements = document.querySelectorAll(selector)
@@ -109,7 +128,11 @@ export const animateProjectsAndPosts = (
  * @param selector CSS selector for the elements to animate
  * @param options Optional animation configuration
  */
-export const setupAnimationWatcher = (itemsArray: any, selector: string, options = {}) => {
+export const setupAnimationWatcher = (
+  itemsArray: any,
+  selector: string,
+  options = {},
+) => {
   // Return the watch function to be used with Vue's watch
   return () => {
     // Small delay to ensure DOM is updated
@@ -120,10 +143,16 @@ export const setupAnimationWatcher = (itemsArray: any, selector: string, options
 }
 
 // for utils.ts
-export const observeMutations = (targetSelector: string, animatePage: () => void) => {
+export const observeMutations = (
+  targetSelector: string,
+  animatePage: () => void,
+) => {
   const observer = new MutationObserver((mutations) => {
     for (const mutation of mutations)
-      if (mutation.addedNodes.length > 0 && document.querySelectorAll(targetSelector).length > 0) {
+      if (
+        mutation.addedNodes.length > 0
+        && document.querySelectorAll(targetSelector).length > 0
+      ) {
         animatePage()
         observer.disconnect()
         break
