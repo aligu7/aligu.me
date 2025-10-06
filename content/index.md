@@ -12,6 +12,22 @@ Hey, I am Ali Guliyev, an aspiring web developer.
 
 items:
 
+- name: Optimax Software
+  icon: images/other/optimaxsoftware.ico
+  isCustomIcon: true
+  link: https://optimaxsoftware.com
+
+---
+
+Working as an intern at:
+::
+
+<!-- prettier-ignore -->
+::main-page-row
+---
+
+items:
+
 - name: Vue
   icon: logos:vue
   link: https://github.com/vuejs
