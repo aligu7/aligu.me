@@ -1,8 +1,8 @@
 import { gsap } from "gsap"
 
-export const useSkillsRowAnimation = () => {
+export const useMainPageItemsRowAnimation = () => {
   const animate = () => {
-    const elements = document.querySelectorAll<HTMLElement>(".skillsRow")
+    const elements = document.querySelectorAll<HTMLElement>(".mainPageItemsRow")
     if (!elements.length) return
     gsap.set(elements, { opacity: 0, y: -10 })
     gsap.to(elements, {
@@ -19,6 +19,6 @@ export const useSkillsRowAnimation = () => {
   })
 
   onBeforeUnmount(() => {
-    gsap.killTweensOf(".skillsRow")
+    gsap.killTweensOf(".mainPageItemsRow")
   })
 }

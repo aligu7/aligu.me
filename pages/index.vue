@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useSkillsRowAnimation } from "~/composables/useSkillsRowAnimation"
+import { useMainPageItemsRowAnimation } from "~/composables/useMainPageItemsRowAnimation"
 
-useSkillsRowAnimation()
+useMainPageItemsRowAnimation()
 </script>
 
 <template>

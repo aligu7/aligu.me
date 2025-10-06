@@ -7,10 +7,10 @@ title: Ali Guliyev
 Hey, I am Ali Guliyev, an aspiring web developer.
 
 <!-- prettier-ignore -->
-::skills-row
+::main-page-row
 ---
 
-skills:
+items:
 
 - name: Vue
   icon: logos:vue
@@ -37,10 +37,10 @@ Main tools:
 ::
 
 <!-- prettier-ignore -->
-::skills-row
+::main-page-row
 ---
 
-skills:
+items:
 
 - name: TailwindCSS
   icon: logos:tailwindcss-icon
@@ -67,10 +67,10 @@ Secondary tools:
 ::
 
 <!-- prettier-ignore  -->
-::skills-row
+::main-page-row
 ---
 
-skills:
+items:
 
 - name: HTML5
   icon: logos:html-5
