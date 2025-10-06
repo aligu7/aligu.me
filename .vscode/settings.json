@@ -47,5 +47,8 @@
     "scss",
     "pcss",
     "postcss"
-  ]
+  ],
+
+  "scss.lint.unknownAtRules": "ignore",
+  "css.lint.unknownAtRules": "ignore"
 }
