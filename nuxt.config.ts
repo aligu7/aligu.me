@@ -10,7 +10,10 @@ export default defineNuxtConfig({
   compatibilitydate: "2024-04-03",
   devtools: { enabled: true },
   css: ["~/assets/styles/main.scss"],
-  modules: ["@unocss/nuxt", "@nuxt/content", "@nuxthub/core", "@nuxthq/studio", "@vueuse/nuxt"],
+  modules: ["@unocss/nuxt", "@nuxt/content", "@nuxthq/studio", "@vueuse/nuxt"],
+  nitro: {
+    preset: "cloudflare-pages",
+  },
   content: {
     documentdriven: true,
     preview: {
