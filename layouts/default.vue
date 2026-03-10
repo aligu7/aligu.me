@@ -1,18 +1,25 @@
 <script setup lang="ts">
 const isDark = useDark()
 
+const route = useRoute()
+
 const loadingColor = computed(() =>
   isDark.value
     ? "repeating-linear-gradient(to right, #a1a1a1 0%, #c9c9c9 50%, #ffffff 100%)"
     : "repeating-linear-gradient(to right, #616161 0%, #383838 50%, #000000 100%)",
 )
+
+const singleItemPages = ["projects-slug", "blog-slug"]
+const showBgAnimation = computed(() => {
+  return !singleItemPages.includes(route.name as string)
+})
 </script>
 
 <template>
   <div class="relative">
     <ClientOnly>
       <!-- Background Animation -->
-      <BgAnimation class="pointer-events-none fixed left-0 top-0 h-full w-full" />
+      <BgAnimation v-if="showBgAnimation" class="pointer-events-none fixed left-0 top-0 h-full w-full" />
 
       <!-- Main content with navbar -->
       <div class="absolute left-0 top-0 h-screen w-screen overflow-y-auto">
