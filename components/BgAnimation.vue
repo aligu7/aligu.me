@@ -16,7 +16,7 @@ onMounted(() => {
 
   // Matrix effect setup
   const cols = Math.floor(window.innerWidth / 20) + 1
-  const ypos = new Array(cols).fill(0)
+  const ypos = new Array(cols).fill(0).map(() => Math.random() * window.innerHeight)
 
   const initialBackground = () => {
     ctx.fillStyle = isDark.value ? "#000" : "#fff"
