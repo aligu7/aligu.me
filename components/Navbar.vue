@@ -44,6 +44,5 @@ const socialLinks = computed(() => data.value?.social || [])
 <style scoped>
 nav {
   backdrop-filter: blur(5px);
-  background-color: rgba(var(--nav-bg), 0.7);
 }
 </style>
