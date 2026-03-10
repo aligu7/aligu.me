@@ -49,7 +49,7 @@ onMounted(() => {
     ypos.forEach((y, ind) => {
       const text = String.fromCharCode(Math.random() * 128)
       const x = ind * 20
-      ctx.globalAlpha = isDark.value ? 0.13 : 0.1 // Adjust opacity
+      ctx.globalAlpha = isDark.value ? 0.11 : 0.08 // Adjust opacity
       ctx.fillText(text, x, y)
       ctx.globalAlpha = 1 // Reset opacity
 
@@ -65,7 +65,7 @@ onMounted(() => {
   })
 
   // Start animation
-  setInterval(matrix, 50)
+  setInterval(matrix, 70)
 })
 </script>
 
