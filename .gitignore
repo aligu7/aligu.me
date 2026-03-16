@@ -22,3 +22,15 @@ logs
 .env
 .env.*
 !.env.example
+
+# Latex build artifacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+resume/resume.pdf

@@ -1,0 +1,197 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{changepage}
+
+% ---------- PAGE MARGINS ----------
+\geometry{
+    left=0.6in,
+    right=0.6in,
+    top=0.6in,
+    bottom=0.6in
+}
+
+% ---------- GLOBAL FONT SIZE ----------
+\renewcommand{\normalsize}{\fontsize{9}{11}\selectfont}
+
+% ---------- SECTION FORMATTING ----------
+\titleformat{\section}{\large\scshape}{}{0em}{}[\vspace{0.2em}\titlerule]
+\titlespacing{\section}{0pt}{0.6em}{0.3em}
+
+% ---------- SPACING ----------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt}
+\linespread{1.15}
+
+% ---------- HYPERLINK COLORS ----------
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
+
+% ---------- PROJECT COMMAND ----------
+\newcommand{\Project}[3]{%
+    \noindent \href{#2}{\textbf{#1}} \textbar~\textit{#3}%
+    \vspace{0.2em}%
+}
+
+% ---------- SUBTITLE COMMAND ----------
+\newcommand{\Subtitle}[2][true]{%
+    \vspace{0.3em}%
+    {\fontsize{10.5}{12}\selectfont \textbf{#2}}%
+    \ifstrequal{#1}{true}{\vspace{0.3em}}{}%
+}
+
+
+\begin{document}
+
+% ---------- HEADER ----------
+\begin{center}
+    {\fontsize{22}{24}\selectfont \textbf{Ali Guliyev}} \\[3pt]
+    \href{https://aligu.me/}{Portfolio Website} $|$
+    \href{mailto:ali.guliyevoo7@gmail.com}{ali.guliyevoo7@gmail.com} $|$
+    \href{https://github.com/aligu7}{Github} $|$
+    \href{https://www.linkedin.com/in/ali-guliyev-bb7211219/}{LinkedIn}
+\end{center}
+
+% ---------- EDUCATION ----------
+\vspace{-1.3em}
+\section*{Education}
+\begin{adjustwidth}{0.4cm}{0pt}
+
+\Subtitle[false]{ABC Horizon Istanbul} \hfill Sep 2024 -- Jan 2026 \\
+\textit{Higher National Diploma (HND) in Computing}
+
+\Subtitle[false]{Wimbledon School of English} \hfill 12 Jun 2023 -- 07 Jul 2023 \\
+\textit{Academic IELTS Express (20 hours/week, B2+ Level)}
+
+\end{adjustwidth}
+
+% ---------- TECHNICAL SKILLS ----------
+\section*{Technical Skills}
+\begin{adjustwidth}{0.4cm}{0pt}
+\setlength{\tabcolsep}{1pt} % default is 6pt, reduce as needed
+\begin{tabular}{l l}
+\textbf{Frontend / Fullstack:} & Nuxt 4, Vue 3, TypeScript, JavaScript, Firebase \\
+\textbf{Programming:} & Python, C++ \\
+\textbf{Tools \& Ecosystem:} & Linux, Git, Pinia, Vite, Vitest, Cloudflare Pages, Nuxthub, Netlify \\
+\end{tabular}
+\end{adjustwidth}
+
+% ---------- EXPERIENCE ----------
+\section*{Experience}
+\begin{adjustwidth}{0.4cm}{0pt}
+
+\Subtitle[false]{Web Developer, Optimax Software} \hfill June 2023 -- Present \\
+\href{https://optimaxsoftware.com/}{optimaxsoftware.com}
+\begin{itemize}
+    \item Built multiple production websites and web apps using Vue 3, Nuxt 4, Pinia, and TypeScript.
+    \item Implemented responsive, component-based interfaces with SSR and efficient state management.
+    \item Integrated REST APIs and dynamic content for 5k+ monthly users.
+    \item Optimised performance, SEO, and accessibility across projects.
+\end{itemize}
+
+\Subtitle[false]{Web Developer, 57Colleges} \hfill June 2022 -- August 2023 \\
+\href{https://57colleges.com}{57colleges.com}
+\begin{itemize}
+    \item Developed and optimised responsive web apps using WordPress, HTML, CSS, JavaScript, and Bootstrap.
+    \item Implemented full-stack solutions with ASP.NET Core MVC for secure dynamic content.
+    \item Collaborated with cross-functional teams to deliver projects on time and improve user engagement.
+\end{itemize}
+
+\end{adjustwidth}
+
+% ---------- PROJECTS ----------
+\section*{Projects}
+\begin{adjustwidth}{0.4cm}{0pt}
+
+% ----- Optimax Software Projects -----
+\Subtitle{Optimax Software (Internship Projects):}
+
+\Project{Lama Trader — Next-Generation Trading Platform (Alpha)}{https://lamatrader.com}{Nuxt 4, Vue 3, TypeScript, Pinia, Alpaca API, AG Grid, Dockview, TailwindCSS}
+\begin{itemize}
+    \item Developed a professional-grade trading platform with multi-widget dashboards and real-time financial data.
+    \item Integrated Alpaca API for secure trading and account management.
+    \item Built responsive interfaces with Nuxt 4, Vue 3, Pinia, and TypeScript.
+    \item Implemented real-time analytics and portfolio dashboards with AG Grid and custom visualizations.
+\end{itemize}
+
+\Project{Visual Quran — Data Visualisation Platform}{https://visual.koran.center}{Nuxt 4, Vue 3, TypeScript, UnoCSS, Chart.js, Unovis, anime.js}
+\begin{itemize}
+    \item Interactive Quran visualisation platform presenting charts, maps, and network graphs.
+    \item Leveraged structured datasets and Quran Meta API for scalable data insights.
+    \item Implemented SEO optimisation, automated testing (Vitest), and type-safe schema validation (Zod).
+\end{itemize}
+
+\Project{Cinoteka — Movie Library Platform}{https://cinoteka.com}{Nuxt 4, TypeScript, Pinia, Drizzle ORM, Cloudflare Pages}
+\begin{itemize}
+    \item Full-stack movie collection web app with authentication.
+    \item Built metadata matching, duplicate detection, and privacy-first design for local media files.
+    \item Deployed to Cloudflare Pages with secure state management and persistent user data.
+\end{itemize}
+
+\Project{Sozler.im — Quote Sharing Platform}{https://www.sozler.im}{Vue 3, TypeScript, UnoCSS}
+\begin{itemize}
+    \item Responsive quote-sharing platform with scalable component architecture.
+    \item Collaborated on feature development and performance optimisation for enhanced UX.
+\end{itemize}
+
+\vspace{1em}
+\Subtitle{Other Projects:}
+
+\Project{Dr. Andrews Plastic Surgery — Simulation Tool}{https://github.com/aligu7/daps_simulation}{Nuxt 4, Vue 3, UnoCSS, Firebase}
+\begin{itemize}
+    \item Interactive simulation tool for plastic surgery practice focusing on secure data handling.
+    \item Implemented real-time visualisations, improving patient engagement and workflow.
+\end{itemize}
+
+\Project{Post-App — Social Networking Application}{https://postapp-v1.web.app/}{Vue 3, Firebase, UnoCSS}
+\begin{itemize}
+    \item Full-stack social networking application with real-time updates and dynamic content.
+    \item Integrated secure user authentication and intuitive UI components for better engagement.
+\end{itemize}
+
+\Project{Vagif Guliyev's Website — Personal Portfolio}{https://guliyev.com}{Nuxt 4, Vue 3, Nuxt Content CMS}
+\begin{itemize}
+    \item Dynamic personal portfolio website with responsive design and SEO optimisations.
+    \item Showcases projects and interactive features for personal branding.
+\end{itemize}
+\end{adjustwidth}
+
+\section*{Testimonials}
+\begin{adjustwidth}{0.4cm}{0pt}
+\href{https://www.linkedin.com/in/ali-guliyev-bb7211219/details/recommendations/}{My LinkedIn Recommendations:}
+\begin{itemize}
+    \item \textit{”To work with Ali for our Iowa plastic surgery practice has been an absolute game-changer. We needed a robust full-stack website that would articulate all of our services and offer a safe and convenient way for our patients to engage with them. Ali did all this and much more within just two weeks!...”}
+    
+    \hfill \textit{— Aidan Andrews, MS Computer Science Candidate, Entrepreneur and Researcher at UIUC}
+\end{itemize}
+\end{adjustwidth}
+
+% ---------- CERTIFICATIONS ----------
+\section*{Certifications}
+\begin{adjustwidth}{0.4cm}{0pt}
+\textbf{IELTS – Overall Band Score: 7.0} \hfill British Council (23 Aug 2023)
+\end{adjustwidth}
+
+% ---------- LANGUAGES ----------
+\section*{Languages}
+\begin{adjustwidth}{0.3cm}{0pt}
+\begin{tabular}{ll}
+\textbullet~\textbf{English}: Fluent & \textbullet~\textbf{Russian}: Native \\
+\textbullet~\textbf{Azerbaijani}: Native & \textbullet~\textbf{Turkish}: Native \\
+\end{tabular}
+\end{adjustwidth}
+
+% ---------- ADDITIONAL INFORMATION ----------
+\section*{Additional Information}
+\begin{adjustwidth}{0.4cm}{0pt}
+Driving Licence – Categories B, B1 (Azerbaijan)
+\end{adjustwidth}
+
+\end{document}
