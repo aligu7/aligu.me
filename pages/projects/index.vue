@@ -1,4 +1,5 @@
 <script setup>
+const selectedStatus = ref("All")
 const selectedTag = ref("All")
 
 const {
@@ -10,19 +11,30 @@ const {
   () =>
     queryContent("projects")
       .where({ _path: { $ne: "/projects" } })
-      .only(["title", "demo", "tags", "github", "description", "date", "_path"])
+      .only(["title", "demo", "tags", "github", "description", "date", "_path", "status"])
       .find(),
   { server: false },
 )
 
-// Use the utility to extract unique tags
+// Status options: All, Completed, Ongoing
+const statusOptions = ["All", "Completed", "Ongoing"]
+
+// Tag options
 const uniqueTags = computed(() => {
   return projects.value ? getUniqueValues(projects.value, "tags") : []
 })
 
-// Use the utility to filter the posts based on the selected tag
+// Filter projects by status and tag
 const filteredProjects = computed(() => {
-  return projects.value ? filteredCollection(projects.value, "tags", selectedTag.value) : []
+  if (!projects.value) return []
+  let filtered = projects.value
+  if (selectedStatus.value !== "All")
+    filtered = filtered.filter(p => p.status === selectedStatus.value)
+
+  if (selectedTag.value !== "All")
+    filtered = filtered.filter(p => (p.tags || []).includes(selectedTag.value))
+
+  return filtered
 })
 
 // Sort filtered projects by date (most recent first)
@@ -65,7 +77,10 @@ onMounted(() => {
       <h1 class="title">
         Projects
       </h1>
-      <Dropdown v-model="selectedTag" :options="uniqueTags" />
+      <div class="flex gap-2">
+        <Dropdown v-model="selectedStatus" :options="statusOptions" icon="mingcute:check-circle-line" />
+        <Dropdown v-model="selectedTag" :options="uniqueTags" icon="mingcute:filter-line" />
+      </div>
     </div>
 
     <!-- Loading state -->

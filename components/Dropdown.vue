@@ -2,6 +2,7 @@
 const _props = defineProps({
   modelValue: String,
   options: Array,
+  icon: String, // Icon name (for example, 'mingcute:filter-line')
 })
 
 const emit = defineEmits(["update:modelValue"])
@@ -25,6 +26,7 @@ const selectOption = (option) => {
       class="group flex items-center gap-2 border-1 border-primary-op10 rounded-xl border-solid bg-transparent px-4 py-2 transition-all duration-200 hover:border-primary-hover"
       @click="isOpen = !isOpen"
     >
+      <Icon v-if="icon" :icon="icon" class="h-4 w-4 text-primary" />
       <span class="text-primary">{{ modelValue }}</span>
       <svg
         class="h-4 w-4 text-primary transition-transform duration-200"
