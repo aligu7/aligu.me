@@ -31,7 +31,7 @@ const showBgAnimation = computed(() => {
           <NuxtPage />
 
           <!-- Footer after content -->
-          <p class="py-5 text-center text-sm text-primary-light">
+          <p class="pt-5 pb-10 text-center text-sm text-primary-light">
             2024-PRESENT © Ali Guliyev
           </p>
         </div>
