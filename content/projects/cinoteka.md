@@ -2,14 +2,13 @@
 title: "Cinoteka"
 date: 2025-06-01
 tags:
-  - Web Dev
-  - Vue
-  - Nuxt
+  - Nuxt.js
+  - Vue.js
   - TypeScript
   - Tailwind CSS
   - Drizzle ORM
   - IMDb
-  - Current Project
+status: Completed
 demo: https://cinoteka.com
 description: Cinoteka is the ultimate movie library manager. Scan folders, create watch lists, detect duplicates, and sync your movie collection across all your devices & streaming services. No install needed — it’s a web app!
 ---

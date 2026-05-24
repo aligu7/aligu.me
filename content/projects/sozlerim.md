@@ -2,8 +2,8 @@
 title: Sozler.im
 date: 2022-09-14
 tags:
-  - Web Dev
-  - Vue
+  - Vue.js
+status: Completed
 demo: https://www.sozler.im/
 description: Fullstack Quotes Website
 ---

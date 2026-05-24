@@ -2,11 +2,10 @@
 title: "Visual Quran"
 date: 2025-03-15
 tags:
-  - Web Dev
-  - Nuxt
+  - Nuxt.js
   - UnoCSS
   - Charts
-  - Current Project
+status: Completed
 demo: https://visual.koran.center
 github: https://github.com/quran-center
 description: Visual Quran is an innovative component of the Quran Center initiative. It transforms the rich textual heritage of the Holy Quran into engaging, interactive visualizations.
