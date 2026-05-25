@@ -7,7 +7,6 @@ export default defineNuxtConfig({
   experimental: {
     viewTransition: true,
   },
-  compatibilitydate: "2024-04-03",
   devtools: { enabled: true },
   css: ["~/assets/styles/main.scss"],
   modules: ["@unocss/nuxt", "@nuxt/content", "@nuxthq/studio", "@vueuse/nuxt"],
@@ -49,5 +48,4 @@ export default defineNuxtConfig({
   },
 
   plugins: ["~/plugins/iconify.ts"],
-  compatibilityDate: "2025-01-30",
 })
