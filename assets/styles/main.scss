@@ -4,6 +4,14 @@ body,
   background-color: var(--body-bg);
 }
 
+html {
+  background-color: var(--body-bg);
+}
+
+body {
+  background-color: var(--body-bg);
+}
+
 @font-face {
   font-family: "blinkmac-md";
   src: url(../fonts/blinkmacsystemfont-regular.ttf);
