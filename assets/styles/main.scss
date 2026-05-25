@@ -1,18 +1,61 @@
-@use "./theme.scss";
+html,
+body,
+#__nuxt {
+  background-color: var(--body-bg);
+}
 
 @font-face {
   font-family: "blinkmac-md";
   src: url(../fonts/blinkmacsystemfont-regular.ttf);
 }
 
+html:not(.dark) {
+  --primary-light: #888888;
+  --primary-hover: #3f3f3f;
+  --body-bg: #ffffff;
+  --primary: #555555;
+  --primary-op10: #55555520;
+  color-scheme: light;
+}
+
+html.dark {
+  --primary-light: #888888;
+  --primary-hover: #eeeeee;
+  --body-bg: #050505;
+  --primary: #bbbbbb;
+  --primary-op10: #bbbbbb30;
+  color-scheme: dark;
+}
+
 html {
+  background-color: var(--body-bg);
   scroll-behavior: smooth;
+}
+
+::selection {
+  background: #8884;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-old(root) {
+  z-index: 1;
+}
+::view-transition-new(root) {
+  z-index: 9999;
+}
+.dark::view-transition-old(root) {
+  z-index: 9999;
+}
+.dark::view-transition-new(root) {
+  z-index: 1;
 }
 
 body {
   font-family: "blinkmac-md";
-  background-color: var(--body-bg);
-  overflow: hidden;
 }
 
 * {
