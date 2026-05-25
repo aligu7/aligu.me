@@ -12,9 +12,6 @@ export default defineNuxtConfig({
       ],
     },
   },
-  experimental: {
-    viewTransition: true,
-  },
   devtools: { enabled: true },
   css: ["~/assets/styles/main.scss"],
   modules: ["@unocss/nuxt", "@nuxt/content", "@nuxthq/studio", "@vueuse/nuxt"],
