@@ -3,9 +3,17 @@ export default defineNuxtConfig({
   // Automatic Page Transitions
   app: {
     pageTransition: { name: "page", mode: "out-in" },
+    head: {
+      meta: [
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1, viewport-fit=cover",
+        },
+      ],
+    },
   },
   experimental: {
-    viewTransition: true,
+    viewTransition: false,
   },
   devtools: { enabled: true },
   css: ["~/assets/styles/main.scss"],
