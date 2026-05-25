@@ -4,6 +4,7 @@ const {
 } = await useAsyncData("projects", () =>
   queryContent("projects")
     .where({ _path: { $ne: "/projects" } })
+    .only(["title", "demo", "tags", "github", "description", "date", "_path", "status"])
     .find())
 
 const currentProjects = computed(() => {
@@ -12,8 +13,7 @@ const currentProjects = computed(() => {
 
 const mostRecentProjects = computed(() => {
   if (!projects.value) return []
-  return projects.value
-    .slice(0, 2)
+  return useSortByDate(projects.value).slice(0, 2)
 })
 
 // Compute grid columns based on number of projects
