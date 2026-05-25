@@ -4,6 +4,6 @@ import { toggleDark } from "~/logics"
 
 <template>
   <a title="Toggle Color Scheme" @click="toggleDark">
-    <div i-ri-sun-line dark:i-ri-moon-line cursor-pointer />
+    <div i-ri-sun-line dark:i-ri-moon-line cursor-pointer text-lg md:text-xl />
   </a>
 </template>
