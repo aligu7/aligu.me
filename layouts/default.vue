@@ -13,10 +13,6 @@ useHead(() => ({
       name: "theme-color",
       content: isDark.value ? "#050505" : "#ffffff",
     },
-    {
-      name: "apple-mobile-web-app-status-bar-style",
-      content: isDark.value ? "black-translucent" : "default",
-    },
   ],
 }))
 </script>

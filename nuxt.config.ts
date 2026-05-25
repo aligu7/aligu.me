@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     },
   },
   experimental: {
-    viewTransition: false,
+    viewTransition: true,
   },
   devtools: { enabled: true },
   css: ["~/assets/styles/main.scss"],
