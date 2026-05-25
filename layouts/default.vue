@@ -9,25 +9,18 @@ const loadingColor = computed(() =>
 </script>
 
 <template>
-  <div class="relative">
-    <div class="relative">
-      <!-- relative makes this a positioned element, so it paints above the fixed BgAnimation canvas -->
-      <Navbar />
+  <Navbar />
 
-      <!-- Main content, native body scroll -->
-      <div class="min-h-screen">
-        <NuxtLoadingIndicator :color="loadingColor" />
-        <NuxtPage />
+  <div class="min-h-screen">
+    <NuxtLoadingIndicator :color="loadingColor" />
+    <NuxtPage />
 
-        <!-- Footer after content -->
-        <p class="pb-10 pt-5 text-center text-sm text-primary-light">
-          2024-PRESENT © Ali Guliyev
-        </p>
-      </div>
-
-      <ScrollToTop />
-    </div>
+    <p class="pb-10 pt-5 text-center text-sm text-primary-light">
+      2024-PRESENT © Ali Guliyev
+    </p>
   </div>
+
+  <ScrollToTop />
 </template>
 
 <style lang="scss">
