@@ -1,44 +1,32 @@
 <script setup lang="ts">
 const isDark = useDark()
 
-const route = useRoute()
-
 const loadingColor = computed(() =>
   isDark.value
     ? "repeating-linear-gradient(to right, #a1a1a1 0%, #c9c9c9 50%, #ffffff 100%)"
     : "repeating-linear-gradient(to right, #616161 0%, #383838 50%, #000000 100%)",
 )
-
-const singleItemPages = ["projects-slug", "blog-slug"]
-const showBgAnimation = computed(() => {
-  return !singleItemPages.includes(route.name as string)
-})
 </script>
 
 <template>
   <div class="relative">
-    <ClientOnly>
-      <!-- Background Animation -->
-      <BgAnimation v-if="showBgAnimation" class="pointer-events-none fixed left-0 top-0 h-full w-full" />
+    <div class="relative">
+      <!-- relative makes this a positioned element, so it paints above the fixed BgAnimation canvas -->
+      <Navbar />
 
-      <!-- Main content with navbar -->
-      <div class="absolute left-0 top-0 h-screen w-screen overflow-y-auto">
-        <Navbar />
+      <!-- Main content, native body scroll -->
+      <div class="min-h-screen">
+        <NuxtLoadingIndicator :color="loadingColor" />
+        <NuxtPage />
 
-        <!-- Wrap content in a container -->
-        <div class="min-h-screen">
-          <NuxtLoadingIndicator :color="loadingColor" />
-          <NuxtPage />
-
-          <!-- Footer after content -->
-          <p class="pt-5 pb-10 text-center text-sm text-primary-light">
-            2024-PRESENT © Ali Guliyev
-          </p>
-        </div>
-
-        <ScrollToTop />
+        <!-- Footer after content -->
+        <p class="pb-10 pt-5 text-center text-sm text-primary-light">
+          2024-PRESENT © Ali Guliyev
+        </p>
       </div>
-    </ClientOnly>
+
+      <ScrollToTop />
+    </div>
   </div>
 </template>
 
