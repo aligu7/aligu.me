@@ -9,7 +9,7 @@ tags:
 
 # 1. Introduction
 
-My introduction to programming began at the age of 11 when my dad temporarily gifted me an ASIO laptop (don't exactly remember which model was it but my dad, uncle and grandpa used it so it was a pretty old laptop). He just taught me a few tags in HTML like headings, p, span, div etc..., some CSS styling rules, and a little bit of javascript. Just a bit from here and there to build simple UI from scratch on a web page. Since childhood, I had a hobby of collecting and building Lego sets, and the same felt to me with programming, building something piece by piece. That is probably why I gained a passion for it. It is not only about coding/IT, it can also be applied to anything: just take control and let your imagination flow.
+My introduction to programming began at the age of 11 when my dad temporarily gifted me a VAIO laptop (don't exactly remember which model was it but my dad, uncle and grandpa used it so it was a pretty old laptop). He just taught me a few tags in HTML like headings, p, span, div etc..., some CSS styling rules, and a little bit of javascript. Just a bit from here and there to build simple UI from scratch on a web page. Since childhood, I had a hobby of collecting and building Lego sets, and the same felt to me with programming, building something piece by piece. That is probably why I gained a passion for it. It is not only about coding/IT, it can also be applied to anything: just take control and let your imagination flow.
 
 # 2 Web Development
 
