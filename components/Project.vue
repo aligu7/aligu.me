@@ -17,14 +17,14 @@ const _props = defineProps<{
             >
               {{ project.title }}
             </p>
-            <!-- Completed green and Ongoing yellow tailwind badge, darker in dark mode, Ongoing has ping animation left -->
+            <!-- Completed green and In Progress yellow tailwind badge, darker in dark mode, In Progress has ping animation left -->
             <div class="flex items-center gap-2">
-              <span v-if="project.status === 'Ongoing'" class="inline-flex items-center border border-yellow-300 rounded-full bg-yellow-100 px-2 py-0.5 text-xs text-yellow-800 font-medium dark:border-yellow-800 dark:bg-yellow-700 dark:text-yellow-100">
+              <span v-if="project.status === 'In Progress'" class="inline-flex items-center border border-yellow-300 rounded-full bg-yellow-100 px-2 py-0.5 text-xs text-yellow-800 font-medium dark:border-yellow-800 dark:bg-yellow-700 dark:text-yellow-100">
                 <span class="relative mr-1 size-3 flex">
                   <span class="absolute h-full w-full inline-flex rounded-full bg-yellow-400 opacity-75 animate-ping" />
                   <span class="relative size-3 inline-flex rounded-full bg-yellow-500" />
                 </span>
-                Ongoing
+                In Progress
               </span>
               <span v-if="project.status === 'Completed'" class="inline-flex items-center border border-green-300 rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-800 font-medium dark:border-green-800 dark:bg-green-700 dark:text-green-100">
                 Completed
