@@ -23,6 +23,8 @@ html:not(.dark) {
   --body-bg: #ffffff;
   --primary: #555555;
   --primary-op10: #55555520;
+  --mob-btn-bg: #1e1e1e;
+  --mob-btn-bar: #f0f0f0;
   color-scheme: light;
 }
 
@@ -32,6 +34,8 @@ html.dark {
   --body-bg: #050505;
   --primary: #bbbbbb;
   --primary-op10: #bbbbbb30;
+  --mob-btn-bg: #f0f0f0;
+  --mob-btn-bar: #1e1e1e;
   color-scheme: dark;
 }
 
@@ -100,7 +104,7 @@ li {
 }
 
 .page {
-  @apply pt-18 md:pt-25 mx-auto max-w-4xl w-full px-5 md:px-10;
+  @apply pt-3 sm:pt-18 md:pt-25 mx-auto max-w-4xl w-full px-5 md:px-10;
 
   .title {
     @apply text-xl md:text-4xl font-bold;
