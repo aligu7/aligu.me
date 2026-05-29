@@ -9,7 +9,7 @@ export const useMainPageItemsRowAnimation = () => {
       opacity: 1,
       y: 0,
       duration: 1,
-      stagger: 0.3,
+      stagger: 0.2,
       clearProps: "all",
     })
   }
