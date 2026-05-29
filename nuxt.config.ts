@@ -4,6 +4,11 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
     head: {
+      script: [
+        {
+          innerHTML: `(function(){var s=localStorage.getItem('vueuse-color-scheme');if(s==='dark'||(s!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}})()`,
+        },
+      ],
       meta: [
         {
           name: "viewport",
