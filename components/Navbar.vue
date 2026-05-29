@@ -14,7 +14,7 @@ function closeMenu() {
 
 <template>
   <!-- sm+: fixed + blur. mobile: static, no blur -->
-  <nav class="top-0 h-15 w-full flex items-center justify-between px-5 max-w-8xl sm:fixed sm:left-50% sm:top-0 sm:z-99 sm:h-20 md:px-8 sm:backdrop-blur-[10px] sm:-translate-x-50%">
+  <nav class="top-0 h-15 w-full flex items-center justify-between px-5 max-w-8xl sm:fixed sm:left-50% sm:top-0 sm:z-99 sm:h-20 md:px-8 sm:bg-[var(--nav-bg)] sm:backdrop-blur-[10px] sm:-translate-x-50%">
     <Logo />
 
     <!-- Desktop nav (sm and above) -->

@@ -21,6 +21,7 @@ html:not(.dark) {
   --primary-light: #888888;
   --primary-hover: #3f3f3f;
   --body-bg: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.88);
   --primary: #555555;
   --primary-op10: #55555520;
   --mob-btn-bg: #1e1e1e;
@@ -32,6 +33,7 @@ html.dark {
   --primary-light: #888888;
   --primary-hover: #eeeeee;
   --body-bg: #050505;
+  --nav-bg: rgba(5, 5, 5, 0.75);
   --primary: #bbbbbb;
   --primary-op10: #bbbbbb30;
   --mob-btn-bg: #f0f0f0;
