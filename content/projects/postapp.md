@@ -3,7 +3,7 @@ title: Post App
 date: 2023-09-27
 tags:
   - Vue.js
-  - SAS
+  - SASS
   - Firebase
 status: Completed
 demo: https://postapp-v1.web.app/
