@@ -30,10 +30,10 @@ items:
 
 - name: Vue
   icon: logos:vue
-  link: https://github.com/vuejs
+  link: https://vuejs.org/
 - name: Nuxt
   icon: logos:nuxt-icon
-  link: https://github.com/nuxt
+  link: https://nuxt.com/
 - name: TypeScript
   icon: logos:typescript-icon-round
   link: https://www.typescriptlang.org/
@@ -51,45 +51,21 @@ items:
 
 - name: TailwindCSS
   icon: logos:tailwindcss-icon
-  link: https://github.com/tailwindlabs/tailwindcss
-- name: BootStrap
-  icon: logos:bootstrap
-  link: https://github.com/twbs
+  link: https://tailwindcss.com/
+- name: Nuxt UI
+  icon: logos:nuxt-icon
+  link: https://ui.nuxt.com/
 - name: Figma
   icon: logos:figma
   link: https://www.figma.com/
 - name: UnoCSS
   icon: logos:unocss
-  link: https://github.com/unocss
+  link: https://unocss.dev/
 - name: SASS
   icon: logos:sass
-  link: https://github.com/sass
+  link: https://sass-lang.com/
 
 ---
 
 CSS and design:
-::
-
-<!-- prettier-ignore  -->
-::main-page-row
----
-
-items:
-
-- icon: logos:html-5
-  link: https://www.google.com/search?q=html5&oq=html5&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQLhhA0gEIMjg3OGowajGoAgCwAgA&sourceid=chrome&ie=UTF-8
-- icon: logos:css-3
-  link: https://www.google.com/search?q=css3&oq=css3&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQLhhA0gEHNDU2ajBqMagCALACAA&sourceid=chrome&ie=UTF-8
-- icon: logos:javascript
-  link: https://www.google.com/search?q=javascript&oq=javascript&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRhBMgYIAhBFGEEyBggDEEUYQTIGCAQQLhhA0gEIMTAzNGowajGoAgCwAgA&sourceid=chrome&ie=UTF-8
-- icon: logos:python
-  link: https://github.com/python
-- icon: logos:firebase-icon
-  link: https://github.com/firebase
-- icon: logos:wordpress-icon
-  link: https://wordpress.com/
-
----
-
-Other:
 ::
