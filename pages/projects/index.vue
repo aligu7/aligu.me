@@ -16,8 +16,8 @@ const {
   { server: false },
 )
 
-// Status options: All, Completed, Ongoing
-const statusOptions = ["All", "Completed", "Ongoing"]
+// Status options: All, Completed, In Progress
+const statusOptions = ["All", "Completed", "In Progress"]
 
 // Tag options
 const uniqueTags = computed(() => {
