@@ -15,7 +15,7 @@ description: Cinoteka is the ultimate movie library manager. Scan folders, creat
 
 # Internship
 
-I am working on this project as part of my internship at **<a target="new" href="https://optimaxsoftware.com"><u>Optimax Software</u></a>**.
+I am working on this project as part of my internship at **<u>[Optimax Software](https://optimaxsoftware.com)</u>**.
 
 # Screenshots
 

@@ -81,22 +81,17 @@ body {
 }
 
 a {
-  @apply transition-all transition-duration-200;
+  @apply transition-all transition-duration-200 text-primary-light hover:text-primary-hover;
 }
 
-a:not(.account) {
-  @apply text-primary-light hover:text-primary-hover;
-}
-
-a.account {
-  @apply text-primary-hover font-bold no-underline;
-
-  &:hover {
-    @apply underline;
+.post,
+.project {
+  a {
+    @apply text-primary hover:text-primary-light dark:hover:text-primary-hover;
   }
 }
 
-a:not(.btn-primary, .btn, .account) {
+a:not(.btn-primary, .btn) {
   @apply no-underline;
 }
 
