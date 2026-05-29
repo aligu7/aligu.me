@@ -24,9 +24,15 @@ useHead(() => ({
     <NuxtLoadingIndicator :color="loadingColor" />
     <NuxtPage />
 
-    <p class="pb-10 pt-5 text-center text-sm text-primary-light">
-      2024-PRESENT © Ali Guliyev
-    </p>
+    <div class="flex items-center justify-center gap-2 pb-10 pt-5 text-center text-sm text-primary-light">
+      <NuxtLink class="flex items-center gap-0.5" to="https://ring.liampas.ca/left" target="_blank">
+        <Icon icon="mingcute:arrow-left-line" class="mt-0.5 text-sm" />
+      </NuxtLink>
+      <span>2024-PRESENT © Ali Guliyev</span>
+      <NuxtLink class="flex items-center gap-0.5" to="https://ring.liampas.ca/right" target="_blank">
+        <Icon icon="mingcute:arrow-right-line" class="mt-0.5 text-sm" />
+      </NuxtLink>
+    </div>
   </div>
 
   <ScrollToTop />
