@@ -91,7 +91,7 @@ a {
   }
 }
 
-a:not(.btn-primary, .btn) {
+a:not(.btn-primary, .btn, #prose-a) {
   @apply no-underline;
 }
 

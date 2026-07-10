@@ -13,7 +13,7 @@ description: Visual Quran is an innovative component of the Quran Center initiat
 
 # Internship
 
-I am working on this project as part of my internship at **<u>[Optimax Software](https://optimaxsoftware.com)</u>**.
+I am working on this project as part of my internship at **[Optimax Software](https://optimaxsoftware.com)**.
 
 # About the Project
 
@@ -48,7 +48,7 @@ Join us in this journey to experience the Quran beyond words—through the power
 
 Visual Quran aims to be a collaborative project that draws on the expertise of scholars, developers, and designers from around the world. We invite everyone to contribute more visualisations to the project or suggestions. We are grateful to the following individuals and organizations for their contributions:
 
-- **<a target="new" href="https://koran.center"><u>Koran.center</u></a>** is our companion project and that is where we would recommend to read the Holy Text and its translations of meanings.
-- **<a target="new" href="https://alquran.cloud/"><u>Al Quran Cloud</u></a>** for the Arabic text and translations.
-- **<a target="new" href="https://atlasofquran.github.io"><u>Atlas of Quran Project</u></a>** for the map and data.
-- **<a target="new" href="https://quran-center.github.io/quran-meta/"><u>Quran Meta</u></a>** for the metadata and rich api, which drives most of our visualizations.
+- **[Koran.center](https://koran.center)** is our companion project and that is where we would recommend to read the Holy Text and its translations of meanings.
+- **[Al Quran Cloud](https://alquran.cloud/)** for the Arabic text and translations.
+- **[Atlas of Quran Project](https://atlasofquran.github.io)** for the map and data.
+- **[Quran Meta](https://quran-center.github.io/quran-meta/)** for the metadata and rich api, which drives most of our visualizations.
