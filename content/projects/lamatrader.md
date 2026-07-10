@@ -23,10 +23,7 @@ In July 2026 LamaTrader was listed on the [Alpaca Connect Marketplace](https://a
 
 # My Role & Timeline
 
-I came on board on **June 25, 2025** as the **lead frontend engineer**, and it has been my main focus ever since — **1,800+ commits** spanning the entire UI layer. LamaTrader is, at its core, a two-person project:
-
-- **Dr. Huseyn Guliyev (Founder)** owns the backend, the Alpaca API integration, the infrastructure, and the AI services.
-- **Ali Guliyev (me)** own the frontend — the UI framework, components, widgets, dashboards, theming, and the trading feature UI.
+I came on board on **June 25, 2025** as the **lead frontend engineer**, and it has been my main focus ever since — **1,800+ commits** spanning the entire UI layer.
 
 My work began with the **Nuxt UI v3 migration** and gradually expanded into the dashboard and widget system (built on Dockview), the order/position/watchlist tables, the options strategy builder, the Lightweight Charts integration, the theme engine, and the Lama AI widget and skill surfaces.
 
@@ -81,22 +78,7 @@ Themes, layouts and widget configuration adapt to each trader's workflow.
 
 Alpaca Connect lets apps like LamaTrader link to a user's existing Alpaca account via OAuth. Alpaca supplies the brokerage accounts, custody, market data, order execution and asset coverage; LamaTrader builds the experience on top — the UI, the dashboards, the AI tools, and the workflow automation. Customer assets always remain inside Alpaca's regulated infrastructure.
 
-As Huseyn put it: *"Traders shouldn't have to juggle five disconnected tools to make one decision. We brought AI, Alpaca market data, account information, and order management into one environment that works together and adapts to each trader."*
-
-# Tech Stack
-
-- **Nuxt 4 / Vue 3** — application framework
-- **TypeScript** — used throughout
-- **Nuxt UI v4** — component layer (UnoCSS on this site)
-- **Pinia Colada** — server state, queries & mutations
-- **Drizzle ORM + Cloudflare D1** — database
-- **Cloudflare** (Pages / Module Workers) — deployment
-- **Better Auth** — authentication
-- **BigNumber.js** — all financial calculations
-- **Dockview** — dockable dashboard layout
-- **Lightweight Charts / Unovis / vue-data-ui** — charting
-- **TanStack AI + QuickJS sandbox** — Lama AI skills & Code Mode
-- **Alpaca Trading / Broker / Market Data APIs** — brokerage backend via OAuth
+As Dr. Huseyn Guliyev put it: *"Traders shouldn't have to juggle five disconnected tools to make one decision. We brought AI, Alpaca market data, account information, and order management into one environment that works together and adapts to each trader."*
 
 # Current Stage
 
