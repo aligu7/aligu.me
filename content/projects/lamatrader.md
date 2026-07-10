@@ -23,7 +23,7 @@ In July 2026 LamaTrader was listed on the [Alpaca Connect Marketplace](https://a
 
 # My Role & Timeline
 
-I came on board on **June 25, 2025** as the **lead frontend engineer**, and it has been my main focus ever since — **1,800+ commits** spanning the entire UI layer.
+I came on board on **June 25, 2025** as the **frontend engineer**, and it has been my main focus ever since — **1,800+ commits** spanning the entire UI layer.
 
 My work began with the **Nuxt UI v3 migration** and gradually expanded into the dashboard and widget system (built on Dockview), the order/position/watchlist tables, the options strategy builder, the Lightweight Charts integration, the theme engine, and the Lama AI widget and skill surfaces.
 
