@@ -17,10 +17,12 @@ export function useContentSeo(page: Ref<ContentPage | null | undefined>) {
         return
       }
 
+      const title = `${p.title} - Ali Guliyev`
+
       useSeoMeta({
-        title: p.title,
-        ogTitle: p.title,
-        twitterTitle: p.title,
+        title,
+        ogTitle: title,
+        twitterTitle: title,
         description: p.description,
         ogDescription: p.description,
         twitterDescription: p.description,
