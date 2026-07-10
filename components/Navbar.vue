@@ -51,7 +51,7 @@ function closeMenu() {
   <Teleport to="body">
     <!-- Always-fixed hamburger (mobile only) -->
     <button
-      class="mob-hamburger fixed right-5 top-[0.875rem] z-99 h-[2em] w-[2em] cursor-pointer border-0 bg-transparent p-0 outline-none sm:hidden focus:opacity-75 hover:opacity-75"
+      class="mob-hamburger fixed right-5 top-4 z-99 h-[2em] w-[2em] cursor-pointer border-0 bg-transparent p-0 outline-none sm:hidden focus:opacity-75 hover:opacity-75"
       :class="{ open: menuOpen }"
       aria-label="Toggle navigation menu"
       @click="menuOpen = !menuOpen"
