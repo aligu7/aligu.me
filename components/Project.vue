@@ -11,9 +11,9 @@ const _props = defineProps<{
         class="projectInnerContainer h-full flex flex-col border-1 border-primary-op10 rounded-xl border-solid p-5 transition-all duration-75 hover:border-primary-hover"
       >
         <div class="flex-1">
-          <div class="flex justify-between">
+          <div class="flex justify-between items-center mb-2">
             <p
-              class="mb-2 max-w-2xl text-lg text-primary font-semibold transition-all duration-75 md:text-xl group-hover:text-black dark:group-hover:text-primary-hover"
+              class="max-w-2xl text-lg text-primary font-semibold transition-all duration-75 md:text-xl group-hover:text-black dark:group-hover:text-primary-hover"
             >
               {{ project.title }}
             </p>

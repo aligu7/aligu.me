@@ -9,7 +9,7 @@ useContentSeo(project)
   <div>
     <article v-if="project" class="page mx-auto">
       <BackButton class="mb-2" />
-      <div class="flex items-center justify-between gap-3">
+      <div class="flex items-center justify-between flex-wrap gap-1">
         <h1 class="text-4xl">
           {{ project.title }}
         </h1>
