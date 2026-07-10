@@ -1,5 +1,5 @@
 ---
-title: "Cinoteka"
+title: "Cinoteka.com"
 date: 2025-06-01
 tags:
   - Nuxt.js

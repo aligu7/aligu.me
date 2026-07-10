@@ -1,5 +1,5 @@
 ---
-title: "LamaTrader"
+title: "LamaTrader.com"
 date: 2026-07-10
 tags:
   - Nuxt.js
