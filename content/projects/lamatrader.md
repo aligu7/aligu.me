@@ -17,7 +17,7 @@ description: LamaTrader is an Integrated Trader Environment (ITE) that connects 
 
 <u>[LamaTrader](https://lamatrader.com)</u> is an **Integrated Trader Environment (ITE)** — a single, customizable workspace that connects to a trader's existing <u>[Alpaca](https://alpaca.markets)</u> brokerage account through **Alpaca Connect (OAuth)**. Instead of juggling a charting tab, a broker's order form, a spreadsheet for P&L and a separate news app, everything lives in one interface: research, charting, portfolio management, and AI-powered analysis.
 
-In July 2026 LamaTrader was listed on the **Alpaca Connect Marketplace** as an independent, third-party app built directly on Alpaca's Trading API and Market Data API. You can read the original announcement on the <u>[Alpaca blog](https://alpaca.markets/blog/lamatrader-launches-on-alpaca-connect-marketplace/)</u>.
+In July 2026 LamaTrader was listed on the <u>**[Alpaca Connect Marketplace](https://alpaca.markets/oauth?ref=alpaca.markets)**</u> as an independent, third-party app built directly on Alpaca's Trading API and Market Data API. You can read the original announcement on the <u>[Alpaca blog](https://alpaca.markets/blog/lamatrader-launches-on-alpaca-connect-marketplace/)</u>.
 
 ![LamaTrader Integrated Trader Environment](/images/projects/lamatrader/lama_trader_ite.webp)
 
