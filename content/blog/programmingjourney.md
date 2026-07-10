@@ -12,7 +12,7 @@ description: "How I went from tinkering with HTML at age 11 to six years of codi
 
 My introduction to programming began at the age of 11 when my dad temporarily gifted me a VAIO laptop (don't exactly remember which model was it but my dad, uncle and grandpa used it so it was a pretty old laptop). He just taught me a few tags in HTML like headings, p, span, div etc..., some CSS styling rules, and a little bit of javascript. Just a bit from here and there to build simple UI from scratch on a web page. Since childhood, I had a hobby of collecting and building Lego sets, and the same felt to me with programming, building something piece by piece. That is probably why I gained a passion for it. It is not only about coding/IT, it can also be applied to anything: just take control and let your imagination flow.
 
-# 2 Web Development
+# 2. Web Development
 
 ## 2.1 HTML, CSS (2018)
 
@@ -26,7 +26,7 @@ At the age of 12 (2019), I started learning probably the most important aspect o
 
 At the end of 2019 (before covid), concurrently, I advanced my JavaScript expertise by adopting frameworks that prioritize scalability and maintainability. **React.js** introduced me to component-driven architecture and state management. At the time I was watching a popular YouTube channel called ["Clever Programmer"](https://www.youtube.com/@CleverProgrammer), in which at the time they were hosting a series of live streams where they building modern web applications like real-time chatting apps and some clone implementations of real apps like Netflix clone, Instagram clone, Twitter clone and etc... With these I learned tools like Redux, Firebase and even building full-stack web applications with MERN stack (MongoDB, Express.js, React.js, Node.js). But, I after watching a couple of videos about MERN stack and full-stack development overall, at the time, it was really complicated for me to learn backend development, since I was very young and my brain just could not process that much information. But since I wanted to keep developing these apps I kept using Firebase, which was pretty much an alternative (not really) for backend dev (Handling Authentication, Storaing Data, Real-time data etc...).
 
-# 3 Python and Unity
+# 3. Python and Unity
 
 ## 3.1 Beginning of Covid: Discovering Python (2020)
 
@@ -36,7 +36,7 @@ When Covid hit everything changed. School stopped. Social life stopped. Everythi
 
 In 2021, I started to learn how to create these fancy 3D games using a game engine called Unity. This game engine required the programming language C#, so I learned that, and it was also relatively easy but I have been introduced to a new concept which was OOP. But I was also a little bit familiar with it so learned it quickly. Then after watching some playlists of the legendary unity youtube channel [Brackeys](https://www.youtube.com/@Brackeys). Afterwards, I created some fun unity games and probably the best was probably a simple 3D platformer game where go through different levels and challenges, and it is basically like a speedrun, since you have time involved. Also created my version of the "Doodle Jump" game. But this did not continue a long time until I went back to web dev..
 
-# 4 The Comeback Of Web Development
+# 4. The Comeback Of Web Development
 
 ## 4.1 Vue.js (2022)
 
@@ -46,6 +46,6 @@ So, in 2022, when I was around 15, my uncle , who is a specialist in this field 
 
 Later, I learned a sub framework of Vue.js which was Nuxt.js, which was also recommended by my uncle, and this was a game changer. It is a really powerful tool for building apps. After learning Nuxt.js I actually collaborated with my uncle and we created the [sozler.im](https://sozler.im/) web app, in which you basically have a big collection of quotes. Even though the website is only in Azerbaijani you can still use a Google Translate extension and translate every page like that., but I will implement the translation feature soon.
 
-# 5 Conclusion
+# 5. Conclusion
 
 From 2023 to 2024 I haven't done much coding except few freelance projects for clients, since I had my school exams and etc. But since the beginning of 2025 I have actually was working on the development of this website and few other coding projects. Thank you for reading until the end of this blog post.
