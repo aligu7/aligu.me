@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
     head: {
+      htmlAttrs: {
+        lang: "en",
+      },
       script: [
         {
           innerHTML: `(function(){var s=localStorage.getItem('vueuse-color-scheme');if(s==='dark'||(s!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}})()`,
@@ -14,6 +17,11 @@ export default defineNuxtConfig({
           name: "viewport",
           content: "width=device-width, initial-scale=1, viewport-fit=cover",
         },
+        { name: "author", content: "Ali Guliyev" },
+        { property: "og:site_name", content: "Ali Guliyev" },
+        { property: "og:type", content: "website" },
+        { property: "og:locale", content: "en_US" },
+        { name: "twitter:card", content: "summary_large_image" },
       ],
     },
   },

@@ -3,6 +3,7 @@ title: "My overall journey in programming: 6 years of coding from 11 to 17"
 date: 2025-02-11
 tags:
   - Personal
+description: "How I went from tinkering with HTML at age 11 to six years of coding — the languages, projects, and lessons from my programming journey so far."
 ---
 
 ---

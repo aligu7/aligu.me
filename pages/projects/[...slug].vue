@@ -2,9 +2,7 @@
 const { path } = useRoute()
 const { data: project } = await useAsyncData(`content:${path}`, () => queryContent(path).findOne())
 
-useSeoMeta({
-  title: `${project.value.title} - Ali Guliyev`,
-})
+useContentSeo(project)
 </script>
 
 <template>
