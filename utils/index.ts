@@ -21,7 +21,8 @@ export const getUniqueValues = (
 ): string[] => {
   if (!Array.isArray(collection)) return []
   const values = collection.flatMap(item => item[key] ?? [])
-  return [defaultValue, ...Array.from(new Set(values))].sort()
+  const unique = Array.from(new Set(values)).sort()
+  return [defaultValue, ...unique]
 }
 
 /**
