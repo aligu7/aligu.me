@@ -8,7 +8,7 @@ const {
     .find())
 
 const currentProjects = computed(() => {
-  return projects.value ? filteredCollection(projects.value, "tags", "Current Project") : []
+  return projects.value ? filteredCollection(projects.value, "status", "In Progress") : []
 })
 
 const mostRecentProjects = computed(() => {
