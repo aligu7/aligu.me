@@ -13,6 +13,10 @@ demo: https://lamatrader.com
 description: LamaTrader is an Integrated Trader Environment (ITE) that connects to Alpaca via OAuth. I have been building its entire frontend since mid-2025 — from the Nuxt UI migrations to the widget/dashboard system and AI-powered trading skills.
 ---
 
+# Internship
+
+This project is being developed as part of my internship at **[Optimax Software](https://optimaxsoftware.com)**.
+
 # Overview
 
 [LamaTrader](https://lamatrader.com) is an **Integrated Trader Environment (ITE)** — a single, customizable workspace that connects to a trader's existing [Alpaca](https://alpaca.markets) brokerage account through **Alpaca Connect (OAuth)**. Instead of juggling a charting tab, a broker's order form, a spreadsheet for P&L and a separate news app, everything lives in one interface: research, charting, portfolio management, and AI-powered analysis.

@@ -10,7 +10,7 @@ description: Fullstack Quotes Website
 
 # Internship
 
-I am working on this project as part of my internship at **[Optimax Software](https://optimaxsoftware.com)**.
+This project was developed as part of my internship at **[Optimax Software](https://optimaxsoftware.com)**.
 
 # Screenshots
 
