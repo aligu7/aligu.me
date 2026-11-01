@@ -18,12 +18,12 @@ const socialLinks = useSocialLinks()
         </li>
       </ul>
       <ul class="flex list-none items-center gap-x-2 sm:gap-x-3">
-        <li v-for="social in socialLinks" :key="social.link" class="pt-1.75 md:pt-2">
-          <NuxtLink :to="social.link" target="_blank" :aria-label="social.label">
+        <li v-for="social in socialLinks" :key="social.link" class="flex">
+          <NuxtLink :to="social.link" target="_blank" :aria-label="social.label" class="flex">
             <span class="block text-lg md:text-2xl" :class="social.icon" />
           </NuxtLink>
         </li>
-        <li>
+        <li class="flex">
           <ToggleTheme />
         </li>
       </ul>
