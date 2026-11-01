@@ -1,7 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  // Automatic Page Transitions
+  modules: ["@unocss/nuxt", "@nuxt/content", "@vueuse/nuxt"],
+
+  devtools: { enabled: true },
+
   app: {
+    // Automatic page transitions
     pageTransition: { name: "page", mode: "out-in" },
     head: {
       htmlAttrs: {
@@ -9,14 +13,17 @@ export default defineNuxtConfig({
       },
       script: [
         {
+          // Apply the stored color scheme before first paint to avoid a flash
           innerHTML: `(function(){var s=localStorage.getItem('vueuse-color-scheme');if(s==='dark'||(s!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}})()`,
         },
       ],
+      link: [
+        { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
+        { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" },
+      ],
       meta: [
-        {
-          name: "viewport",
-          content: "width=device-width, initial-scale=1, viewport-fit=cover",
-        },
+        { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
         { name: "author", content: "Ali Guliyev" },
         { property: "og:site_name", content: "Ali Guliyev" },
         { property: "og:type", content: "website" },
@@ -25,45 +32,46 @@ export default defineNuxtConfig({
       ],
     },
   },
-  devtools: { enabled: true },
+
+  components: [
+    // Components used from markdown (MDC) must be global
+    { path: "~/components/content", global: true },
+    "~/components",
+  ],
+
   css: ["~/assets/styles/main.scss"],
-  modules: ["@unocss/nuxt", "@nuxt/content", "@nuxthq/studio", "@vueuse/nuxt"],
-  nitro: {
-    preset: "cloudflare-pages",
-  },
+
   content: {
-    documentdriven: true,
-    preview: {
-      api: "https://api.nuxt.studio",
+    build: {
+      markdown: {
+        highlight: {
+          theme: "github-dark",
+          langs: ["js", "ts", "python", "vue", "html", "css", "shell", "json"],
+        },
+      },
     },
-    highlight: {
-      theme: "github-dark",
-      preload: ["js", "python", "vue", "html", "css"],
-    },
-    markdown: {
-      rehypeplugins: [
-        [
-          "remark-slug",
-          "rehype-pretty-code",
-          {
-            theme: "one-dark-pro", // or 'github-dark'
-            keepbackground: true,
-            onvisithighlightedline(node) {
-              node.children = node.children.filter(child => !(child.type === "text" && /^\s*$/.test(child.value)))
-            },
-          },
-        ],
-      ],
+    experimental: {
+      // Use Node's built-in `node:sqlite` at build time, no native addon needed
+      sqliteConnector: "native",
     },
   },
+
   devServer: {
     host: "0.0.0.0",
     port: 2007,
   },
-  components: {
-    global: true,
-    dirs: ["~/components"],
-  },
 
-  plugins: ["~/plugins/iconify.ts"],
+  compatibilityDate: "2026-11-01",
+
+  nitro: {
+    // Fully prerendered site, deployed as static assets to Cloudflare
+    preset: "static",
+    prerender: {
+      crawlLinks: true,
+      routes: ["/"],
+      // Emit `/projects.html` rather than `/projects/index.html`, so Cloudflare
+      // serves `/projects` directly instead of redirecting to `/projects/`
+      autoSubfolderIndex: false,
+    },
+  },
 })

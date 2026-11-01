@@ -1,14 +1,17 @@
 {
   "social": [
     {
+      "label": "GitHub",
       "icon": "i-mdi-github",
       "link": "https://github.com/aligu7"
     },
     {
+      "label": "LinkedIn",
       "icon": "i-mingcute:linkedin-fill",
       "link": "https://www.linkedin.com/in/ali-guliyev-bb7211219/"
     },
     {
+      "label": "Email",
       "icon": "i-mdi-email",
       "link": "mailto:ali.guliyevoo7@gmai.com"
     }

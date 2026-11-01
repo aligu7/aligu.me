@@ -1,0 +1,15 @@
+minimumReleaseAgeExcludePrune: true
+
+trustPolicy: no-downgrade
+trustPolicyExclude:
+  # 2023 ReDoS backport (used by Babel), published by npm maintainers without
+  # provenance after 7.5.x had it, so pnpm reads it as a trust downgrade
+  - semver@6.3.1
+
+shellEmulator: true
+
+allowBuilds:
+  "@parcel/watcher": true
+  esbuild: true
+  sharp: false
+  workerd: true

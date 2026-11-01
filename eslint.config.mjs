@@ -25,10 +25,13 @@ export default antfu({
     "node/prefer-global/process": ["off"],
     "node/no-process-env": ["error"],
     "curly": ["error", "multi"],
-    "perfectionist/sort-imports": ["error", {
-      tsconfigRootDir: ".",
-    }],
     "unicorn/no-new-array": "off",
     "unused-imports/no-unused-vars": "warn",
+  },
+}, {
+  files: ["**/*.md"],
+  rules: {
+    // Content uses H1s as top-level sections below the page title
+    "markdown/no-multiple-h1": "off",
   },
 })

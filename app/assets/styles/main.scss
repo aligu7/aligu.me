@@ -1,0 +1,236 @@
+html,
+body,
+#__nuxt {
+  background-color: var(--body-bg);
+}
+
+html {
+  background-color: var(--body-bg);
+}
+
+body {
+  background-color: var(--body-bg);
+}
+
+@font-face {
+  font-family: "blinkmac-md";
+  src: url(../fonts/blinkmacsystemfont-regular.ttf);
+}
+
+html:not(.dark) {
+  --primary-light: #888888;
+  --primary-hover: #3f3f3f;
+  --body-bg: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.88);
+  --primary: #555555;
+  --primary-op10: #55555520;
+  --mob-btn-bg: #1e1e1e;
+  --mob-btn-bar: #f0f0f0;
+  color-scheme: light;
+}
+
+html.dark {
+  --primary-light: #888888;
+  --primary-hover: #eeeeee;
+  --body-bg: #050505;
+  --nav-bg: rgba(5, 5, 5, 0.75);
+  --primary: #bbbbbb;
+  --primary-op10: #bbbbbb30;
+  --mob-btn-bg: #f0f0f0;
+  --mob-btn-bar: #1e1e1e;
+  color-scheme: dark;
+}
+
+html {
+  background-color: var(--body-bg);
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #8884;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-old(root) {
+  z-index: 1;
+}
+::view-transition-new(root) {
+  z-index: 9999;
+}
+.dark::view-transition-old(root) {
+  z-index: 9999;
+}
+.dark::view-transition-new(root) {
+  z-index: 1;
+}
+
+body {
+  font-family: "blinkmac-md";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 25px;
+  letter-spacing: 0.9px;
+}
+
+a {
+  @apply transition-all transition-duration-200 text-primary-light hover:text-primary-hover;
+}
+
+.post,
+.project {
+  a {
+    @apply text-primary font-bold hover:text-primary-light dark:hover:text-primary-hover;
+  }
+}
+
+a:not(.btn-primary, .btn, .prose-a) {
+  @apply no-underline;
+}
+
+p,
+li {
+  @apply text-primary;
+}
+
+.page {
+  @apply pt-3 sm:pt-18 md:pt-25 mx-auto max-w-4xl w-full px-5 md:px-10;
+
+  .title {
+    @apply text-xl md:text-4xl font-bold;
+  }
+}
+
+main.page {
+  @apply max-w-5xl pb-10;
+
+  h1#ali-guliyev {
+    @apply mb-5 text-2xl md:text-4xl;
+  }
+
+  h1#about {
+    @apply mb-2 mt-4 text-2xl;
+  }
+
+  p {
+    @apply text-sm md:text-base;
+  }
+}
+
+main.page.about {
+  p {
+    @apply mb-2;
+  }
+}
+
+.skillsRow {
+  @apply flex flex-row items-center gap-2 md:gap-3 mb-4;
+
+  p {
+    @apply text-sm md:text-base text-primary;
+  }
+}
+
+.post,
+.project {
+  * {
+    @apply max-w-full my-1.5 md:my-2;
+  }
+
+  // Vertical rhythm for block elements
+  p,
+  ul,
+  ol,
+  blockquote {
+    @apply my-3 md:my-4;
+  }
+
+  h1,
+  h2,
+  h2 a,
+  h3,
+  h3 a {
+    @apply pointer-events-none text-black dark:text-white;
+  }
+
+  // Headings: comfortable gap above, tight gap below so text hugs the heading
+  h1 {
+    @apply pt-7 md:pt-10 mt-1.5 md:mt-2 mb-2 md:mb-3;
+  }
+
+  h2 {
+    @apply text-xl mt-6 md:mt-8 mb-1 md:mb-1.5;
+  }
+
+  h3 {
+    @apply text-lg mt-4 md:mt-6 mb-1 md:mb-1;
+  }
+
+  ol,
+  ul {
+    @apply pl-8 md:pl-10;
+  }
+
+  // Markdown images render as <p><img></p>; modest space above and below
+  p:has(> img) {
+    @apply mt-4 md:mt-6 mb-4 md:mb-6;
+  }
+
+  // Text immediately following an image paragraph
+  p:has(> img) + p,
+  p:has(> img) + h1,
+  p:has(> img) + h2,
+  p:has(> img) + h3,
+  p:has(> img) + ul,
+  p:has(> img) + ol,
+  p:has(> img) + blockquote {
+    @apply mt-0;
+  }
+}
+
+// Animations
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-light);
+  border-radius: 4px;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: var(--primary-hover);
+  }
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-light) transparent;
+}
+
+/* Hide scrollbar for Chrome/Safari/Opera but keep functionality */
+@media (max-width: 640px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+}
+
+img {
+  @apply block mx-auto h-auto rounded-xl;
+}
