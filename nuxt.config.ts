@@ -13,8 +13,10 @@ export default defineNuxtConfig({
       },
       script: [
         {
-          // Before first paint: mark JS as enabled (hides .stagger-in until it animates)
-          // and apply the stored color scheme to avoid a flash
+          /*
+           * Before first paint: mark JS as enabled (hides .stagger-in until it animates)
+           * and apply the stored color scheme to avoid a flash
+           */
           innerHTML: `(function(){document.documentElement.classList.add('js');var s=localStorage.getItem('vueuse-color-scheme');if(s==='dark'||(s!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}})()`,
         },
       ],
@@ -70,8 +72,10 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ["/"],
-      // Emit `/projects.html` rather than `/projects/index.html`, so Cloudflare
-      // serves `/projects` directly instead of redirecting to `/projects/`
+      /*
+       * Emit `/projects.html` rather than `/projects/index.html`, so Cloudflare
+       * serves `/projects` directly instead of redirecting to `/projects/`
+       */
       autoSubfolderIndex: false,
     },
   },

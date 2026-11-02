@@ -1,8 +1,10 @@
 import { fileURLToPath } from "node:url"
 import { defineConfig, presetAttributify, presetIcons, presetWind3, transformerDirectives } from "unocss"
 
-// Explicit loaders: preset-icons skips its auto node loader when it detects
-// VS Code (VSCODE_CWD), which also matches builds run in its terminal
+/*
+ * Explicit loaders: preset-icons skips its auto node loader when it detects
+ * VS Code (VSCODE_CWD), which also matches builds run in its terminal
+ */
 const collections = {
   logos: () => import("@iconify-json/logos/icons.json").then(i => i.default),
   mdi: () => import("@iconify-json/mdi/icons.json").then(i => i.default),
@@ -30,8 +32,10 @@ export default defineConfig({
   },
   transformers: [transformerDirectives()],
   content: {
-    // Icon classes referenced from markdown/json content (e.g. `i-logos:vue`).
-    // Absolute, since relative globs resolve against Vite's root (`app/`)
+    /*
+     * Icon classes referenced from markdown/json content (e.g. `i-logos:vue`).
+     * Absolute, since relative globs resolve against Vite's root (`app/`)
+     */
     filesystem: [fileURLToPath(new URL("./content/**/*.{md,json}", import.meta.url))],
     pipeline: {
       // UnoCSS defaults, plus JSON content (social links)

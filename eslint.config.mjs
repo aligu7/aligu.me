@@ -27,6 +27,8 @@ export default antfu({
     "curly": ["error", "multi"],
     "unicorn/no-new-array": "off",
     "unused-imports/no-unused-vars": "warn",
+    // Multi-line comments use /* */ blocks, not stacked // lines
+    "style/multiline-comment-style": ["error", "starred-block"],
   },
 }, {
   files: ["**/*.md"],

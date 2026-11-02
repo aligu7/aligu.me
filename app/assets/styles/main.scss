@@ -12,8 +12,10 @@ body {
   background-color: var(--body-bg);
 }
 
-// Pre-rendered HTML paints before hydration; keep staggered items hidden
-// until useStaggerAnimation fades them in (no-JS visitors still see them)
+/*
+ * Pre-rendered HTML paints before hydration; keep staggered items hidden
+ * until useStaggerAnimation fades them in (no-JS visitors still see them)
+ */
 html.js .stagger-in {
   opacity: 0;
 }
