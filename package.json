@@ -15,7 +15,9 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "typecheck": "nuxt typecheck",
-    "prepare": "husky"
+    "prepare": "husky",
+    "up": "pnpm update -i -L"
+
   },
   "dependencies": {
     "@nuxt/content": "^3.16.2",
