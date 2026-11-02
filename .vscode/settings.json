@@ -50,5 +50,10 @@
   ],
 
   "scss.lint.unknownAtRules": "ignore",
-  "css.lint.unknownAtRules": "ignore"
+  "css.lint.unknownAtRules": "ignore",
+
+  // Copilot commit message rules (Conventional Commits, no scopes)
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    { "file": "./.github/copilot-commit-rules.md" }
+  ]
 }
