@@ -27,7 +27,8 @@ export function useStaggerAnimation(
       duration,
       stagger,
       ease,
-      clearProps: "all",
+      // Only drop the transform; the inline opacity must stay to beat .stagger-in
+      clearProps: "transform",
     })
   }
 

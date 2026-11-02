@@ -26,7 +26,7 @@ useStaggerAnimation(".blog-item", filteredPosts)
     </p>
 
     <ul v-else class="list-none">
-      <li v-for="post in filteredPosts" :key="post.path" class="blog-item relative mb-4">
+      <li v-for="post in filteredPosts" :key="post.path" class="blog-item stagger-in relative mb-4">
         <BlogPostCard :post="post" />
       </li>
     </ul>

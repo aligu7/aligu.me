@@ -37,7 +37,7 @@ useStaggerAnimation(".project-item", filteredProjects)
     </p>
 
     <ul v-else class="list-none">
-      <li v-for="project in filteredProjects" :key="project.path" class="project-item relative mb-4">
+      <li v-for="project in filteredProjects" :key="project.path" class="project-item stagger-in relative mb-4">
         <ProjectCard :project="project" />
       </li>
     </ul>

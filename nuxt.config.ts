@@ -13,8 +13,9 @@ export default defineNuxtConfig({
       },
       script: [
         {
-          // Apply the stored color scheme before first paint to avoid a flash
-          innerHTML: `(function(){var s=localStorage.getItem('vueuse-color-scheme');if(s==='dark'||(s!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}})()`,
+          // Before first paint: mark JS as enabled (hides .stagger-in until it animates)
+          // and apply the stored color scheme to avoid a flash
+          innerHTML: `(function(){document.documentElement.classList.add('js');var s=localStorage.getItem('vueuse-color-scheme');if(s==='dark'||(s!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}})()`,
         },
       ],
       link: [

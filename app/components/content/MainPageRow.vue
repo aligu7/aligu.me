@@ -13,7 +13,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="main-page-row mt-2.5 flex flex-wrap items-center gap-x-2">
+  <div class="main-page-row stagger-in mt-2.5 flex flex-wrap items-center gap-x-2">
     <slot />
     <NuxtLink
       v-for="item in items"
