@@ -1,0 +1,7 @@
+# Cloudflare Pages headers. aligu.me is the canonical site, so keep the pages.dev
+# copies (production and per-branch previews) out of search results
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex

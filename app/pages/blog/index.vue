@@ -1,7 +1,8 @@
 <script setup lang="ts">
-useSeoMeta({
-  title: "Blog - Ali Guliyev",
-})
+usePageSeo(
+  "Blog - Ali Guliyev",
+  "Ali Guliyev's blog about programming, web development and learning to build software.",
+)
 
 const { data: posts, error } = await useBlogPosts()
 

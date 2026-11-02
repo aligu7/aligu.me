@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+const siteUrl = "https://aligu.me"
+
 export default defineNuxtConfig({
   modules: ["@unocss/nuxt", "@nuxt/content", "@vueuse/nuxt"],
 
@@ -31,8 +33,19 @@ export default defineNuxtConfig({
         { property: "og:site_name", content: "Ali Guliyev" },
         { property: "og:type", content: "website" },
         { property: "og:locale", content: "en_US" },
+        { property: "og:image", content: `${siteUrl}/og.png` },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
+        { property: "og:image:alt", content: "Ali Guliyev" },
         { name: "twitter:card", content: "summary_large_image" },
       ],
+    },
+  },
+
+  runtimeConfig: {
+    public: {
+      // Canonical origin for canonical links, og:url, structured data and the sitemap
+      siteUrl,
     },
   },
 
@@ -71,7 +84,7 @@ export default defineNuxtConfig({
     preset: "static",
     prerender: {
       crawlLinks: true,
-      routes: ["/"],
+      routes: ["/", "/sitemap.xml"],
       /*
        * Emit `/projects.html` rather than `/projects/index.html`, so Cloudflare
        * serves `/projects` directly instead of redirecting to `/projects/`

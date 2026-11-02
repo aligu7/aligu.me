@@ -11,16 +11,10 @@ export function useContentPage<T extends "blog" | "projects">(collection: T) {
   const result = useAsyncData(`${collection}:${route.path}`, () =>
     queryCollection(collection).path(route.path).first() as Promise<Collections[T] | null>)
 
-  const title = () => `${result.data.value?.title} - Ali Guliyev`
-  const description = () => result.data.value?.description
-  useSeoMeta({
-    title,
-    ogTitle: title,
-    twitterTitle: title,
-    description,
-    ogDescription: description,
-    twitterDescription: description,
-  })
+  usePageSeo(
+    () => `${result.data.value?.title} - Ali Guliyev`,
+    () => result.data.value?.description,
+  )
 
   return result
 }

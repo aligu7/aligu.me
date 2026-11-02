@@ -1,5 +1,6 @@
 ---
 title: Ali Guliyev
+description: Ali Guliyev is a software engineer building web apps with Vue, Nuxt and TypeScript. Projects, blog and resume.
 ---
 
 # Ali Guliyev

@@ -1,7 +1,8 @@
 <script setup lang="ts">
-useSeoMeta({
-  title: "Projects - Ali Guliyev",
-})
+usePageSeo(
+  "Projects - Ali Guliyev",
+  "Projects by Ali Guliyev: web apps built with Vue, Nuxt and TypeScript, from an AI trading workspace to data visualisation and movie library platforms.",
+)
 
 const { data: projects, error } = await useProjects()
 

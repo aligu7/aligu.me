@@ -7,9 +7,18 @@ const loadingColor = computed(() =>
     : "repeating-linear-gradient(to right, #616161 0%, #383838 50%, #000000 100%)",
 )
 
+// Every page points search engines at its aligu.me URL, not the pages.dev copies
+const route = useRoute()
+const { siteUrl } = useRuntimeConfig().public
+const pageUrl = () => siteUrl + route.path
+
 useHead({
+  link: [
+    { rel: "canonical", href: pageUrl },
+  ],
   meta: [
     { name: "theme-color", content: () => isDark.value ? "#050505" : "#ffffff" },
+    { property: "og:url", content: pageUrl },
   ],
 })
 </script>
