@@ -92,7 +92,7 @@
   #link("https://aligu.me/")[Portfolio Website] #bar
   #link("mailto:ali.guliyevoo7@gmail.com")[ali.guliyevoo7\@gmail.com] #bar
   #link("https://github.com/aligu7")[Github] #bar
-  #link("https://www.linkedin.com/in/ali-guliyev-bb7211219/")[LinkedIn]
+  #link("https://www.linkedin.com/in/aligu/")[LinkedIn]
 ]
 
 #section("Education", above: 7pt, below: 5.7pt)[
@@ -196,7 +196,7 @@
 ]
 
 #section("Testimonials", below: 4.2pt)[
-  #link("https://www.linkedin.com/in/ali-guliyev-bb7211219/details/recommendations/")[My LinkedIn Recommendations:]
+  #link("https://www.linkedin.com/in/aligu/details/recommendations/")[My LinkedIn Recommendations:]
   - _”To work with Ali for our Iowa plastic surgery practice has been an absolute game-changer. We needed a robust full-stack website that would articulate all of our services and offer a safe and convenient way for our patients to engage with them. Ali did all this and much more within just two weeks!#"..."”_
 
     #align(right)[_— Aidan Andrews, MS Computer Science Candidate, Entrepreneur and Researcher at UIUC_#h(1.28pt)] // \textit's italic correction
