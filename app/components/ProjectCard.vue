@@ -21,13 +21,13 @@ defineProps<{
         </p>
         <ProjectStatusBadge :status="project.status" />
       </div>
-      <p class="mb-3 text-sm text-primary md:text-base">
+      <p class="mb-2 text-sm text-primary md:text-base">
         {{ project.description }}
       </p>
       <TagList :tags="project.tags" />
     </div>
 
-    <div class="mt-2 w-full flex flex-row items-center justify-between">
+    <div class="mt-1.5 w-full flex flex-row items-center justify-between">
       <ProjectLinks :demo="project.demo" :github="project.github" class="relative z-1 text-sm md:text-base" />
       <p class="flex flex-row items-center gap-0.5 text-black opacity-0 transition-opacity duration-75 dark:text-white group-hover:opacity-100">
         <span>Details</span>
