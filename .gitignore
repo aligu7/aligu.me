@@ -24,14 +24,5 @@ logs
 .env.*
 !.env.example
 
-# Latex build artifacts
-*.aux
-*.bbl
-*.blg
-*.log
-*.out
-*.toc
-*.synctex.gz
-*.fdb_latexmk
-*.fls
+# Typst default output (`pnpm resume` builds into public/resume.pdf instead)
 resume/resume.pdf

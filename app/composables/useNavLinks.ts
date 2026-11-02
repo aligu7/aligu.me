@@ -7,7 +7,7 @@ export type NavLink = {
 const navLinks: NavLink[] = [
   { label: "Projects", to: "/projects" },
   { label: "Blog", to: "/blog" },
-  { label: "Resume", to: "/pdf/Ali_Guliyev_Resume.pdf", external: true },
+  { label: "Resume", to: "/resume.pdf", external: true },
 ]
 
 export function useNavLinks() {

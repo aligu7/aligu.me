@@ -15,6 +15,8 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "typecheck": "nuxt typecheck",
+    "resume": "typst compile --font-path resume/fonts --ignore-system-fonts resume/resume.typ public/resume.pdf",
+    "resume:watch": "typst watch --font-path resume/fonts --ignore-system-fonts resume/resume.typ public/resume.pdf",
     "prepare": "husky",
     "up": "pnpm update -i -L"
 

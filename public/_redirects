@@ -1,0 +1,2 @@
+# Cloudflare Pages redirects. Keep the old resume URL working for links already shared
+/pdf/Ali_Guliyev_Resume.pdf /resume.pdf 301
