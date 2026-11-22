@@ -36,6 +36,8 @@ export default defineNuxtConfig({
       meta: [
         { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
         { name: "author", content: "Ali Guliyev" },
+        // No thumbnail next to Google results; og:image still shows when links are shared
+        { name: "robots", content: "max-image-preview:none" },
         { property: "og:site_name", content: "Ali Guliyev" },
         { property: "og:type", content: "website" },
         { property: "og:locale", content: "en_US" },
