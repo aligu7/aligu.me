@@ -11,7 +11,7 @@ export default defineEventHandler(async (event) => {
     queryCollection(event, "blog").select("path").all(),
   ])
 
-  const paths = ["/", "/projects", "/blog", ...projects.map(p => p.path), ...posts.map(p => p.path), "/resume.pdf"]
+  const paths = ["/", "/projects", "/blog", ...projects.map(p => p.path), ...posts.map(p => p.path)]
   const urls = paths.map(path => `  <url><loc>${siteUrl}${path}</loc></url>`).join("\n")
 
   setResponseHeader(event, "content-type", "application/xml")
