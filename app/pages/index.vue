@@ -2,7 +2,7 @@
 const { data: page } = await useAsyncData("home", () =>
   queryCollection("pages").path("/").first())
 
-usePageSeo("Ali Guliyev - Software Engineer", () => page.value?.description)
+usePageSeo("Ali Guliyev", () => page.value?.description)
 
 /*
  * Structured data telling search engines who this site is about, and that the
