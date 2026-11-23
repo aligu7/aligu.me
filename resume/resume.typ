@@ -130,13 +130,13 @@
 
 #section("Projects", below: 5.7pt)[
   #project(
-    [AI Market Prediction Dashboard — Final-Year Project (in progress)],
+    [AI Market Prediction Dashboard — Final-Year Project (2026–27)],
     none,
-    [Python, FastAPI, FinBERT, XGBoost, Nuxt],
+    [Python, FinBERT, Nuxt],
   )
-  - Building a pipeline combining stock prices with news sentiment (FinBERT), news volume and earnings features.
-  - Evaluating gains over price-only models with walk-forward validation and cost-aware backtesting.
-  - Developing a full-stack dashboard for predictions, sentiment and strategy performance.
+  - Researching whether stock-specific news sentiment, news volume and earnings features improve price-only prediction.
+  - Planned evaluation with walk-forward validation and cost-aware backtesting, measured by Sharpe ratio and drawdown.
+  - Implementation from January 2027: a Python data pipeline and a Nuxt dashboard for predictions and strategy results.
 
   #project(
     [Visual Quran — Data Visualization Platform],
